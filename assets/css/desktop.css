@@ -1,0 +1,129 @@
+@media (min-width: 768px) {
+    .doctors__card {
+        flex-basis: calc((100% - 8px)/2);
+    }
+}
+
+@media (min-width: 1024px) {
+
+    .doctors__card-picture,
+    .doctors__card-picture img {
+        border-radius: 28px;
+    }
+
+    .doctors__card-videointroduction {
+        font-size: 12px;
+        border-radius: 18px;
+        padding: 8px 14px;
+    }
+
+    .doctors__card-videointroduction p {
+        padding-left: 8px;
+    }
+
+    .doctors__card-videointroduction::before {
+        transform: scale(1);
+    }
+
+    .doctors__card-links {
+        bottom: 10px;
+        left: 10px;
+        right: 10px;
+        gap: 12px;
+    }
+
+    .doctors__card-link {
+        border-radius: 76px;
+        padding: 6px 18px 6px 6px;
+        gap: 12px;
+    }
+
+    .doctors__card-icon {
+        border-radius: 40px;
+        width: 52px;
+        height: 52px;
+    }
+
+    .doctors__card-icon img {
+        width: 32px;
+        height: 32px;
+    }
+
+    .doctors__card-num {
+        font-size: 16px;
+    }
+
+    .doctors__card-info a {
+        font-size: 14px;
+        display: flex;
+    }
+
+    .doctors__card-info p {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+    }
+
+    .doctors__card-bottom {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .doctors__card-name {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .doctors__card-job {
+        margin-bottom: 8px;
+    }
+
+    .doctors__card-job,
+    .doctors__card-experience {
+        font-size: 16px;
+    }
+
+    .doctors__card-experience::before,
+    .doctors__card-job::before {
+        width: 7px;
+        height: 22px;
+        top: -1px;
+    }
+
+    .doctors__cards {
+        margin-bottom: 60px;
+    }
+
+    .doctors__btns button {
+        border-radius: 60px;
+        padding: 22px 28px;
+        font-size: 12px;
+    }
+}
+
+
+@media (min-width: 1200px) {
+    .doctors__card {
+        flex-basis: calc((100% - 40px)/3);
+        border-radius: 40px;
+        padding: 12px 12px 32px 12px;
+    }
+
+    .doctors__cards {
+        gap: 20px;
+    }
+
+    .doctors {
+        margin-bottom: 160px;
+    }
+}
+
+@media (min-width: 1632px) {
+    .doctors__card-star::before {
+        content: url("../img/doc/stars.png");
+    }
+
+    .doctors__card-info a span {
+        display: block;
+    }
+}
