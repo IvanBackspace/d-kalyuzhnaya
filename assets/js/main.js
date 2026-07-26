@@ -23,6 +23,20 @@
         return scrollWidth;
     }
 
+    document.querySelectorAll('.menu__item--submenu').forEach(item => {
+        const openBtn = item.querySelector('.menu__toggle');       
+        const closeBtn = item.querySelector('.submenu__toggle');
+        const submenu = item.querySelector('.submenu');
+         console.log(submenu);
+
+        openBtn.addEventListener('click', () => {
+            submenu.classList.add('active');
+        });
+
+        closeBtn.addEventListener('click', () => {
+            submenu.classList.remove('active');
+        });
+    });
 
     function bodyLock(bool) {
         if (bool) {
