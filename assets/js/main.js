@@ -1,6 +1,6 @@
 (() => {
     const burger = document.getElementById('burger');
-    const menu = document.getElementById('menu');
+    const menu = document.getElementById('header__bottom-info');
     burger.addEventListener('click', () => {
         menu.classList.toggle('active');
     });

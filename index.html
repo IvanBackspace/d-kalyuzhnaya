@@ -16,8 +16,9 @@
 <body class="body">
   <div class="hero__wrap">
     <div class="hero">
-      <div class="container">
-        <header class="header">
+
+      <header class="header">
+        <div class="header__container container">
           <div class="header__top">
             <a href="/" class="header__logo">
               <picture class="logo">
@@ -65,28 +66,43 @@
             </div>
           </div>
           <div class="header__bottom">
-            <nav class="menu" id="menu">
-
-              <a href="#">О центре</a>
-              <a href="#">Направления</a>
-
-              <a href="#">Врачи</a>
-              <a href="#">Программа</a>
-              <a href="#">Семья</a>
-              <a href="#">Условия</a>
-              <a href="#">Цены</a>
-              <a href="#">Отзывы</a>
-              <a href="#">FAQ</a>
-              <a href="#">Контакты</a>
-            </nav>
-            <button class="burger" id="burger">
-              ☰
-            </button>
+            <a href="/" class="header__logo header__logo--mobile">
+              <picture class="logo">
+                <source srcset="assets/img/logo/logo.svg" type="image/svg+xml">
+                <img src="assets/img/logo/logo.png" alt="логотип наркологической клиники"
+                  title="логотип наркологической клиники">
+              </picture>
+            </a>
+            <div class="header__btns">
+              <div class="header__phone-mobile">
+                <a href="tel:+79034110003"><img src="assets/img/icons/phone-white.png" alt="Иконка телефона"></a>
+              </div>
+              <button class="burger" id="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+              </button>
+            </div>
+            <div class="header__bottom-info" id="header__bottom-info">
+              <nav class="menu">
+                <a href="#">О центре</a>
+                <a href="#">Направления</a>
+                <a href="#">Врачи</a>
+                <a href="#">Программа</a>
+                <a href="#">Семья</a>
+                <a href="#">Условия</a>
+                <a href="#">Цены</a>
+                <a href="#">Отзывы</a>
+                <a href="#">FAQ</a>
+                <a href="#">Контакты</a>
+              </nav>
+            </div>
           </div>
-        </header>
-        <div class="banner">
         </div>
+      </header>
+      <div class="banner">
       </div>
+
     </div>
 
     <main class="main">
