@@ -8,9 +8,9 @@
   <link href="assets/css/style.css" rel="stylesheet" type="text/css">
   <link href="assets/css/mobile.css" rel="stylesheet" type="text/css">
   <link href="assets/css/desktop.css" rel="stylesheet" type="text/css">
+  <link href="assets/css/swiper.css" rel="stylesheet" type="text/css">
   <script src="assets/js/main.js" defer></script>
   <script src="assets/js/build/fancybox.min.js" defer></script>
-  <script src="assets/js/build/swiper-bundle.min.js" defer></script>
 </head>
 
 <body class="body">
@@ -304,88 +304,373 @@
           </div>
         </div>
       </section>
-      <section class="medicine section__general">
-        <div class="medicine__container container">
-          <div class="medicine__top section__top">
-            <p class="medicine__title section__title-general">Больше, чем реабилитация<br> <span>— это медицина</span>
-            </p>
-            <p class="medicine__subtitle section__subtitle-general">Зависимость — хроническое заболевание. Мы не обещаем
-              «вылечить
-              навсегда»,
-              но обеспечиваем устойчивую
-              ремиссию и возврат к полноценной жизни</p>
-          </div>
 
-          <div class="medicine__bottom">
-            <div class="medicine__content">
 
-              <div class="medicine__content-top">
-                <div class="medicine__content-text">
-                  <p>Клиника доктора Калюжной — это не обычный реабилитационный центр. У
-                    нас
-                    в штате работают психиатр-нарколог, невролог, терапевт, клинические психологи и аддиктологи. Это не
-                    приглашённые специалисты, а постоянная команда, которая ведёт каждого пациента от первого звонка до
-                    завершения постлечебной программы</p>
-                  <p>Наша авторская программа медико-социальной реабилитации охватывает
-                    четыре сферы: биологическую, психологическую, социальную и духовную. Всё — в одном месте, как единый
-                    непрерывный процесс. Не нужно переводить близкого из одного учреждения в другое</p>
-                </div>
-                <button class="medicine__content-btn primary-btn  popup-btn" data-path="popup-sing">
-                  <i></i>Задать вопрос<span></span>
-                </button>
-              </div>
-              <div class="medicine__content-bottom">
-                <p class="medicine__content-task">«Наша задача — не просто снять острое состояние, а создать условия
-                  для достижения устойчивой ремиссии
-                  и улучшения качества жизни человека и его близких»</p>
-                <div class="medicine__content-doctor">
-                  <p class="content-doctor__name">Калюжная Марина Александровна</p>
-                  <p class="content-doctor__experience">Стаж работы: 17 лет</p>
-                </div>
-              </div>
+
+      <section class="doctors-staff section__general">
+        <div class="doctors-staff__container container">
+          <div class="doctors-staff__top section__top">
+            <div>
+              <p class="doctors-staff__title section__title-general">Врачи, которые <br><span>работают у нас в
+                  штате</span>
+              </p>
+              <p class="doctors-staff__subtitle section__subtitle-general">Не приглашённые специалисты — постоянная
+                команда с дипломами и подтверждённым стажем</p>
             </div>
-            <div class="medicine__items">
-              <div class="medicine__items-main">
-                <div class="medicine__item">
-                  <p class="medicine__item-num">01</p>
-                  <div class="medicine__item-content">
-                    <p class="medicine__item-title">наши Врачи в штате</p>
-                    <p class="medicine__item-subtitle">Психиатр-нарколог, невролог, терапевт, аддиктолог, клинический
-                      психолог и диетолог — все в постоянном штате</p>
+            <div class="swiper-btns">
+              <button class="doctors-staff__swiper-button-prev swiper-button-prev"></button>
+              <button class="doctors-staff__swiper-button-next swiper-button-next"></button>
+            </div>
+          </div>
+          <div class="doctors__swiper doctorsSwiper swiper">
+            <div class="swiper-wrapper">
+              <div class="doctors__swiper-slide swiper-slide">
+                <div class="doctors__card">
+                  <div class="doctors__card-top">
+                    <div class="doctors__card-img">
+                      <picture class="doctors__card-picture">
+                        <source srcset="assets/img/doc/photo.jpg" type="image/webp" />
+                        <img src="assets/img/doc/photo.jpg" alt="" title="" loading="lazy" />
+                      </picture>
+                    </div>
+                    <div class="doctors__card-videointroduction">
+                      <p>Видеовизитка</p>
+                    </div>
+                    <div class="doctors__card-links">
+                      <div class="doctors__card-link">
+                        <div class="doctors__card-icon">
+                          <picture>
+                            <source srcset="assets/img/doc/prodoc.svg" type="image/svg+xml">
+                            <img src="assets/img/doc/prodoc.png" alt="логотип whatsapp" title="whatsapp">
+                          </picture>
+                        </div>
+                        <div class="doctors__card-info">
+                          <p><span class="doctors__card-num">4.7</span><span class="doctors__card-star"></span></p>
+                          <a href="#">Читать <span>&nbsp; 47 отзывов</span></a>
+                        </div>
+                      </div>
+                      <div class="doctors__card-link">
+                        <div class="doctors__card-icon">
+                          <picture>
+                            <source srcset="assets/img/doc/zn.png" type="image/svg+xml">
+                            <img src="assets/img/doc/zn.png" alt="логотип whatsapp" title="whatsapp">
+                          </picture>
+                        </div>
+                        <div class="doctors__card-info">
+                          <p><span class="doctors__card-num">4.7</span><span class="doctors__card-star"></span></p>
+                          <a href="#">Читать <span>&nbsp; 47 отзывов</span></a>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                </div>
-                <div class="medicine__item">
-                  <p class="medicine__item-num">02</p>
-                  <div class="medicine__item-content">
-                    <p class="medicine__item-title">Авторская программа</p>
-                    <p class="medicine__item-subtitle">Собственная интегративная модель медико-социальной реабилитации,
-                      разработанная дипломированными специалистами</p>
+                  <a class="doctors__card-bottom" href="#">
+                    <p class="doctors__card-name">
+                      Калюжная марина александровна
+                    </p>
+                    <p class="doctors__card-job">
+                      Директор клиники, главный врач, психиатр-нарколог
+                    </p>
+                    <p class="doctors__card-experience">
+                      Стаж работы: 17 лет
+                    </p>
+                  </a>
+                </div>            
+              </div>
+              <div class="doctors__swiper-slide swiper-slide">
+                <div class="doctors__card">
+                  <div class="doctors__card-top">
+                    <div class="doctors__card-img">
+                      <picture class="doctors__card-picture">
+                        <source srcset="assets/img/doc/photo.jpg" type="image/webp" />
+                        <img src="assets/img/doc/photo.jpg" alt="" title="" loading="lazy" />
+                      </picture>
+                    </div>
+                    <div class="doctors__card-videointroduction">
+                      <p>Видеовизитка</p>
+                    </div>
+                    <div class="doctors__card-links">
+                      <div class="doctors__card-link">
+                        <div class="doctors__card-icon">
+                          <picture>
+                            <source srcset="assets/img/doc/prodoc.svg" type="image/svg+xml">
+                            <img src="assets/img/doc/prodoc.png" alt="логотип whatsapp" title="whatsapp">
+                          </picture>
+                        </div>
+                        <div class="doctors__card-info">
+                          <p><span class="doctors__card-num">4.7</span><span class="doctors__card-star"></span></p>
+                          <a href="#">Читать <span>&nbsp; 47 отзывов</span></a>
+                        </div>
+                      </div>
+                      <div class="doctors__card-link">
+                        <div class="doctors__card-icon">
+                          <picture>
+                            <source srcset="assets/img/doc/zn.png" type="image/svg+xml">
+                            <img src="assets/img/doc/zn.png" alt="логотип whatsapp" title="whatsapp">
+                          </picture>
+                        </div>
+                        <div class="doctors__card-info">
+                          <p><span class="doctors__card-num">4.7</span><span class="doctors__card-star"></span></p>
+                          <a href="#">Читать <span>&nbsp; 47 отзывов</span></a>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                </div>
-                <div class="medicine__item">
-                  <p class="medicine__item-num">03</p>
-                  <div class="medicine__item-content">
-                    <p class="medicine__item-title">Полная анонимность</p>
-                    <p class="medicine__item-subtitle">Данные не передаются в госорганы. Никакой постановки на
-                      наркологический учёт. Никаких сведений по месту работы</p>
+                  <a class="doctors__card-bottom" href="#">
+                    <p class="doctors__card-name">
+                      Калюжная марина александровна
+                    </p>
+                    <p class="doctors__card-job">
+                      Директор клиники, главный врач, психиатр-нарколог
+                    </p>
+                    <p class="doctors__card-experience">
+                      Стаж работы: 17 лет
+                    </p>
+                  </a>
+                </div>            
+              </div>
+              <div class="doctors__swiper-slide swiper-slide">
+                <div class="doctors__card">
+                  <div class="doctors__card-top">
+                    <div class="doctors__card-img">
+                      <picture class="doctors__card-picture">
+                        <source srcset="assets/img/doc/photo.jpg" type="image/webp" />
+                        <img src="assets/img/doc/photo.jpg" alt="" title="" loading="lazy" />
+                      </picture>
+                    </div>
+                    <div class="doctors__card-videointroduction">
+                      <p>Видеовизитка</p>
+                    </div>
+                    <div class="doctors__card-links">
+                      <div class="doctors__card-link">
+                        <div class="doctors__card-icon">
+                          <picture>
+                            <source srcset="assets/img/doc/prodoc.svg" type="image/svg+xml">
+                            <img src="assets/img/doc/prodoc.png" alt="логотип whatsapp" title="whatsapp">
+                          </picture>
+                        </div>
+                        <div class="doctors__card-info">
+                          <p><span class="doctors__card-num">4.7</span><span class="doctors__card-star"></span></p>
+                          <a href="#">Читать <span>&nbsp; 47 отзывов</span></a>
+                        </div>
+                      </div>
+                      <div class="doctors__card-link">
+                        <div class="doctors__card-icon">
+                          <picture>
+                            <source srcset="assets/img/doc/zn.png" type="image/svg+xml">
+                            <img src="assets/img/doc/zn.png" alt="логотип whatsapp" title="whatsapp">
+                          </picture>
+                        </div>
+                        <div class="doctors__card-info">
+                          <p><span class="doctors__card-num">4.7</span><span class="doctors__card-star"></span></p>
+                          <a href="#">Читать <span>&nbsp; 47 отзывов</span></a>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                </div>
-                <div class="medicine__item">
-                  <p class="medicine__item-num">04</p>
-                  <div class="medicine__item-content">
-                    <p class="medicine__item-title">Гарантия  по договору</p>
-                    <p class="medicine__item-subtitle">Если после полного курса произошёл срыв — повторное лечение
-                      проводится бесплатно. Это зафиксировано в договоре</p>
+                  <a class="doctors__card-bottom" href="#">
+                    <p class="doctors__card-name">
+                      Калюжная марина александровна
+                    </p>
+                    <p class="doctors__card-job">
+                      Директор клиники, главный врач, психиатр-нарколог
+                    </p>
+                    <p class="doctors__card-experience">
+                      Стаж работы: 17 лет
+                    </p>
+                  </a>
+                </div>            
+              </div>
+              <div class="doctors__swiper-slide swiper-slide">
+                <div class="doctors__card">
+                  <div class="doctors__card-top">
+                    <div class="doctors__card-img">
+                      <picture class="doctors__card-picture">
+                        <source srcset="assets/img/doc/photo.jpg" type="image/webp" />
+                        <img src="assets/img/doc/photo.jpg" alt="" title="" loading="lazy" />
+                      </picture>
+                    </div>
+                    <div class="doctors__card-videointroduction">
+                      <p>Видеовизитка</p>
+                    </div>
+                    <div class="doctors__card-links">
+                      <div class="doctors__card-link">
+                        <div class="doctors__card-icon">
+                          <picture>
+                            <source srcset="assets/img/doc/prodoc.svg" type="image/svg+xml">
+                            <img src="assets/img/doc/prodoc.png" alt="логотип whatsapp" title="whatsapp">
+                          </picture>
+                        </div>
+                        <div class="doctors__card-info">
+                          <p><span class="doctors__card-num">4.7</span><span class="doctors__card-star"></span></p>
+                          <a href="#">Читать <span>&nbsp; 47 отзывов</span></a>
+                        </div>
+                      </div>
+                      <div class="doctors__card-link">
+                        <div class="doctors__card-icon">
+                          <picture>
+                            <source srcset="assets/img/doc/zn.png" type="image/svg+xml">
+                            <img src="assets/img/doc/zn.png" alt="логотип whatsapp" title="whatsapp">
+                          </picture>
+                        </div>
+                        <div class="doctors__card-info">
+                          <p><span class="doctors__card-num">4.7</span><span class="doctors__card-star"></span></p>
+                          <a href="#">Читать <span>&nbsp; 47 отзывов</span></a>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                </div>
+                  <a class="doctors__card-bottom" href="#">
+                    <p class="doctors__card-name">
+                      Калюжная марина александровна
+                    </p>
+                    <p class="doctors__card-job">
+                      Директор клиники, главный врач, психиатр-нарколог
+                    </p>
+                    <p class="doctors__card-experience">
+                      Стаж работы: 17 лет
+                    </p>
+                  </a>
+                </div>            
+              </div>
+              <div class="doctors__swiper-slide swiper-slide">
+                <div class="doctors__card">
+                  <div class="doctors__card-top">
+                    <div class="doctors__card-img">
+                      <picture class="doctors__card-picture">
+                        <source srcset="assets/img/doc/photo.jpg" type="image/webp" />
+                        <img src="assets/img/doc/photo.jpg" alt="" title="" loading="lazy" />
+                      </picture>
+                    </div>
+                    <div class="doctors__card-videointroduction">
+                      <p>Видеовизитка</p>
+                    </div>
+                    <div class="doctors__card-links">
+                      <div class="doctors__card-link">
+                        <div class="doctors__card-icon">
+                          <picture>
+                            <source srcset="assets/img/doc/prodoc.svg" type="image/svg+xml">
+                            <img src="assets/img/doc/prodoc.png" alt="логотип whatsapp" title="whatsapp">
+                          </picture>
+                        </div>
+                        <div class="doctors__card-info">
+                          <p><span class="doctors__card-num">4.7</span><span class="doctors__card-star"></span></p>
+                          <a href="#">Читать <span>&nbsp; 47 отзывов</span></a>
+                        </div>
+                      </div>
+                      <div class="doctors__card-link">
+                        <div class="doctors__card-icon">
+                          <picture>
+                            <source srcset="assets/img/doc/zn.png" type="image/svg+xml">
+                            <img src="assets/img/doc/zn.png" alt="логотип whatsapp" title="whatsapp">
+                          </picture>
+                        </div>
+                        <div class="doctors__card-info">
+                          <p><span class="doctors__card-num">4.7</span><span class="doctors__card-star"></span></p>
+                          <a href="#">Читать <span>&nbsp; 47 отзывов</span></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <a class="doctors__card-bottom" href="#">
+                    <p class="doctors__card-name">
+                      Калюжная марина александровна
+                    </p>
+                    <p class="doctors__card-job">
+                      Директор клиники, главный врач, психиатр-нарколог
+                    </p>
+                    <p class="doctors__card-experience">
+                      Стаж работы: 17 лет
+                    </p>
+                  </a>
+                </div>            
+              </div>
+              <div class="doctors__swiper-slide swiper-slide">
+                <div class="doctors__card">
+                  <div class="doctors__card-top">
+                    <div class="doctors__card-img">
+                      <picture class="doctors__card-picture">
+                        <source srcset="assets/img/doc/photo.jpg" type="image/webp" />
+                        <img src="assets/img/doc/photo.jpg" alt="" title="" loading="lazy" />
+                      </picture>
+                    </div>
+                    <div class="doctors__card-videointroduction">
+                      <p>Видеовизитка</p>
+                    </div>
+                    <div class="doctors__card-links">
+                      <div class="doctors__card-link">
+                        <div class="doctors__card-icon">
+                          <picture>
+                            <source srcset="assets/img/doc/prodoc.svg" type="image/svg+xml">
+                            <img src="assets/img/doc/prodoc.png" alt="логотип whatsapp" title="whatsapp">
+                          </picture>
+                        </div>
+                        <div class="doctors__card-info">
+                          <p><span class="doctors__card-num">4.7</span><span class="doctors__card-star"></span></p>
+                          <a href="#">Читать <span>&nbsp; 47 отзывов</span></a>
+                        </div>
+                      </div>
+                      <div class="doctors__card-link">
+                        <div class="doctors__card-icon">
+                          <picture>
+                            <source srcset="assets/img/doc/zn.png" type="image/svg+xml">
+                            <img src="assets/img/doc/zn.png" alt="логотип whatsapp" title="whatsapp">
+                          </picture>
+                        </div>
+                        <div class="doctors__card-info">
+                          <p><span class="doctors__card-num">4.7</span><span class="doctors__card-star"></span></p>
+                          <a href="#">Читать <span>&nbsp; 47 отзывов</span></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <a class="doctors__card-bottom" href="#">
+                    <p class="doctors__card-name">
+                      Калюжная марина александровна
+                    </p>
+                    <p class="doctors__card-job">
+                      Директор клиники, главный врач, психиатр-нарколог
+                    </p>
+                    <p class="doctors__card-experience">
+                      Стаж работы: 17 лет
+                    </p>
+                  </a>
+                </div>            
               </div>
             </div>
           </div>
         </div>
       </section>
+
     </main>
     <footer class="footer">
     </footer>
+    <script src="assets/js/build/swiper-bundle.min.js" defer></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const doctorsSwiper = new Swiper(".doctorsSwiper", {
+          slidesPerView: 1.1,
+          spaceBetween: 10,
+          navigation: {
+            nextEl: ".doctors-staff__swiper-button-next",
+            prevEl: ".doctors-staff__swiper-button-prev"
+          },
+          breakpoints: {
+            1380: {
+              slidesPerView: 3,
+              spaceBetween: 20
+            },
+            830: {
+              slidesPerView: 2,
+              spaceBetween: 10
+            },
+            550: {
+              slidesPerView: 1.2,
+              spaceBetween: 10
+            }
+          }
+        });
+      });
+    </script>
 </body>
 
 </html>
