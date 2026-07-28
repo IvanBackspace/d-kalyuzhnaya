@@ -236,76 +236,86 @@
               но обеспечиваем устойчивую
               ремиссию и возврат к полноценной жизни</p>
           </div>
-          <style>
-            .medicine__content {
-              border-radius: 26px;
-              background: var(--fonovyy);
-              margin-bottom: 10px;
-              padding: 6px;
-            }
 
-            .medicine__content-text {
-              font-family: var(--font-family);
-              font-weight: 500;
-              font-size: 14px;
-              line-height: 143%;
-              color: var(--tekst-dark-80);
-              display: flex;
-              flex-direction: column;
-              gap: 4px;
-              margin-bottom: 16px;
-            }
+          <div class="medicine__bottom">
+            <div class="medicine__content">
 
-            .medicine__content-top {
-              margin-bottom: 34px;
-              padding: 34px 14px 0px 14px;
-            }
+              <div class="medicine__content-top">
+                <div class="medicine__content-text">
+                  <p>Клиника доктора Калюжной — это не обычный реабилитационный центр. У
+                    нас
+                    в штате работают психиатр-нарколог, невролог, терапевт, клинические психологи и аддиктологи. Это не
+                    приглашённые специалисты, а постоянная команда, которая ведёт каждого пациента от первого звонка до
+                    завершения постлечебной программы</p>
+                  <p>Наша авторская программа медико-социальной реабилитации охватывает
+                    четыре сферы: биологическую, психологическую, социальную и духовную. Всё — в одном месте, как единый
+                    непрерывный процесс. Не нужно переводить близкого из одного учреждения в другое</p>
+                </div>
+                <button class="medicine__content-btn primary-btn  popup-btn" data-path="popup-sing">
+                  <i></i>Задать вопрос<span></span>
+                </button>
+              </div>
+              <div class="medicine__content-bottom">
+                <p class="medicine__content-task">«Наша задача — не просто снять острое состояние, а создать условия
+                  для достижения устойчивой ремиссии
+                  и улучшения качества жизни человека и его близких»</p>
+                <div class="medicine__content-doctor">
+                  <p class="content-doctor__name">Калюжная Марина Александровна</p>
+                  <p class="content-doctor__experience">Стаж работы: 17 лет</p>
+                </div>
+              </div>
+            </div>
+            <div class="medicine__items">
+              <div class="medicine__items-main">
+                <div class="medicine__item">
+                  <p class="medicine__item-num">01</p>
+                  <div class="medicine__item-content">
+                    <p class="medicine__item-title">наши Врачи в штате</p>
+                    <p class="medicine__item-subtitle">Психиатр-нарколог, невролог, терапевт, аддиктолог, клинический
+                      психолог и диетолог — все в постоянном штате</p>
+                  </div>
+                </div>
+                <div class="medicine__item">
+                  <p class="medicine__item-num">02</p>
+                  <div class="medicine__item-content">
+                    <p class="medicine__item-title">Авторская программа</p>
+                    <p class="medicine__item-subtitle">Собственная интегративная модель медико-социальной реабилитации,
+                      разработанная дипломированными специалистами</p>
+                  </div>
+                </div>
+                <div class="medicine__item">
+                  <p class="medicine__item-num">03</p>
+                  <div class="medicine__item-content">
+                    <p class="medicine__item-title">Полная анонимность</p>
+                    <p class="medicine__item-subtitle">Данные не передаются в госорганы. Никакой постановки на
+                      наркологический учёт. Никаких сведений по месту работы</p>
+                  </div>
+                </div>
+                <div class="medicine__item">
+                  <p class="medicine__item-num">04</p>
+                  <div class="medicine__item-content">
+                    <p class="medicine__item-title">Гарантия  по договору</p>
+                    <p class="medicine__item-subtitle">Если после полного курса произошёл срыв — повторное лечение
+                      проводится бесплатно. Это зафиксировано в договоре</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="medicine section__general">
+        <div class="medicine__container container">
+          <div class="medicine__top section__top">
+            <p class="medicine__title section__title-general">Больше, чем реабилитация<br> <span>— это медицина</span>
+            </p>
+            <p class="medicine__subtitle section__subtitle-general">Зависимость — хроническое заболевание. Мы не обещаем
+              «вылечить
+              навсегда»,
+              но обеспечиваем устойчивую
+              ремиссию и возврат к полноценной жизни</p>
+          </div>
 
-            .medicine__content-btn {
-              width: 100%;
-            }
-
-            .medicine__content-bottom {
-              border-radius: 20px;
-              padding: 20px 14px;
-              background: linear-gradient(156.49deg, #3c8fce -6.53%, #e9f5ff 137.34%);
-            }
-
-            .medicine__content-task {
-              border-bottom: 1px solid transparent;
-              background-image: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.2) 50%, transparent);
-              background-size: 100% 1px;
-              background-repeat: no-repeat;
-              background-position: bottom;
-
-              font-family: var(--second-family);
-              font-weight: 700;
-              font-size: 14px;
-              line-height: 129%;
-              text-transform: uppercase;
-              color: var(--belyy-100);
-              padding-bottom: 12px;
-              margin-bottom: 12px;
-            }
-
-            .content-doctor__name {
-              font-family: var(--second-family);
-              font-weight: 700;
-              font-size: 11px;
-              line-height: 136%;
-              text-transform: uppercase;
-              color: var(--belyy-100);
-              margin-bottom: 8px;
-            }
-
-            .content-doctor__experience {
-              font-family: var(--font-family);
-              font-weight: 500;
-              font-size: 12px;
-              line-height: 133%;
-              color: var(--belyy-100);
-            }
-          </style>
           <div class="medicine__bottom">
             <div class="medicine__content">
 
