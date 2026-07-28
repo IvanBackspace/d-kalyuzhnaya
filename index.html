@@ -143,7 +143,7 @@
         <div class="intro__container container">
           <div class="intro__wrapper">
             <div class="intro__content">
-              <h1 class="title__general">Центр медико-социальной реабилитации клиники доктора Калюжной</h1>
+              <h1 class="title__general">Центр <br> медико-социальной реабилитации клиники доктора Калюжной</h1>
               <p class="subtitle__general">Штатные врачи — психиатр-нарколог, невролог, терапевт. Авторская программа
                 восстановления. Весь спектр помощи в одном месте — от детокса до постлечебного сопровождения</p>
               <div class="intro__advantages">
@@ -167,10 +167,10 @@
                 </p>
               </div>
               <div class="intro__btns">
-                <button class="intro__btn primary-btn  popup-btn" data-path="popup-question">
+                <button class="intro__btn primary-btn  popup-btn" data-path="popup-sing">
                   <i></i>Записаться<span></span>
                 </button>
-                <button class="intro__btn tertiary-btn  popup-btn" data-path="popup-question">
+                <button class="intro__btn tertiary-btn  popup-btn" data-path="popup-program">
                   <i></i>Как работает программа<span><svg width="10" height="16" viewBox="0 0 10 16" fill="none"
                       xmlns="http://www.w3.org/2000/svg">
                       <path d="M0 16L6.68516 8L0 0H3.29412L10 8L3.29412 16H0Z" fill="#07253F" />
@@ -179,161 +179,6 @@
                 </button>
               </div>
             </div>
-            <style>
-              .intro__form {
-                border-radius: 26px;
-                padding: 6px 6px 20px 6px;
-                background: var(--belyy-100);
-                width: 100%;
-              }
-
-              .intro__btn {
-                background: var(--fonovyy);
-              }
-
-              .intro__form-doctor {
-                border-radius: 20px;
-                background: var(--fonovyy);
-                padding: 14px;
-                display: flex;
-                position: relative;
-                gap: 12px;
-                min-height: 142px;
-                margin-bottom: 20px;
-              }
-
-              .form-doctor__picture {
-                border-radius: 10px;
-                max-width: 70px;
-                max-height: 70px;
-                width: 100%;
-                height: 100%;
-                display: flex;
-              }
-
-              .form-doctor__picture img,
-              .form-doctor__picture {
-                border-radius: 10px;
-                width: 100%;
-                height: 100%;
-              }
-
-              .form-doctor__info {
-                position: absolute;
-                bottom: 14px;
-                left: 14px;
-                right: 0;
-                display: flex;
-                flex-direction: column;
-                gap: 4px;
-              }
-
-              .form-doctor__name {
-                font-family: var(--second-family);
-                font-weight: 700;
-                font-size: 14px;
-                line-height: 129%;
-                text-transform: uppercase;
-                color: var(--tekst-dark-100);
-              }
-
-              .form-doctor__experience,
-              .form-doctor__job {
-                font-family: var(--font-family);
-                font-weight: 500;
-                font-size: 12px;
-                line-height: 133%;
-                color: var(--tekst-dark-100);
-                padding-left: 11px;
-                position: relative;
-              }
-
-              .intro__form-subtitle {
-                font-family: var(--font-family);
-                font-weight: 500;
-                font-size: 14px;
-                line-height: 143%;
-                color: var(--tekst-dark-80);
-                margin-bottom: 18px;
-              }
-
-              .intro__form-bottom {
-                padding-left: 14px;
-                padding-right: 14px;
-              }
-
-              .intro__form-input--name {
-                margin-bottom: 6px;
-              }
-
-              .intro__form-input--phone {
-                margin-bottom: 12px;
-              }
-
-              .politic {
-                display: flex;
-                gap: 8px;
-                font-family: var(--font-family);
-                font-weight: 500;
-                font-size: 12px;
-                line-height: 133%;
-                color: var(--tekst-dark-60);
-              }
-
-              .politic a {
-                text-decoration: underline;
-                text-decoration-skip-ink: none;
-                color: var(--tekst-dark-100);
-              }
-
-              .politic input[type=checkbox]:checked {
-                color: #fff;
-                border-color: var(--ogon-vozrozhdeniya-800);
-                background: var(--ogon-vozrozhdeniya-800);
-              }
-
-              .politic input[type=checkbox] {
-                flex: 0 0 20px;
-                position: relative;
-                border: 1px solid var(--ogon-vozrozhdeniya-800);
-                border-radius: 6px;
-                width: 20px;
-                height: 20px;
-                color: #000;
-                -webkit-appearance: none;
-                -moz-appearance: none;
-                appearance: none;
-                outline: 0;
-                cursor: pointer;
-                padding: 9px;
-                transition: all 175ms cubic-bezier(0.1, 0.1, 0.25, 1);
-              }
-
-              .politic input[type=checkbox]:checked::before {
-                opacity: 1;
-              }
-
-              .politic input[type=checkbox]::before {
-                content: "";
-                display: block;
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                width: 4.5px;
-                height: 8px;
-                border-style: solid;
-                border-color: #fff;
-                border-width: 0 2px 2px 0;
-                transform: translate(-50%, -60%) rotate(45deg);
-                opacity: 0;
-              }
-
-              .politic {
-                margin-bottom: 12px;
-              }
-
-        
-            </style>
             <form class="intro__form">
               <div class="intro__form-doctor">
                 <picture class="form-doctor__picture">
@@ -369,7 +214,7 @@
                       Нажимая на кнопку «Заказать звонок», вы соглашаетесь <a href="#">с обработкой персональных
                         данных</a></label>
                   </div>
-                  <button class="intro__btn primary-btn" type="submit">
+                  <button class="intro__form-btn intro__btn primary-btn" type="submit">
                     <i></i>Заказать звонок<span></span>
                   </button>
                 </div>
@@ -380,7 +225,154 @@
       </div>
     </div>
     <main class="main">
+      <section class="medicine section__general">
+        <div class="medicine__container container">
+          <div class="medicine__top section__top">
+            <p class="medicine__title section__title-general">Больше, чем реабилитация<br> <span>— это медицина</span>
+            </p>
+            <p class="medicine__subtitle section__subtitle-general">Зависимость — хроническое заболевание. Мы не обещаем
+              «вылечить
+              навсегда»,
+              но обеспечиваем устойчивую
+              ремиссию и возврат к полноценной жизни</p>
+          </div>
+          <style>
+            .medicine__content {
+              border-radius: 26px;
+              background: var(--fonovyy);
+              margin-bottom: 10px;
+              padding: 6px;
+            }
 
+            .medicine__content-text {
+              font-family: var(--font-family);
+              font-weight: 500;
+              font-size: 14px;
+              line-height: 143%;
+              color: var(--tekst-dark-80);
+              display: flex;
+              flex-direction: column;
+              gap: 4px;
+              margin-bottom: 16px;
+            }
+
+            .medicine__content-top {
+              margin-bottom: 34px;
+              padding: 34px 14px 0px 14px;
+            }
+
+            .medicine__content-btn {
+              width: 100%;
+            }
+
+            .medicine__content-bottom {
+              border-radius: 20px;
+              padding: 20px 14px;
+              background: linear-gradient(156.49deg, #3c8fce -6.53%, #e9f5ff 137.34%);
+            }
+
+            .medicine__content-task {
+              border-bottom: 1px solid transparent;
+              background-image: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.2) 50%, transparent);
+              background-size: 100% 1px;
+              background-repeat: no-repeat;
+              background-position: bottom;
+
+              font-family: var(--second-family);
+              font-weight: 700;
+              font-size: 14px;
+              line-height: 129%;
+              text-transform: uppercase;
+              color: var(--belyy-100);
+              padding-bottom: 12px;
+              margin-bottom: 12px;
+            }
+
+            .content-doctor__name {
+              font-family: var(--second-family);
+              font-weight: 700;
+              font-size: 11px;
+              line-height: 136%;
+              text-transform: uppercase;
+              color: var(--belyy-100);
+              margin-bottom: 8px;
+            }
+
+            .content-doctor__experience {
+              font-family: var(--font-family);
+              font-weight: 500;
+              font-size: 12px;
+              line-height: 133%;
+              color: var(--belyy-100);
+            }
+          </style>
+          <div class="medicine__bottom">
+            <div class="medicine__content">
+
+              <div class="medicine__content-top">
+                <div class="medicine__content-text">
+                  <p>Клиника доктора Калюжной — это не обычный реабилитационный центр. У
+                    нас
+                    в штате работают психиатр-нарколог, невролог, терапевт, клинические психологи и аддиктологи. Это не
+                    приглашённые специалисты, а постоянная команда, которая ведёт каждого пациента от первого звонка до
+                    завершения постлечебной программы</p>
+                  <p>Наша авторская программа медико-социальной реабилитации охватывает
+                    четыре сферы: биологическую, психологическую, социальную и духовную. Всё — в одном месте, как единый
+                    непрерывный процесс. Не нужно переводить близкого из одного учреждения в другое</p>
+                </div>
+                <button class="medicine__content-btn primary-btn  popup-btn" data-path="popup-sing">
+                  <i></i>Задать вопрос<span></span>
+                </button>
+              </div>
+              <div class="medicine__content-bottom">
+                <p class="medicine__content-task">«Наша задача — не просто снять острое состояние, а создать условия
+                  для достижения устойчивой ремиссии
+                  и улучшения качества жизни человека и его близких»</p>
+                <div class="medicine__content-doctor">
+                  <p class="content-doctor__name">Калюжная Марина Александровна</p>
+                  <p class="content-doctor__experience">Стаж работы: 17 лет</p>
+                </div>
+              </div>
+            </div>
+            <div class="medicine__items">
+              <div class="medicine__items-main">
+                <div class="medicine__item">
+                  <p class="medicine__item-num">01</p>
+                  <div class="medicine__item-content">
+                    <p class="medicine__item-title">наши Врачи в штате</p>
+                    <p class="medicine__item-subtitle">Психиатр-нарколог, невролог, терапевт, аддиктолог, клинический
+                      психолог и диетолог — все в постоянном штате</p>
+                  </div>
+                </div>
+                <div class="medicine__item">
+                  <p class="medicine__item-num">02</p>
+                  <div class="medicine__item-content">
+                    <p class="medicine__item-title">Авторская программа</p>
+                    <p class="medicine__item-subtitle">Собственная интегративная модель медико-социальной реабилитации,
+                      разработанная дипломированными специалистами</p>
+                  </div>
+                </div>
+                <div class="medicine__item">
+                  <p class="medicine__item-num">03</p>
+                  <div class="medicine__item-content">
+                    <p class="medicine__item-title">Полная анонимность</p>
+                    <p class="medicine__item-subtitle">Данные не передаются в госорганы. Никакой постановки на
+                      наркологический учёт. Никаких сведений по месту работы</p>
+                  </div>
+                </div>
+                <div class="medicine__item">
+                  <p class="medicine__item-num">04</p>
+                  <div class="medicine__item-content">
+                    <p class="medicine__item-title">Гарантия  по договору</p>
+                    <p class="medicine__item-subtitle">Если после полного курса произошёл срыв — повторное лечение
+                      проводится бесплатно. Это зафиксировано в договоре</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <footer class="footer">
     </footer>
