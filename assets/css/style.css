@@ -251,8 +251,6 @@ body.lock {
     width: 100%;
 }
 
-
-
 .header__info--address::before {
     content: url("../img/icons/loc.png");
 }
@@ -269,6 +267,8 @@ body.lock {
     content: url("../img/doc/video.png");
 }
 
+.what-apart__rehab-list li::before,
+.what-apart__clinic-list li::before,
 .doctors__card-experience::before,
 .doctors__card-job::before {
     content: "";
@@ -280,6 +280,30 @@ body.lock {
     position: absolute;
     left: 0;
     top: 3.5px;
+}
+
+.what-apart__clinic-top span::before {
+    content: "";
+    display: block;
+    width: 14px;
+    height: 13px;
+    background-size: contain;
+    background: url("../img/icons/yel.svg") no-repeat center;
+    background-size: contain;
+}
+
+.what-apart__rehab-list li::before {
+    background: url("../img/icons/er.svg") no-repeat center;
+    width: 14px;
+    height: 14px;
+    top: 2px;
+}
+
+.what-apart__clinic-list li::before {
+    background: url("../img/icons/gren.svg") no-repeat center;
+    width: 14px;
+    height: 14px;
+    top: 2px;
 }
 
 .doctors__card-star::before {
@@ -809,6 +833,14 @@ body.lock {
 
     .submenu__toggle {
         display: none;
+    }
+
+    .swiper-btns__img {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
     }
 }
 
@@ -2002,6 +2034,11 @@ input {
     background: var(--fonovyy);
 }
 
+.expert-assistance__top {
+    display: flex;
+    justify-content: space-between;
+}
+
 @media (min-width: 1025px) {
     .swiper-btns {
         position: relative;
@@ -2082,5 +2119,280 @@ input {
     .swiper-btns .swiper-rtl .swiper-button-prev {
         right: var(--swiper-navigation-sides-offset, 5px);
         left: auto;
+    }
+}
+
+.expert-assistance__item {
+    border-radius: 26px;
+    padding: 20px;
+    background-color: var(--fonovyy);
+    display: flex;
+    justify-content: space-between;
+    gap: 98px;
+    flex-direction: column;
+    transition: background-color .3s, box-shadow .3s;
+}
+
+.expert-assistance__item:hover {
+    box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.05);
+}
+
+
+.expert-assistance__item-title {
+    font-family: var(--second-family);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 125%;
+    text-transform: uppercase;
+    color: var(--tekst-dark-100);
+    margin-bottom: 12px;
+}
+
+.expert-assistance__item-subtitle {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 143%;
+    color: var(--tekst-dark-100);
+}
+
+.expert-assistance__read-more {
+    border-radius: 40px;
+    padding: 16px 18px;
+    width: fit-content;
+    height: 44px;
+    background-color: var(--belyy-100);
+    font-family: var(--second-family);
+    font-weight: 700;
+    font-size: 12px;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--tekst-dark-100);
+    transition: background-color .3s, color .3s;
+}
+
+.expert-assistance__item:hover .expert-assistance__read-more {
+    background-color: #eb591f;
+    color: #ffffff;
+}
+
+
+
+@media (min-width: 1025px) {
+    .expert-assistance__item {
+        border-radius: 40px;
+        padding: 40px;
+        gap: 110px;
+    }
+
+    .expert-assistance__item-title {
+        font-size: 32px;
+    }
+
+    .expert-assistance__item-subtitle {
+        font-size: 16px;
+    }
+
+    .expert-assistance__read-more {
+        border-radius: 40px;
+        padding: 22px 28px;
+        width: 155px;
+        height: 62px;
+    }
+}
+
+.what-apart {
+    border-radius: 30px;
+    padding: 70px 10px 10px 10px;
+    background: linear-gradient(154.84deg, #3c8fce 15.73%, #e9f5ff 130.61%);
+}
+
+.what-apart__top {
+    margin-bottom: 30px;
+}
+
+.what-apart__title {
+    font-family: var(--second-family);
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 120%;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--belyy-100);
+    margin-bottom: 15px;
+}
+
+.what-apart__subtitle {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 143%;
+    text-align: center;
+    color: var(--belyy-100);
+}
+
+.what-apart__rehab {
+    margin-bottom: 10px;
+}
+
+.what-apart__clinic,
+.what-apart__rehab {
+    border-radius: 26px;
+    padding: 20px 6px 6px 6px;
+    background: var(--belyy-100);
+}
+
+.what-apart__clinic {
+    padding-top: 6px;
+}
+
+.what-apart__clinic-title,
+.what-apart__rehab-title {
+    font-family: var(--second-family);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 125%;
+    text-transform: uppercase;
+    color: var(--tekst-dark-100);
+    margin-bottom: 18px;
+    padding-left: 14px;
+}
+
+.what-apart__rehab-list,
+.what-apart__clinic-list {
+    border-radius: 20px;
+    padding: 20px 14px;
+    background: var(--fonovyy);
+    padding-left: 14px;
+}
+
+.what-apart__rehab-list li,
+.what-apart__clinic-list li {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 143%;
+    color: var(--tekst-dark-80);
+    margin-bottom: 4px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.what-apart__clinic-top {
+    border-radius: 40px;
+    padding: 4px 20px 4px 4px;
+    background: #77ba70;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.what-apart__clinic-top p {
+    font-family: var(--second-family);
+    font-weight: 700;
+    font-size: 9px;
+    line-height: 133%;
+    text-transform: uppercase;
+    color: var(--belyy-100);
+}
+
+.what-apart__clinic-top span {
+    border-radius: 40px;
+    background-color: var(--belyy-15);
+    width: 36px;
+    height: 36px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (min-width: 1025px) {
+    .what-apart {
+        border-radius: 60px;
+        padding: 160px 0px;
+        background: linear-gradient(154.84deg, #3c8fce 14%, #e9f5ff 128.69%);
+    }
+
+    .what-apart__top {
+        max-width: 851px;
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        padding-bottom: 60px;
+    }
+
+    .what-apart__title {
+        font-size: 54px;
+        margin-bottom: 24px;
+    }
+
+    .what-apart__subtitle {
+        font-size: 16px;
+    }
+
+    .what-apart__bottom {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        align-items: end;
+    }
+
+    .what-apart__rehab {
+        margin-bottom: 0px;
+    }
+
+    .what-apart__clinic,
+    .what-apart__rehab {
+        border-radius: 26px;
+        padding: 40px 8px 8px 8px;
+        flex: calc((100% - 20px)/2);
+        height: fit-content;
+    }
+
+    .what-apart__clinic {
+        padding-top: 10px;
+    }
+
+    .what-apart__clinic-title,
+    .what-apart__rehab-title {
+        font-size: 24px;
+        padding-left: 24px;
+    }
+
+    .what-apart__rehab-list,
+    .what-apart__clinic-list {
+        border-radius: 30px;
+        padding: 30px 30px 10px 30px;
+    }
+
+    .what-apart__rehab-list li,
+    .what-apart__clinic-list li {
+        margin-bottom: 16px;
+        padding-left: 30px;
+    }
+
+    .what-apart__clinic-top {
+        border-radius: 40px;
+        padding: 6px 20px 6px 6px;
+        background: #77ba70;
+        display: flex;
+        gap: 16px;
+        margin-bottom: 24px;
+    }
+
+    .what-apart__clinic-top p {
+        font-size: 14px;
+    }
+
+    .what-apart__clinic-top span {
+        width: 48px;
+        height: 48px;
+    }
+
+    .what-apart__clinic-top span::before {
+        width: 20px;
+        height: 19px;
     }
 }
