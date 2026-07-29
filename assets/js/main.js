@@ -111,6 +111,38 @@
                 }
             }
         });
+        const pathCirculationSwiper = new Swiper(".pathCirculationSwiper", {
+            slidesPerView: 1.1,
+            spaceBetween: 10,
+            navigation: {
+                nextEl: ".path-circulation__swiper-button-next",
+                prevEl: ".path-circulation__swiper-button-prev"
+            },
+            pagination: {
+                el: '.path-circulation__swiper-pagination',
+                type: 'custom',
+                renderCustom: function (swiper, current, total) {
+                    const currentFormatted = String(current).padStart(2, '0');
+                    const totalFormatted = String(total).padStart(2, '0');
+                    return `<span class="pagination-current">${currentFormatted}</span> / <span class="pagination-total">${totalFormatted}</span>`;
+                }
+            },
+            grabCursor: true,
+            breakpoints: {
+                1380: {
+                    slidesPerView: 3,
+                    spaceBetween: 20
+                },
+                830: {
+                    slidesPerView: 2,
+                    spaceBetween: 10
+                },
+                550: {
+                    slidesPerView: 1.2,
+                    spaceBetween: 10
+                }
+            }
+        });
     });
 
     // function initModalWorker() {

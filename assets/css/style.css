@@ -267,6 +267,7 @@ body.lock {
     content: url("../img/doc/video.png");
 }
 
+.spheres-rehabilitation__item-list li::before,
 .what-apart__rehab-list li::before,
 .what-apart__clinic-list li::before,
 .doctors__card-experience::before,
@@ -2203,8 +2204,9 @@ input {
 
 .what-apart {
     border-radius: 30px;
-    padding: 70px 10px 10px 10px;
+    padding: 70px 0px 10px 0px;
     background: linear-gradient(154.84deg, #3c8fce 15.73%, #e9f5ff 130.61%);
+    margin-bottom: 10px;
 }
 
 .what-apart__top {
@@ -2394,5 +2396,271 @@ input {
     .what-apart__clinic-top span::before {
         width: 20px;
         height: 19px;
+    }
+}
+
+.path-circulation {
+    border-radius: 30px;
+    padding: 70px 10px;
+    background: var(--fonovyy);
+}
+
+.path-circulation__item {
+    border-radius: 26px;
+    padding: 20px;
+    background: var(--belyy-100);
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.path-circulation__item-top,
+.path-circulation__item-bottom {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    align-items: center;
+    max-width: 200px;
+    justify-content: center;
+}
+
+.path-circulation__item-top p,
+.path-circulation__item-bottom p {
+    border-radius: 8px;
+    padding: 6px 10px;
+    background: var(--fonovyy);
+    font-family: var(--second-family);
+    font-weight: 700;
+    font-size: 9px;
+    line-height: 133%;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--tekst-dark-100);
+}
+
+.path-circulation__item-title {
+    font-family: var(--second-family);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 125%;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--tekst-dark-100);
+    margin-bottom: 12px;
+}
+
+.path-circulation__item-subtitle {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 133%;
+    text-align: center;
+    color: var(--tekst-dark-80);
+}
+
+@media (min-width: 1025px) {
+    .path-circulation__top {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .path-circulation .swiper-btns .swiper-button-prev,
+    .path-circulation .swiper-btns .swiper-rtl .swiper-button-next {
+        left: var(--swiper-navigation-sides-offset, 8px);
+        right: auto;
+    }
+
+    .path-circulation .swiper-btns .swiper-button-next,
+    .path-circulation .swiper-btns .swiper-rtl .swiper-button-prev {
+        right: var(--swiper-navigation-sides-offset, 8px);
+        left: auto;
+    }
+
+    .expert-assistance .swiper-btns .swiper-button-prev,
+    .expert-assistance .swiper-btns .swiper-rtl .swiper-button-next {
+        left: var(--swiper-navigation-sides-offset, 8px);
+        right: auto;
+    }
+
+    .expert-assistance .swiper-btns .swiper-button-next,
+    .expert-assistance .swiper-btns .swiper-rtl .swiper-button-prev {
+        right: var(--swiper-navigation-sides-offset, 8px);
+        left: auto;
+    }
+
+    .path-circulation {
+        background: var(--fonovyy);
+        border-radius: 60px;
+        padding: 160px 145px;
+    }
+
+    .path-circulation__item {
+        border-radius: 40px;
+        padding: 40px;
+        gap: 52px;
+    }
+
+    .path-circulation__item-top,
+    .path-circulation__item-bottom {
+        max-width: 100%;
+    }
+
+    .path-circulation__item-top p,
+    .path-circulation__item-bottom p {
+        border-radius: 12px;
+        padding: 8px 14px;
+        font-size: 12px;
+    }
+
+    .path-circulation__item-title {
+        font-size: 24px;
+        margin-bottom: 16px;
+    }
+
+    .path-circulation__item-subtitle {
+        font-size: 16px;
+    }
+}
+
+.spheres-rehabilitation__main {
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.spheres-rehabilitation__main::-webkit-scrollbar {
+    display: none;
+}
+
+.spheres-rehabilitation__items {
+    width: 1070px;
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+.spheres-rehabilitation__item {
+    border-radius: 26px;
+    padding: 20px;
+    background: var(--fonovyy);
+    min-height: 480px;
+    max-height: 480px;
+    flex-basis: calc((100% - 30px)/4);
+    overflow: hidden;
+    position: relative;
+}
+
+.spheres-rehabilitation__item-top {
+    margin-bottom: 16px;
+}
+
+.spheres-rehabilitation__item-top p {
+    border-radius: 8px;
+    padding: 6px 10px;
+    background: var(--belyy-100);
+    font-family: var(--second-family);
+    font-weight: 700;
+    font-size: 9px;
+    line-height: 133%;
+    text-transform: uppercase;
+    color: var(--tekst-dark-100);
+    width: fit-content;
+}
+
+.spheres-rehabilitation__item-title {
+    font-family: var(--second-family);
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 129%;
+    text-transform: uppercase;
+    color: var(--tekst-dark-100);
+    margin-bottom: 12px;
+}
+
+.spheres-rehabilitation__item-list li {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 143%;
+    color: var(--tekst-dark-80);
+    padding-left: 11px;
+    margin-bottom: 4px;
+    position: relative;
+}
+
+.spheres-rehabilitation__item-img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.spheres-rehabilitation__item-img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 181px;
+}
+
+@media (min-width: 1025px) {
+    .spheres-rehabilitation__items {
+        width: 100%;
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .spheres-rehabilitation__item {
+        border-radius: 40px;
+        padding: 40px;
+        min-height: auto;
+        max-height: 100%;
+        flex-basis: calc((100% - 20px)/2);
+    }
+
+    .spheres-rehabilitation__item-top {
+        margin-bottom: 86px;
+    }
+
+    .spheres-rehabilitation__item-top p {
+        border-radius: 12px;
+        padding: 8px 14px;
+        font-size: 12px;
+    }
+
+    .spheres-rehabilitation__item-title {
+        font-size: 24px;
+        margin-bottom: 20px;
+        max-width: 65%;
+    }
+
+    .spheres-rehabilitation__item-list {
+        max-width: 65%;
+    }
+
+    .spheres-rehabilitation__item-list li {
+        font-size: 16px;
+        margin-bottom: 10px;
+        padding-left: 19px;
+    }
+
+    .spheres-rehabilitation__item-img {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+
+    .spheres-rehabilitation__item-img {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 384px;
+    }
+
+    .spheres-rehabilitation__item-list li::before {
+        width: 10px;
+        height: 12px;
+        top: 4.5px;
     }
 }
