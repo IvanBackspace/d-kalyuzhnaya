@@ -9,7 +9,6 @@
   <link href="assets/css/mobile.css" rel="stylesheet" type="text/css">
   <link href="assets/css/desktop.css" rel="stylesheet" type="text/css">
   <link href="assets/css/swiper.css" rel="stylesheet" type="text/css">
-  <script src="assets/js/main.js" defer></script>
   <script src="assets/js/build/fancybox.min.js" defer></script>
 </head>
 
@@ -304,9 +303,6 @@
           </div>
         </div>
       </section>
-
-
-
       <section class="doctors-staff section__general">
         <div class="doctors-staff__container container">
           <div class="doctors-staff__top section__top">
@@ -319,10 +315,12 @@
             </div>
             <div class="swiper-btns">
               <button class="doctors-staff__swiper-button-prev swiper-button-prev"></button>
+              <div class="doctors-staff__swiper-pagination swiper-pagination"></div>
               <button class="doctors-staff__swiper-button-next swiper-button-next"></button>
+              <img src="assets/img/icons/swb.png" style="position: absolute;top: 0;bottom: 0;right: 0; left: 0;" alt="">
             </div>
           </div>
-          <div class="doctors__swiper doctorsSwiper swiper">
+          <div class="doctors__swiper doctorsSwiper swiper swiper__general">
             <div class="swiper-wrapper">
               <div class="doctors__swiper-slide swiper-slide">
                 <div class="doctors__card">
@@ -374,7 +372,7 @@
                       Стаж работы: 17 лет
                     </p>
                   </a>
-                </div>            
+                </div>
               </div>
               <div class="doctors__swiper-slide swiper-slide">
                 <div class="doctors__card">
@@ -426,7 +424,7 @@
                       Стаж работы: 17 лет
                     </p>
                   </a>
-                </div>            
+                </div>
               </div>
               <div class="doctors__swiper-slide swiper-slide">
                 <div class="doctors__card">
@@ -478,7 +476,7 @@
                       Стаж работы: 17 лет
                     </p>
                   </a>
-                </div>            
+                </div>
               </div>
               <div class="doctors__swiper-slide swiper-slide">
                 <div class="doctors__card">
@@ -530,7 +528,7 @@
                       Стаж работы: 17 лет
                     </p>
                   </a>
-                </div>            
+                </div>
               </div>
               <div class="doctors__swiper-slide swiper-slide">
                 <div class="doctors__card">
@@ -582,7 +580,7 @@
                       Стаж работы: 17 лет
                     </p>
                   </a>
-                </div>            
+                </div>
               </div>
               <div class="doctors__swiper-slide swiper-slide">
                 <div class="doctors__card">
@@ -634,9 +632,14 @@
                       Стаж работы: 17 лет
                     </p>
                   </a>
-                </div>            
+                </div>
               </div>
             </div>
+          </div>
+          <div class="doctors-staff__links section__links-general">
+            <a class="doctors-staff__link primary-link" href="">
+              <i></i>Смотреть всех врачей<span></span>
+            </a>
           </div>
         </div>
       </section>
@@ -645,32 +648,7 @@
     <footer class="footer">
     </footer>
     <script src="assets/js/build/swiper-bundle.min.js" defer></script>
-    <script>
-      document.addEventListener('DOMContentLoaded', function () {
-        const doctorsSwiper = new Swiper(".doctorsSwiper", {
-          slidesPerView: 1.1,
-          spaceBetween: 10,
-          navigation: {
-            nextEl: ".doctors-staff__swiper-button-next",
-            prevEl: ".doctors-staff__swiper-button-prev"
-          },
-          breakpoints: {
-            1380: {
-              slidesPerView: 3,
-              spaceBetween: 20
-            },
-            830: {
-              slidesPerView: 2,
-              spaceBetween: 10
-            },
-            550: {
-              slidesPerView: 1.2,
-              spaceBetween: 10
-            }
-          }
-        });
-      });
-    </script>
+    <script src="assets/js/main.js" defer></script>
 </body>
 
 </html>

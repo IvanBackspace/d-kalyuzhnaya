@@ -24,10 +24,10 @@
     }
 
     document.querySelectorAll('.menu__item--submenu').forEach(item => {
-        const openBtn = item.querySelector('.menu__toggle');       
+        const openBtn = item.querySelector('.menu__toggle');
         const closeBtn = item.querySelector('.submenu__toggle');
         const submenu = item.querySelector('.submenu');
-         console.log(submenu);
+        console.log(submenu);
 
         openBtn.addEventListener('click', () => {
             submenu.classList.add('active');
@@ -45,6 +45,41 @@
             document.body.classList.remove('lock');
         }
     }
+
+    document.addEventListener('DOMContentLoaded', function () {
+        const doctorsSwiper = new Swiper(".doctorsSwiper", {
+            slidesPerView: 1.1,
+            spaceBetween: 10,
+            navigation: {
+                nextEl: ".doctors-staff__swiper-button-next",
+                prevEl: ".doctors-staff__swiper-button-prev"
+            },
+            pagination: {
+                el: '.doctors-staff__swiper-pagination',
+                type: 'custom',
+                renderCustom: function (swiper, current, total) {
+                    const currentFormatted = String(current).padStart(2, '0');
+                    const totalFormatted = String(total).padStart(2, '0');
+                    return `<span class="pagination-current">${currentFormatted}</span> / <span class="pagination-total">${totalFormatted}</span>`;
+                }
+            },
+            grabCursor: true,
+            breakpoints: {
+                1380: {
+                    slidesPerView: 3,
+                    spaceBetween: 20
+                },
+                830: {
+                    slidesPerView: 2,
+                    spaceBetween: 10
+                },
+                550: {
+                    slidesPerView: 1.2,
+                    spaceBetween: 10
+                }
+            }
+        });
+    });
 
     // function initModalWorker() {
     //     const modalList = document.querySelectorAll('.modal');
