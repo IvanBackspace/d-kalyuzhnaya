@@ -845,6 +845,7 @@ body.lock {
     }
 }
 
+.primarycolor-btn,
 .primary-link,
 .tertiary-btn,
 .primary-btn {
@@ -855,6 +856,7 @@ body.lock {
     transition: background-color .3s;
 }
 
+.primarycolor-btn:hover,
 .primary-link:hover,
 .tertiary-btn:hover,
 .primary-btn:hover {
@@ -870,6 +872,7 @@ body.lock {
     transition: background-color .3s;
 }
 
+.primarycolor-btn svg path,
 .tertiary-btn svg path {
     transition: fill .3s;
 }
@@ -1158,6 +1161,7 @@ body.lock {
     width: 100%;
 }
 
+.primarycolor-btn,
 .primary-link,
 .tertiary-btn,
 .primary-btn {
@@ -1180,6 +1184,7 @@ body.lock {
     background: var(--fonovyy);
 }
 
+.primarycolor-btn span,
 .primary-link span,
 .tertiary-btn span,
 .primary-btn span {
@@ -1196,6 +1201,19 @@ body.lock {
 
 .tertiary-btn span {
     background-color: var(--fonovyy);
+}
+
+.primarycolor-btn {
+    width: 100%;
+}
+
+.primarycolor-btn {
+    background: var(--ogon-vozrozhdeniya-800);
+    color: white;
+}
+
+.primarycolor-btn span {
+    background: white;
 }
 
 .primary-btn span::after {
@@ -1400,6 +1418,7 @@ input {
 
 @media (min-width: 1024px) {
 
+    .primarycolor-btn,
     .primary-link,
     .tertiary-btn,
     .primary-btn {
@@ -1407,6 +1426,7 @@ input {
         width: fit-content;
     }
 
+    .primarycolor-btn span,
     .primary-link span,
     .tertiary-btn span,
     .primary-btn span {
@@ -1559,12 +1579,14 @@ input {
     color: var(--tekst-dark-100);
 }
 
+.anonymous-test__answers input[type=radio]:checked,
 .politic input[type=checkbox]:checked {
     color: #fff;
     border-color: var(--ogon-vozrozhdeniya-800);
     background: var(--ogon-vozrozhdeniya-800);
 }
 
+.anonymous-test__answers input[type=radio],
 .politic input[type=checkbox] {
     flex: 0 0 20px;
     position: relative;
@@ -1582,10 +1604,11 @@ input {
     transition: all 175ms cubic-bezier(0.1, 0.1, 0.25, 1);
 }
 
+.anonymous-test__answers input[type=radio]:checked::before,
 .politic input[type=checkbox]:checked::before {
     opacity: 1;
 }
-
+.anonymous-test__answers input[type=radio]::before,
 .politic input[type=checkbox]::before {
     content: "";
     display: block;
@@ -3222,5 +3245,133 @@ input {
 
     .specialized-clinic__functionals-wrapper {
         width: 79%;
+    }
+}
+
+.plp__main {
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    margin-bottom: 12px;
+}
+
+.plp__main::-webkit-scrollbar {
+    display: none;
+}
+
+.plp__items {
+    display: flex;
+    gap: 10px;
+    width: 1340px;
+}
+
+.plp__item {
+    border-radius: 26px;
+    padding: 20px;
+    background: var(--belyy-100);
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    justify-content: space-between;
+    align-items: center;
+    flex: 0 0 calc((100% - 40px)/5);
+}
+
+.plp__item-num {
+    border-radius: 8px;
+    padding: 6px 10px;
+    background: var(--fonovyy);
+    font-family: var(--second-family);
+    font-weight: 700;
+    font-size: 9px;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--tekst-dark-100);
+}
+
+.plp__item-title {
+    font-family: var(--second-family);
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 129%;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--tekst-dark-100);
+    margin-bottom: 10px;
+}
+
+.plp__item-subtitle {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 143%;
+    text-align: center;
+    color: var(--tekst-dark-80);
+}
+
+.plp {
+    background: var(--fonovyy);
+    border-radius: 30px;
+    padding: 70px 0px;
+}
+
+.plp__btn {
+    width: 100%;
+}
+
+@media (min-width:500px) {
+    .plp__btn {
+        width: fit-content;
+    }
+}
+
+@media (min-width:1025px) {
+    .plp__main {
+        margin-bottom: 40px;
+    }
+
+    .plp__items {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .plp__item {
+        border-radius: 40px;
+        padding: 28px;
+        gap: 68px;
+        flex: 0 0 calc((100% - 30px)/3);
+    }
+
+    .plp__item-num {
+        border-radius: 12px;
+        padding: 8px 14px;
+        font-size: 12px;
+    }
+
+    .plp__item-title {
+        font-size: 16px;
+        margin-bottom: 16px;
+    }
+
+    .plp__item-subtitle {
+        font-size: 16px;
+    }
+
+    .plp {
+        border-radius: 60px;
+        padding: 160px 0px;
+    }
+}
+
+@media (min-width:1200px) {
+    .plp__item {
+        flex: 0 0 calc((100% - 30px)/4);
+    }
+}
+
+@media (min-width:1300px) {
+    .plp__item {
+        flex: 0 0 calc((100% - 40px)/5);
     }
 }

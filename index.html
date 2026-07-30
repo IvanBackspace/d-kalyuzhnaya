@@ -1416,135 +1416,6 @@
             </div>
           </div>
         </div>
-        <style>
-          .plp__main {
-            overflow-x: auto;
-            scrollbar-width: none;
-            -ms-overflow-style: none;
-            margin-bottom: 12px;
-          }
-
-          .plp__main::-webkit-scrollbar {
-            display: none;
-          }
-
-          .plp__items {
-            display: flex;
-            gap: 10px;
-            width: 1340px;
-          }
-
-          .plp__item {
-            border-radius: 26px;
-            padding: 20px;
-            background: var(--belyy-100);
-            display: flex;
-            flex-direction: column;
-            gap: 50px;
-            justify-content: space-between;
-            align-items: center;
-            flex: 0 0 calc((100% - 40px)/5);
-          }
-
-          .plp__item-num {
-            border-radius: 8px;
-            padding: 6px 10px;
-            background: var(--fonovyy);
-            font-family: var(--second-family);
-            font-weight: 700;
-            font-size: 9px;
-            text-transform: uppercase;
-            text-align: center;
-            color: var(--tekst-dark-100);
-          }
-
-          .plp__item-title {
-            font-family: var(--second-family);
-            font-weight: 700;
-            font-size: 14px;
-            line-height: 129%;
-            text-transform: uppercase;
-            text-align: center;
-            color: var(--tekst-dark-100);
-            margin-bottom: 10px;
-          }
-
-          .plp__item-subtitle {
-            font-family: var(--font-family);
-            font-weight: 500;
-            font-size: 14px;
-            line-height: 143%;
-            text-align: center;
-            color: var(--tekst-dark-80);
-          }
-
-          .plp {
-            background: var(--fonovyy);
-            border-radius: 30px;
-            padding: 70px 0px;
-          }
-
-          .plp__btn {
-            width: 100%;
-          }
-
-          @media (min-width:500px) {
-            .plp__btn {
-              width: fit-content;
-            }
-          }
-
-          @media (min-width:1025px) {
-            .plp__main {
-              margin-bottom: 40px;
-            }
-
-            .plp__items {
-              display: flex;
-              flex-wrap: wrap;
-              width: 100%;
-            }
-
-            .plp__item {
-              border-radius: 40px;
-              padding: 28px;
-              gap: 68px;
-              flex: 0 0 calc((100% - 30px)/3);
-            }
-
-            .plp__item-num {
-              border-radius: 12px;
-              padding: 8px 14px;
-              font-size: 12px;
-            }
-
-            .plp__item-title {
-              font-size: 16px;
-              margin-bottom: 16px;
-            }
-
-            .plp__item-subtitle {
-              font-size: 16px;
-            }
-
-            .plp {
-              border-radius: 60px;
-              padding: 160px 0px;
-            }
-          }
-
-          @media (min-width:1200px) {
-            .plp__item {
-              flex: 0 0 calc((100% - 30px)/4);
-            }
-          }
-
-          @media (min-width:1300px) {
-            .plp__item {
-              flex: 0 0 calc((100% - 40px)/5);
-            }
-          }
-        </style>
         <div class="plp__main">
           <div class="plp__items">
             <div class="plp__item">
@@ -1621,6 +1492,436 @@
         </div>
       </div>
     </section>
+    <style>
+      .anonymous-test__tag {
+        border-radius: 8px;
+        padding: 6px 10px;
+        background: var(--belyy-100);
+        font-family: var(--second-family);
+        font-weight: 700;
+        font-size: 9px;
+        text-transform: uppercase;
+        text-align: center;
+        color: var(--tekst-dark-100);
+        margin-bottom: 12px;
+        width: fit-content;
+      }
+
+      .anonymous-test__subtitle,
+      .anonymous-test__title {
+        color: var(--belyy-100);
+      }
+
+      .anonymous-test {
+        border-radius: 30px;
+        padding: 70px 0px;
+        background: #5AAFEF;
+      }
+
+      .anonymous-test__wrapper {
+        border-radius: 26px;
+        padding: 20px;
+        background: var(--belyy-100);
+      }
+
+      .anonymous-test__tabs {
+        margin-bottom: 24px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        width: 415px;
+      }
+
+      .anonymous-test__tab {
+        border-radius: 10px;
+        padding: 10px;
+        font-family: var(--second-family);
+        font-weight: 700;
+        font-size: 9px;
+        line-height: 133%;
+        text-transform: uppercase;
+        color: var(--tekst-dark-100);
+        background-color: var(--belyy-100);
+      }
+
+      .anonymous-test__tab.active {
+        background: var(--glubina-doveriya);
+        color: var(--belyy-100);
+      }
+
+      .anonymous-test__question {
+        font-family: var(--second-family);
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 133%;
+        text-transform: uppercase;
+        color: var(--tekst-dark-100);
+        margin-bottom: 12px;
+      }
+
+
+      .anonymous-test__answer {
+        display: flex;
+        border-radius: 12px;
+        padding: 12px;
+        justify-content: space-between;
+        align-items: center;
+        font-family: var(--second-family);
+        font-weight: 700;
+        font-size: 9px;
+        line-height: 133%;
+        text-transform: uppercase;
+        color: var(--tekst-dark-100);
+        background: var(--fonovyy);
+        margin-bottom: 4px;
+        cursor: pointer;
+      }
+
+      .anonymous-test__answers {
+        margin-bottom: 76px;
+      }
+
+      .anonymous-test-bottom {
+        border-radius: 50px;
+        padding: 4px;
+        background: var(--fonovyy);
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        align-items: center;
+      }
+
+      .anonymous-test__next,
+      .anonymous-test__prev {
+        border-radius: 40px;
+        padding: 16px 18px;
+        background: white;
+        font-family: var(--second-family);
+        font-weight: 700;
+        font-size: 9px;
+        line-height: 133%;
+        text-transform: uppercase;
+        text-align: center;
+        opacity: 0.5;
+        color: var(--tekst-dark-100);
+      }
+
+      .anonymous-test__next.active,
+      .anonymous-test__prev.active {
+        opacity: 1;
+      }
+
+      .anonymous-test__currents {
+        font-family: var(--second-family);
+        font-weight: 700;
+        font-size: 11px;
+        line-height: 136%;
+        text-transform: uppercase;
+        text-align: center;
+        color: var(--tekst-dark-100);
+      }
+
+      #anonymous-test__total {
+        color: var(--tekst-dark-30);
+      }
+
+      .anonymous-test__wrapper .primarycolor-btn {
+        margin-bottom: 8px;
+        padding: 1px 5px 1px 22px;
+        height: 38px;
+      }
+
+      .anonymous-test__wrapper .primarycolor-btn:hover {
+        background: var(--ogon-vozrozhdeniya-700);
+        color: white;
+      }
+
+      .anonymous-test__wrapper .primarycolor-btn span {
+        width: 30px;
+        height: 30px;
+      }
+
+      .anonymous-test__wrapper .primarycolor-btn svg {
+        width: 8px;
+        height: 12px;
+      }
+
+      .anonymous-test__wrapper .primarycolor-btn:hover svg path {
+        fill: var(--ogon-vozrozhdeniya-800);
+      }
+
+      .anonymous-test__tabs-wrapper {
+        overflow-x: auto;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+      }
+      .anonymous-test__btn,
+      .anonymous-test__tabs-wrapper::-webkit-scrollbar {
+        display: none;
+      }
+
+      .anonymous-test__btn.active {
+        display: flex;
+      }
+    </style>
+    <section class="anonymous-test section__general">
+      <div class="anonymous-test__container container">
+        <div class="anonymous-test__top section__top">
+          <p class="anonymous-test__tag">
+            Анонимный тест
+          </p>
+          <p class="anonymous-test__title section__title-general">
+            Проверьте, нужна ли помощь
+          </p>
+          <div class="anonymous-test__content">
+            <div>
+              <p class="anonymous-test__subtitle section__subtitle-general">Короткий анонимный тест поможет оценить
+                ситуацию и понять, стоит ли обратиться к специалисту. Регистрация не нужна</p>
+            </div>
+          </div>
+        </div>
+        <div class="anonymous-test__wrapper">
+          <div class="anonymous-test__main" id="anonymous-test__main">
+            <div class="anonymous-test__tabs-wrapper">
+              <div class="anonymous-test__tabs">
+                <button class="anonymous-test__tab active" data-test="adult">Для взрослых</button>
+                <button class="anonymous-test__tab" data-test="parent">Родителям о ребенке</button>
+                <button class="anonymous-test__tab" data-test="express">Экспресс-тест</button>
+              </div>
+            </div>
+            <div class="anonymous-test__question"></div>
+            <div class="anonymous-test__answers"></div>
+            <button class="anonymous-test__btn primarycolor-btn  popup-btn" data-path="popup-program">
+              <i></i>узнать результаты<span><svg width="10" height="16" viewBox="0 0 10 16" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0 16L6.68516 8L0 0H3.29412L10 8L3.29412 16H0Z" fill="#07253F" />
+                </svg>
+              </span>
+            </button>
+            <div class="anonymous-test-bottom">
+              <button class="anonymous-test__prev" id="anonymous-test__prev">Назад</button>
+              <span class="anonymous-test__currents"><span id="anonymous-test__current">1</span>/<span
+                  id="anonymous-test__total">4</span></span>
+              <button class="anonymous-test__next" id="anonymous-test__next">Далее</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <pre class="anonymous-test__analis"></pre>
+    </section>
+    <script>
+      const tests = {
+        adult: {
+          name: "Для взрослых",
+          questions: [
+            {
+              question: "Как часто в последние 6 месяцев употреблялось алкоголь или ПАВ?",
+              answers: ["Никогда", "Иногда", "Регулярно", "Ежедневно"]
+            },
+            {
+              question: "Были ли проблемы из-за употребления?",
+              answers: ["Нет", "Редко", "Иногда", "Часто"]
+            },
+            {
+              question: "Пытались отказаться?",
+              answers: ["Нет", "1 раз", "Несколько раз", "Постоянно"]
+            },
+            {
+              question: "Есть желание изменить ситуацию?",
+              answers: ["Нет", "Скорее нет", "Скорее да", "Да"]
+            }
+          ]
+        },
+
+        parent: {
+          name: "Родителям о ребенке",
+          questions: [
+            {
+              question: "Замечали изменения поведения?",
+              answers: ["Нет", "Иногда", "Часто", "Постоянно"]
+            },
+            {
+              question: "Появились новые подозрительные друзья?",
+              answers: ["Нет", "Не знаю", "Да", "Много"]
+            },
+            {
+              question: "Ребенок скрывает информацию?",
+              answers: ["Нет", "Редко", "Иногда", "Постоянно"]
+            },
+            {
+              question: "Есть повод обратиться к специалисту?",
+              answers: ["Нет", "Возможно", "Да", "Срочно"]
+            }
+          ]
+        },
+
+        express: {
+          name: "Экспресс-тест",
+          questions: [
+            {
+              question: "Употребляли алкоголь за последний месяц?",
+              answers: ["Нет", "1-2 раза", "Несколько раз", "Часто"]
+            },
+            {
+              question: "Испытывали желание употребить?",
+              answers: ["Нет", "Редко", "Иногда", "Постоянно"]
+            },
+            {
+              question: "Мешает ли это жизни?",
+              answers: ["Нет", "Немного", "Да", "Очень"]
+            },
+            {
+              question: "Хотите получить помощь?",
+              answers: ["Нет", "Не знаю", "Да", "Срочно"]
+            }
+          ]
+        }
+      };
+
+      let currentTest = "adult";
+      let currentQuestion = 0;
+      let userAnswers = [];
+
+      const question = document.querySelector(".anonymous-test__question");
+      const answers = document.querySelector(".anonymous-test__answers");
+      const analis = document.querySelector(".anonymous-test__analis");
+
+      const current = document.getElementById("anonymous-test__current");
+      const total = document.getElementById("anonymous-test__total");
+
+      const prevBtn = document.getElementById("anonymous-test__prev");
+      const nextBtn = document.getElementById("anonymous-test__next");
+      const resultBtn = document.querySelector(".anonymous-test__btn");
+
+      function updateButtons() {
+        const test = tests[currentTest];
+        const isLast = currentQuestion === test.questions.length - 1;
+        const answered = userAnswers[currentQuestion] !== undefined;
+
+        // Назад
+        prevBtn.disabled = currentQuestion === 0;
+        prevBtn.classList.toggle("active", currentQuestion > 0);
+
+        // Последний вопрос
+        if (isLast) {
+          nextBtn.innerHTML =
+            '<img src="assets/img/icons/test-res.svg" alt="рестарт">';
+          nextBtn.classList.add("active");
+          nextBtn.disabled = false;
+
+          resultBtn.classList.toggle("active", answered);
+        } else {
+          nextBtn.textContent = "Далее";
+          nextBtn.disabled = !answered;
+          nextBtn.classList.toggle("active", answered);
+
+          resultBtn.classList.remove("active");
+        }
+      }
+
+      function render() {
+        const test = tests[currentTest];
+        const q = test.questions[currentQuestion];
+
+        question.textContent = q.question;
+        answers.innerHTML = "";
+
+        q.answers.forEach((text, index) => {
+          const label = document.createElement("label");
+          label.className = "anonymous-test__answer";
+
+          label.innerHTML = `
+      <input type="radio" name="anonymous-answer" value="${index}">
+      <span>${text}</span>
+    `;
+
+          const input = label.querySelector("input");
+
+          if (userAnswers[currentQuestion] === index) {
+            input.checked = true;
+          }
+
+          input.addEventListener("change", () => {
+            userAnswers[currentQuestion] = index;
+            updateButtons();
+          });
+
+          answers.appendChild(label);
+        });
+
+        current.textContent = currentQuestion + 1;
+        total.textContent = test.questions.length;
+
+        updateButtons();
+      }
+
+      render();
+
+      prevBtn.addEventListener("click", () => {
+        if (currentQuestion > 0) {
+          currentQuestion--;
+          render();
+        }
+      });
+
+      nextBtn.addEventListener("click", () => {
+        const test = tests[currentTest];
+        const isLast = currentQuestion === test.questions.length - 1;
+
+        // Последний вопрос = рестарт
+        if (isLast) {
+          currentQuestion = 0;
+          userAnswers = [];
+          analis.textContent = "";
+          resultBtn.classList.remove("active");
+          render();
+          return;
+        }
+
+        // Пока ответ не выбран — дальше нельзя
+        if (nextBtn.disabled) return;
+
+        currentQuestion++;
+        render();
+      });
+
+      // Получение результатов
+      resultBtn.addEventListener("click", () => {
+        const test = tests[currentTest];
+
+        const result = {
+          test: test.name,
+          answers: test.questions.map((q, i) => ({
+            question: q.question,
+            answer:
+              userAnswers[i] !== undefined
+                ? q.answers[userAnswers[i]]
+                : null
+          }))
+        };
+
+        analis.textContent = JSON.stringify(result, null, 4);
+      });
+
+      document.querySelectorAll(".anonymous-test__tab").forEach(tab => {
+        tab.addEventListener("click", () => {
+          document
+            .querySelectorAll(".anonymous-test__tab")
+            .forEach(btn => btn.classList.remove("active"));
+
+          tab.classList.add("active");
+
+          currentTest = tab.dataset.test;
+          currentQuestion = 0;
+          userAnswers = [];
+          analis.textContent = "";
+
+          resultBtn.classList.remove("active");
+
+          render();
+        });
+      });
+    </script>
   </main>
   <footer class="footer">
   </footer>
