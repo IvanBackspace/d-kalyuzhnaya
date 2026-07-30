@@ -1655,6 +1655,7 @@
         scrollbar-width: none;
         -ms-overflow-style: none;
       }
+
       .anonymous-test__btn,
       .anonymous-test__tabs-wrapper::-webkit-scrollbar {
         display: none;
@@ -1662,6 +1663,23 @@
 
       .anonymous-test__btn.active {
         display: flex;
+      }
+
+      .anonymous-test__radio {
+        border-radius: 30px;
+        width: 16px;
+        height: 16px;
+        background: var(--belyy-100);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .anonymous-test__answer.active .anonymous-test__radio span {
+        border-radius: 30px;
+        width: 12px;
+        height: 12px;
+        background: var(--ogon-vozrozhdeniya-800);
       }
     </style>
     <section class="anonymous-test section__general">
@@ -1831,7 +1849,7 @@
           label.className = "anonymous-test__answer";
 
           label.innerHTML = `
-      <input type="radio" name="anonymous-answer" value="${index}">
+      <input type="radio" name="anonymous-answer" value="${index}"><span class="anonymous-test__radio"><span></span></span>
       <span>${text}</span>
     `;
 
@@ -1841,8 +1859,18 @@
             input.checked = true;
           }
 
+          if (userAnswers[currentQuestion] === index) {
+            label.classList.add("active");
+          }
+
           input.addEventListener("change", () => {
             userAnswers[currentQuestion] = index;
+            answers
+              .querySelectorAll(".anonymous-test__answer")
+              .forEach(item => item.classList.remove("active"));
+
+            // добавляем active выбранному
+            label.classList.add("active");
             updateButtons();
           });
 
