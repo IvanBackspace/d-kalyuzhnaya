@@ -1351,6 +1351,276 @@
         </div>
       </div>
     </section>
+    <section class="specialized-clinic section__general">
+      <div class="specialized-clinic__container container">
+        <div class="specialized-clinic__top section__top">
+          <p class="specialized-clinic__title section__title-general">Государственный диспансер <span>vs клиника
+              КДК</span>
+          </p>
+        </div>
+        <div class="specialized-clinic__items">
+          <ul class="specialized-clinic__advantages">
+            <li>Анонимность</li>
+            <li>Условия проживания</li>
+            <li>Программа лечения</li>
+            <li>Специалисты</li>
+            <li>Поддержка после выписки</li>
+          </ul>
+          <div class="specialized-clinic__functionals-wrapper">
+            <div class="specialized-clinic__functionals">
+              <div class="specialized-clinic__functional specialized-clinic__functional--standard">
+                <p class="specialized-clinic__functional-subtitle">Стандартные условия и узкий функционал</p>
+                <div class="specialized-clinic__functional-main">
+                  <p class="specialized-clinic__functional-title">
+                    Государственный диспансер
+                  </p>
+                  <ul class="specialized-clinic__functional-list">
+                    <li>Постановка на учёт. Ограничения на права и работу.</li>
+                    <li>Переполненные палаты, старый ремонт, скудное меню.</li>
+                    <li>Только медикаменты. Психологической работы нет.</li>
+                    <li>Только нарколог. Узкая специализация.</li>
+                    <li>Выписка «в никуда». Срыв в первые недели.</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="specialized-clinic__functional">
+                <p class="specialized-clinic__functional-subtitle">комфорт и широкий функционал реабилитации</p>
+                <div class="specialized-clinic__functional-main">
+                  <p class="specialized-clinic__functional-title">
+                    Клиника доктора калюжной
+                  </p>
+                  <ul class="specialized-clinic__functional-list">
+                    <li>100% анонимно. Данные не передаются, на учёт не ставим.</li>
+                    <li>2-4-местные палаты, кондиционер, матрасы, питание, спортзал, баня.</li>
+                    <li>Авторская программа медико-социальной реабилитации + медикаменты</li>
+                    <li>Штатные врачи, психологи, аддиктологи, диетолог.</li>
+                    <li>ПЛП, кураторы 24/7, помощь в трудоустройстве.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="plp section__general">
+      <div class="plp__container container">
+        <div class="plp__top section__top">
+          <p class="plp__title section__title-general">
+            ПЛП — <span>сопровождение после выписки</span>
+          </p>
+          <div class="plp__content">
+            <div>
+              <p class="plp__subtitle section__subtitle-general">Выписка — не конец программы. Первые месяцы после
+                возвращения домой — самый уязвимый период. Наши кураторы остаются рядом.</p>
+            </div>
+          </div>
+        </div>
+        <style>
+          .plp__main {
+            overflow-x: auto;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+            margin-bottom: 12px;
+          }
+
+          .plp__main::-webkit-scrollbar {
+            display: none;
+          }
+
+          .plp__items {
+            display: flex;
+            gap: 10px;
+            width: 1340px;
+          }
+
+          .plp__item {
+            border-radius: 26px;
+            padding: 20px;
+            background: var(--belyy-100);
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+            justify-content: space-between;
+            align-items: center;
+            flex: 0 0 calc((100% - 40px)/5);
+          }
+
+          .plp__item-num {
+            border-radius: 8px;
+            padding: 6px 10px;
+            background: var(--fonovyy);
+            font-family: var(--second-family);
+            font-weight: 700;
+            font-size: 9px;
+            text-transform: uppercase;
+            text-align: center;
+            color: var(--tekst-dark-100);
+          }
+
+          .plp__item-title {
+            font-family: var(--second-family);
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 129%;
+            text-transform: uppercase;
+            text-align: center;
+            color: var(--tekst-dark-100);
+            margin-bottom: 10px;
+          }
+
+          .plp__item-subtitle {
+            font-family: var(--font-family);
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 143%;
+            text-align: center;
+            color: var(--tekst-dark-80);
+          }
+
+          .plp {
+            background: var(--fonovyy);
+            border-radius: 30px;
+            padding: 70px 0px;
+          }
+
+          .plp__btn {
+            width: 100%;
+          }
+
+          @media (min-width:500px) {
+            .plp__btn {
+              width: fit-content;
+            }
+          }
+
+          @media (min-width:1025px) {
+            .plp__main {
+              margin-bottom: 40px;
+            }
+
+            .plp__items {
+              display: flex;
+              flex-wrap: wrap;
+              width: 100%;
+            }
+
+            .plp__item {
+              border-radius: 40px;
+              padding: 28px;
+              gap: 68px;
+              flex: 0 0 calc((100% - 30px)/3);
+            }
+
+            .plp__item-num {
+              border-radius: 12px;
+              padding: 8px 14px;
+              font-size: 12px;
+            }
+
+            .plp__item-title {
+              font-size: 16px;
+              margin-bottom: 16px;
+            }
+
+            .plp__item-subtitle {
+              font-size: 16px;
+            }
+
+            .plp {
+              border-radius: 60px;
+              padding: 160px 0px;
+            }
+          }
+
+          @media (min-width:1200px) {
+            .plp__item {
+              flex: 0 0 calc((100% - 30px)/4);
+            }
+          }
+
+          @media (min-width:1300px) {
+            .plp__item {
+              flex: 0 0 calc((100% - 40px)/5);
+            }
+          }
+        </style>
+        <div class="plp__main">
+          <div class="plp__items">
+            <div class="plp__item">
+              <p class="plp__item-num">
+                01
+              </p>
+              <div class="plp__item-bottom">
+                <p class="plp__item-title">
+                  персональный куратор
+                </p>
+                <p class="plp__item-subtitle">
+                  Постоянный специалист на связи 24/7 — звонок при любом тревожном состоянии
+                </p>
+              </div>
+            </div>
+            <div class="plp__item">
+              <p class="plp__item-num">
+                02
+              </p>
+              <div class="plp__item-bottom">
+                <p class="plp__item-title">
+                  Регулярные сессии
+                </p>
+                <p class="plp__item-subtitle">
+                  Плановые встречи с психологом для отслеживания динамики и профилактики срыва
+                </p>
+              </div>
+            </div>
+            <div class="plp__item">
+              <p class="plp__item-num">
+                03
+              </p>
+              <div class="plp__item-bottom">
+                <p class="plp__item-title">
+                  Помощь в поиске работы
+                </p>
+                <p class="plp__item-subtitle">
+                  Поддержка в поиске работы и адаптации к рабочей среде
+                </p>
+              </div>
+            </div>
+            <div class="plp__item">
+              <p class="plp__item-num">
+                04
+              </p>
+              <div class="plp__item-bottom">
+                <p class="plp__item-title">
+                  Реагирование  при угрозе срыва
+                </p>
+                <p class="plp__item-subtitle">
+                  Немедленное подключение специалиста — до того,  как произошёл сры
+                </p>
+              </div>
+            </div>
+            <div class="plp__item">
+              <p class="plp__item-num">
+                05
+              </p>
+              <div class="plp__item-bottom">
+                <p class="plp__item-title">
+                  Продолжение семейной работы
+                </p>
+                <p class="plp__item-subtitle">
+                  Сессии с близкими для сохранения здоровой обстановки дома
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="plp__links section__links-general">
+          <button class="plp__btn primary-btn  popup-btn" data-path="popup-sing">
+            <i></i>Узнать подробнее<span></span>
+          </button>
+        </div>
+      </div>
+    </section>
   </main>
   <footer class="footer">
   </footer>
