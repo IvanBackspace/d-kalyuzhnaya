@@ -2493,7 +2493,7 @@ input {
     .path-circulation {
         background: var(--fonovyy);
         border-radius: 60px;
-        padding: 160px 145px;
+        padding: 160px 0px;
     }
 
     .path-circulation__item {
@@ -2827,5 +2827,207 @@ input {
     .what-do .work-each__item img {
         left: 21%;
 
+    }
+}
+
+.children-adolescents {
+    background: var(--fonovyy);
+    border-radius: 30px;
+    padding: 70px 0px;
+}
+
+.children-adolescents__subtitle--top {
+    margin-bottom: 8px;
+}
+
+.children-adolescents__subtitle--bottom {
+    margin-bottom: 16px;
+}
+
+.children-adolescents__btn {
+    width: 100%;
+}
+
+.children-adolescents__top {
+    margin-bottom: 20px;
+}
+
+.children-adolescents__items {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.children-adolescents__item {
+    border-radius: 26px;
+    padding: 20px;
+    background: var(--belyy-100);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.children-adolescents__item-title {
+    font-family: var(--second-family);
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: var(--tekst-dark-100);
+}
+
+.children-adolescents__item-subtitle {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 14px;
+    color: var(--tekst-dark-80);
+}
+
+@media (min-width: 1025px) {
+    .children-adolescents {
+        border-radius: 60px;
+        padding: 160px 0px;
+    }
+
+    .children-adolescents__subtitle--top {
+        margin-bottom: 16px;
+    }
+
+    .children-adolescents__subtitle--bottom {
+        margin-bottom: 40px;
+    }
+
+    .children-adolescents__btn {
+        width: fit-content;
+    }
+
+    .children-adolescents__items {
+        gap: 20px;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+
+    .children-adolescents__item {
+        border-radius: 40px;
+        padding: 32px;
+        gap: 60px;
+        flex: 0 0 calc((100% - 20px) / 2);
+        min-height: 225px;
+    }
+
+    .children-adolescents__item-title {
+        font-size: 20px;
+    }
+
+    .children-adolescents__item-subtitle {
+        font-size: 16px;
+    }
+
+    .children-adolescents__subtitle {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 1220px) {
+    .children-adolescents__top {
+        margin-bottom: 0px;
+        width: 46%;
+    }
+
+    .children-adolescents__info {
+        width: 49%;
+    }
+
+    .children-adolescents__wrapper {
+        display: flex;
+        justify-content: space-between;
+        gap: 15px;
+    }
+
+}
+
+.strength-returning__item {
+    border-radius: 26px;
+    padding: 6px;
+    background: var(--fonovyy);
+}
+
+.strength-returning__item-wrapper {
+    padding: 18px;
+    background: var(--belyy-10);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 48px;
+    align-items: center;
+    box-shadow:
+        inset 0 2px 6px rgba(255, 255, 255, .8),
+        inset 0 -4px 10px rgba(0, 0, 0, .08);
+}
+
+.strength-returning__item-title {
+    font-family: var(--second-family);
+    font-weight: 700;
+    font-size: 16px;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--tekst-dark-100);
+    margin-bottom: 10px;
+}
+
+.strength-returning__item-subtitle {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 14px;
+    text-align: center;
+    color: var(--tekst-dark-80);
+}
+
+.strength-returning__item-nun {
+    border-radius: 8px;
+    padding: 6px 10px;
+    background: var(--belyy-100);
+    display: flex;
+    font-family: var(--second-family);
+    font-weight: 700;
+    font-size: 9px;
+    line-height: 133%;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--tekst-dark-100);
+}
+
+@media (min-width: 1025px) {
+
+    .strength-returning__top {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .strength-returning__item {
+        border-radius: 40px;
+        padding: 10px;
+    }
+
+    .strength-returning__item-wrapper {
+        padding: 34px;
+        border-radius: 30px;
+        gap: 48px;
+        min-height: 290px;
+    }
+
+    .strength-returning__item-title {
+        font-size: 20px;
+        margin-bottom: 16px;
+    }
+
+    .strength-returning__item-subtitle {
+        font-size: 16px;
+    }
+
+    .strength-returning__item-nun {
+        border-radius: 12px;
+        padding: 8px 14px;
+        font-size: 14px;
     }
 }
