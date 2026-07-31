@@ -175,6 +175,18 @@
                 }
             }
         });
+
+        /* simple spoiler */
+        document.querySelectorAll('[data-action="spoiler"]').forEach(function (element) {
+            element.addEventListener('click', function () {
+                let target = document.querySelector(`[data-spoiler="${this.dataset.target}"]`);
+                if (target) {
+                    target.classList.toggle('active');
+                    const spoiler = element.querySelector('.spoiler')
+                    if (spoiler) { spoiler.classList.toggle('active'); }
+                }
+            });
+        });
     });
 
     // function initModalWorker() {
