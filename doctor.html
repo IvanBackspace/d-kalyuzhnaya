@@ -1,0 +1,510 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="initial-scale=1.0, width=device-width">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="assets/css/style.css" rel="stylesheet" type="text/css">
+  <link href="assets/css/mobile.css" rel="stylesheet" type="text/css">
+  <link href="assets/css/desktop.css" rel="stylesheet" type="text/css">
+  <link href="assets/css/swiper.css" rel="stylesheet" type="text/css">
+  <script src="assets/js/build/fancybox.min.js" defer></script>
+</head>
+
+<body class="body">
+  <div class="hero__wrap">
+    <div class="hero">
+      <header class="header">
+        <div class="header__container container">
+          <div class="header__top">
+            <a href="/" class="header__logo">
+              <picture class="logo">
+                <source srcset="assets/img/logo/logo.svg" type="image/svg+xml">
+                <img src="assets/img/logo/logo.png" alt="логотип наркологической клиники"
+                  title="логотип наркологической клиники">
+              </picture>
+            </a>
+            <div class="header__info header__info--address">
+              <p>Краснодар, <br>ул. Алма-Атинская, д. 99</p>
+            </div>
+            <div class="header__info header__info--time">
+              <p>Круглосуточно, <br>работаем 24/7</p>
+            </div>
+            <div class="header__info header__info--license">
+              <p>Лицензия № Л041-01126-<br>23/01066181 <a href="#">Проверить</a></p>
+            </div>
+            <div class="header__social">
+              <a href="#">
+                <picture class="logo">
+                  <source srcset="assets/img/icons/wh.svg" type="image/svg+xml">
+                  <img src="assets/img/icons/wh.png" alt="логотип whatsapp" title="whatsapp">
+                </picture>
+              </a>
+              <a href="#">
+                <picture class="logo">
+                  <source srcset="assets/img/icons/tg.svg" type="image/svg+xml">
+                  <img src="assets/img/icons/tg.png" alt="логотип telegram" title="telegram">
+                </picture>
+              </a>
+            </div>
+            <div class="header__phone">
+              <a href="tel:+79034110003">
+                +7 (903) 411–00–03
+              </a>
+              <p>Звонок анонимен</p>
+            </div>
+            <div class="header__contacts">
+              <button class="header__contacts-btn btn--belyy-15">
+                Вызвать врача
+              </button>
+              <button class="header__contacts-btn btn--white">
+                Консультация
+              </button>
+            </div>
+          </div>
+          <div class="header__bottom">
+            <a href="/" class="header__logo header__logo--mobile">
+              <picture class="logo">
+                <source srcset="assets/img/logo/logo.svg" type="image/svg+xml">
+                <img src="assets/img/logo/logo.png" alt="логотип наркологической клиники"
+                  title="логотип наркологической клиники">
+              </picture>
+            </a>
+            <div class="header__btns">
+              <div class="header__phone-mobile">
+                <a href="tel:+79034110003"><img src="assets/img/icons/phone-white.png" alt="Иконка телефона"></a>
+              </div>
+              <button class="burger" id="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+              </button>
+            </div>
+            <div class="header__bottom-info" id="header__bottom-info">
+              <nav class="menu">
+                <ul class="menu__list">
+                  <li class="menu__item menu__item--submenu">
+                    <a class="menu__link" href="#">О центре</a>
+                    <button class="menu__toggle"></button>
+                    <div class="submenu">
+                      <button class="submenu__toggle">Назад</button>
+                      <ul class="submenu__list">
+                        <li><a class="submenu__link" href="#">О центре 1</a></li>
+                        <li><a class="submenu__link" href="#">О центре 2</a></li>
+                        <li><a class="submenu__link" href="#">О центре 3</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="menu__item menu__item--submenu">
+                    <a class="menu__link" href="#">Программа</a>
+                    <button class="menu__toggle"></button>
+                    <div class="submenu">
+                      <button class="submenu__toggle">Назад</button>
+                      <ul class="submenu__list">
+                        <li><a class="submenu__link" href="#">Программа 1</a></li>
+                        <li><a class="submenu__link" href="#">Программа 2</a></li>
+                        <li><a class="submenu__link" href="#">Программа 3</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="menu__item">
+                    <a class="menu__link" href="#">Врачи</a>
+                  </li>
+                  <li class="menu__item">
+                    <a class="menu__link" href="#">Программа</a>
+                  </li>
+                  <li class="menu__item">
+                    <a class="menu__link" href="#">Семья</a>
+                  </li>
+                  <li class="menu__item">
+                    <a class="menu__link" href="#">Условия</a>
+                  </li>
+                  <li class="menu__item">
+                    <a class="menu__link" href="#">Цены</a>
+                  </li>
+                  <li class="menu__item">
+                    <a class="menu__link" href="#">Отзывы</a>
+                  </li>
+                  <li class="menu__item">
+                    <a class="menu__link" href="#">FAQ</a>
+                  </li>
+                  <li class="menu__item">
+                    <a class="menu__link" href="#">Контакты</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="intro">
+        <div class="intro__container container">
+          <div class="intro__wrapper">
+            <div class="intro__content">
+              <div class="breadcrumbs">
+                <div class="breadcrumbs__wrapper">
+                  <ul class="breadcrumbs__list">
+                    <li class="breadcrumbs__item"><a href="/" class="breadcrumbs__link">Главная</a></li>
+                    <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Врачи</a></li>
+                    <li class="breadcrumbs__item"><span class="breadcrumbs__link-text">Калюжная Марина
+                        Александровна</span></li>
+                  </ul>
+                </div>
+              </div>
+              <p class="intro__tag">Директор клиники</p>
+              <h1 class="title__general">Калюжная Марина Алксандровна</h1>
+              <div class="intro__doctor">
+                <picture class="intro__doctor-picture">
+                  <source srcset="" type="image/webp" />
+                  <img src="assets/img/icons/doc.png" alt="" title="" loading="lazy" />
+                </picture>
+                <div class="intro__doctor-svg">
+                  <svg width="1228" height="811" viewBox="0 0 1228 811" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M129.514 1448.1C179.847 1508.59 277.872 1483.06 292.314 1405.71L481.301 393.544C489.502 349.62 527.8 317.748 572.483 317.662L1602.14 315.671C1680.83 315.519 1723.73 223.76 1673.4 163.279L1565.39 33.4893C1547.72 12.2607 1521.53 -0.0113822 1493.91 3.50661e-05L308.673 0.489396C263.883 0.507892 225.478 32.4691 217.324 76.5105L1.55376 1241.94C-3.4741 1269.1 3.83614 1297.09 21.5026 1318.32L129.514 1448.1Z"
+                      fill="white" fill-opacity="0.06" />
+                  </svg>
+
+                </div>
+                <div class="intro__doctor-items">
+                  <div class="intro__doctor-item">
+                    <p>Специальность</p>
+                    <p>Психиатр-нарколог</p>
+                  </div>
+                  <div class="intro__doctor-item">
+                    <p>Стаж работы</p>
+                    <p>13 лет</p>
+                  </div>
+                  <div class="intro__doctor-item">
+                    <p>Ученая степень</p>
+                    <p>Кандидат мед. Наук</p>
+                  </div>
+                </div>
+              </div>
+              <div class="intro__btns">
+                <button class="intro__btn primary-btn  popup-btn" data-path="popup-sing">
+                  <i></i>Записаться на прием<span></span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <main class="main">
+    <section class="doctor-detailed">
+      <div class="doctor-detailed__container container">
+        <div class="doctor-detailed__wrapper">
+          <div class="doctor-detailed__content">
+            <div class="doctor-detailed__item">
+              <p class="doctor-detailed__item-title">
+                О враче
+              </p>
+              <p class="doctor-detailed__item-subtitle">
+                Марина Александровна Калюжная — врач-психиатр, нарколог высшей квалификационной категории, кандидат
+                медицинских наук. Специализируется на лечении алкогольной, наркотической и лекарственной зависимостей, а
+                также на терапии тревожных и депрессивных расстройств. В своей работе использует доказательные методики,
+                индивидуальный подход и принципы анонимности. Автор более 45 научных публикаций, постоянный участник
+                конференций по аддиктологии.
+              </p>
+              <div class="doctor-detailed__item-links">
+                <a class="doctor-detailed__item-link" href="#">
+                  <div><img src="assets/img/doc/sber.png" alt="Сберздоровье"></div>
+                  <span>
+                    <p>Сберздоровье</p>
+                    <p>4.7<img src="assets/img/doc/stars.png" alt="Звезды"></p>
+                  </span>
+                </a>
+                <a class="doctor-detailed__item-link" href="#">
+                  <div><img src="assets/img/doc/prodoctor.png" alt="Сберздоровье"></div>
+                  <span>
+                    <p>продокторов</p>
+                    <p>4.7<img src="assets/img/doc/stars.png" alt="Звезды"></p>
+                  </span>
+                </a>
+                <a class="doctor-detailed__item-link" href="#">
+                  <div><img src="assets/img/doc/gmap.png" alt="Google Maps"></div>
+                  <span>
+                    <p>Google Maps</p>
+                    <p>4.7<img src="assets/img/doc/stars.png" alt="Звезды"></p>
+                  </span>
+                </a>
+                <a class="doctor-detailed__item-link" href="#">
+                  <div><img src="assets/img/doc/zoon.png" alt="zoon"></div>
+                  <span>
+                    <p>zoon.ru</p>
+                    <p>4.7<img src="assets/img/doc/stars.png" alt="Звезды"></p>
+                  </span>
+                </a>
+                <a class="doctor-detailed__item-link" href="#">
+                  <div><img src="assets/img/doc/yandex.png" alt="Яндекс карты"></div>
+                  <span>
+                    <p>Яндекс.карты</p>
+                    <p>4.7<img src="assets/img/doc/stars.png" alt="Звезды"></p>
+                  </span>
+                </a>
+              </div>
+            </div>
+            <div class="doctor-detailed__item">
+              <p class="doctor-detailed__item-title">
+                Сфера практических интересов
+              </p>
+              <div class="doctor-detailed__interests">
+                <div class="doctor-detailed__interest">
+                  <div class="doctor-detailed__interest-img">
+                    <img src="assets/img/doc/roup.svg" alt="">
+                  </div>
+                  <p class="doctor-detailed__interest-text">
+                    Алкогольная зависимость
+                  </p>
+                </div>
+                <div class="doctor-detailed__interest">
+                  <div class="doctor-detailed__interest-img">
+                    <img src="assets/img/doc/roup.svg" alt="">
+                  </div>
+                  <p class="doctor-detailed__interest-text">
+                    Наркотическая зависимость
+                  </p>
+                </div>
+                <div class="doctor-detailed__interest">
+                  <div class="doctor-detailed__interest-img">
+                    <img src="assets/img/doc/roup.svg" alt="">
+                  </div>
+                  <p class="doctor-detailed__interest-text">
+                    Лекарственная зависимость (габапентин, лирика)
+                  </p>
+                </div>
+                <div class="doctor-detailed__interest">
+                  <div class="doctor-detailed__interest-img">
+                    <img src="assets/img/doc/roup.svg" alt="">
+                  </div>
+                  <p class="doctor-detailed__interest-text">
+                    Тревожные и депрессивные расстройства
+                  </p>
+                </div>
+                <div class="doctor-detailed__interest">
+                  <div class="doctor-detailed__interest-img">
+                    <img src="assets/img/doc/roup.svg" alt="">
+                  </div>
+                  <p class="doctor-detailed__interest-text">
+                    Кодирование (Довженко, Торпедо, Вивитрол)
+                  </p>
+                </div>
+                <div class="doctor-detailed__interest">
+                  <div class="doctor-detailed__interest-img">
+                    <img src="assets/img/doc/roup.svg" alt="">
+                  </div>
+                  <p class="doctor-detailed__interest-text">
+                    Реабилитация и постреабилитационное сопровождение
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="doctor-detailed__item">
+              <p class="doctor-detailed__item-title">
+                Образование и квалификация
+              </p>
+              <div class="doctor-detailed__qualifications-wrapper">
+                <div class="doctor-detailed__qualifications">
+                  <div class="doctor-detailed__qualification">
+                    <p class="doctor-detailed__qualification-date">
+                      2009
+                    </p>
+                    <div class="doctor-detailed__qualification-bottom">
+                      <p class="doctor-detailed__qualification-title">
+                        Читинская государственная медицинская академия
+                      </p>
+                      <p class="doctor-detailed__qualification-subtitle">
+                        Педиатрия
+                      </p>
+                    </div>
+                  </div>
+                  <div class="doctor-detailed__qualification">
+                    <p class="doctor-detailed__qualification-date">
+                      2009
+                    </p>
+                    <div class="doctor-detailed__qualification-bottom">
+                      <p class="doctor-detailed__qualification-title">
+                        Читинская государственная медицинская академия
+                      </p>
+                      <p class="doctor-detailed__qualification-subtitle">
+                        Педиатрия
+                      </p>
+                    </div>
+                  </div>
+                  <div class="doctor-detailed__qualification">
+                    <p class="doctor-detailed__qualification-date">
+                      2009
+                    </p>
+                    <div class="doctor-detailed__qualification-bottom">
+                      <p class="doctor-detailed__qualification-title">
+                        Читинская государственная медицинская академия
+                      </p>
+                      <p class="doctor-detailed__qualification-subtitle">
+                        Педиатрия
+                      </p>
+                    </div>
+                  </div>
+                  <div class="doctor-detailed__qualification">
+                    <p class="doctor-detailed__qualification-date">
+                      2009
+                    </p>
+                    <div class="doctor-detailed__qualification-bottom">
+                      <p class="doctor-detailed__qualification-title">
+                        Читинская государственная медицинская академия
+                      </p>
+                      <p class="doctor-detailed__qualification-subtitle">
+                        Педиатрия
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="doctor-detailed__item">
+              <p class="doctor-detailed__item-title">
+                Повышение квалификации
+              </p>
+              <div class="doctor-detailed__qualifications-wrapper">
+                <div class="doctor-detailed__qualifications">
+                  <div class="doctor-detailed__qualification">
+                    <p class="doctor-detailed__qualification-date">
+                      2009
+                    </p>
+                    <div class="doctor-detailed__qualification-bottom">
+                      <p class="doctor-detailed__qualification-title">
+                        Читинская государственная медицинская академия
+                      </p>
+                      <p class="doctor-detailed__qualification-subtitle">
+                        Педиатрия
+                      </p>
+                    </div>
+                  </div>
+                  <div class="doctor-detailed__qualification">
+                    <p class="doctor-detailed__qualification-date">
+                      2009
+                    </p>
+                    <div class="doctor-detailed__qualification-bottom">
+                      <p class="doctor-detailed__qualification-title">
+                        Читинская государственная медицинская академия
+                      </p>
+                      <p class="doctor-detailed__qualification-subtitle">
+                        Педиатрия
+                      </p>
+                    </div>
+                  </div>
+                  <div class="doctor-detailed__qualification">
+                    <p class="doctor-detailed__qualification-date">
+                      2009
+                    </p>
+                    <div class="doctor-detailed__qualification-bottom">
+                      <p class="doctor-detailed__qualification-title">
+                        Читинская государственная медицинская академия
+                      </p>
+                      <p class="doctor-detailed__qualification-subtitle">
+                        Педиатрия
+                      </p>
+                    </div>
+                  </div>
+                  <div class="doctor-detailed__qualification">
+                    <p class="doctor-detailed__qualification-date">
+                      2009
+                    </p>
+                    <div class="doctor-detailed__qualification-bottom">
+                      <p class="doctor-detailed__qualification-title">
+                        Читинская государственная медицинская академия
+                      </p>
+                      <p class="doctor-detailed__qualification-subtitle">
+                        Педиатрия
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <style>
+              .doctor-detailed__item--approach {
+                background: linear-gradient(156.49deg, #3c8fce -6.23%, #e9f5ff 138.86%);
+              }
+
+              .doctor-detailed__approach {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+              }
+
+              .doctor-detailed__approach-tag {
+                border-radius: 8px;
+                padding: 6px 10px;
+                background: var(--belyy-100);
+                margin-bottom: 12px;
+                width: fit-content;
+              }
+
+              .doctor-detailed__approach-text {
+                font-family: var(--second-family);
+                font-weight: 700;
+                font-size: 14px;
+                line-height: 129%;
+                text-transform: uppercase;
+                text-align: center;
+                color: var(--belyy-100);
+              }
+
+              @media (min-width: 1025px) {
+
+                .doctor-detailed__approach-tag {
+                  border-radius: 12px;
+                  padding: 8px 14px;
+                  margin-bottom: 24px;
+                  font-size: 14px;
+                }
+
+                .doctor-detailed__approach-text {
+                  font-size: 20px;
+                }
+
+                .doctor-detailed__item--approach {
+                  border-radius: 30px;
+                  padding: 40px;
+                }
+
+              }
+            </style>
+            <div class="doctor-detailed__item doctor-detailed__item--approach">
+              <div class="doctor-detailed__approach">
+                <svg width="231" height="216" viewBox="0 0 231 216" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M119.438 -282.08C153.457 -296.013 188.126 -263.566 176.473 -228.7L108.101 -24.1256C100.252 -0.640432 110.775 25.0523 132.843 36.284L325.075 134.121C357.838 150.796 355.891 198.24 321.872 212.174C310.323 216.904 297.288 216.379 286.156 210.735L27.3948 79.5357C5.25751 68.3114 -5.29497 42.547 2.6086 19.0188L94.9929 -256.001C98.967 -267.832 107.889 -277.35 119.438 -282.08Z"
+                    fill="white" fill-opacity="0.12" />
+                </svg>
+
+                <p class="doctor-detailed__approach-tag">
+                  Подход к лечению
+                </p>
+                <p class="doctor-detailed__approach-text">
+                  «Зависимость — это не просто физиологическая тяга, это глубокий кризис всей суверенной структуры
+                  личности. Невозможно вылечить человека, просто поставив капельницу. Моя цель как врача — помочь
+                  резиденту полностью пересобрать разрушенные сферы жизни (биологическую, психологическую и социальную)
+                  и вернуть ему контроль над собственной судьбой»
+                </p>
+              </div>
+            </div>
+          </div>
+          <aside class="doctor-detailed__sidebar">
+
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+  </footer>
+  <script src="assets/js/build/swiper-bundle.min.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+</body>
+
+</html>
