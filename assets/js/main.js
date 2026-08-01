@@ -188,404 +188,233 @@
             });
         });
     });
+    document.addEventListener('DOMContentLoaded', function () {
+        const patientStoriesSwiper = new Swiper(".patientStoriesSwiper", {
+            slidesPerView: 1.1,
+            spaceBetween: 10,
+            navigation: {
+                nextEl: ".patient-stories__swiper-button-next",
+                prevEl: ".patient-stories__swiper-button-prev"
+            },
+            pagination: {
+                el: '.patient-stories__swiper-pagination',
+                type: 'custom',
+                renderCustom: function (swiper, current, total) {
+                    const currentFormatted = String(current).padStart(2, '0');
+                    const totalFormatted = String(total).padStart(2, '0');
+                    return `<span class="pagination-current">${currentFormatted}</span> / <span class="pagination-total">${totalFormatted}</span>`;
+                }
+            },
+            grabCursor: true,
+            breakpoints: {
+                1380: {
+                    slidesPerView: 3,
+                    spaceBetween: 20
+                },
+                830: {
+                    slidesPerView: 2,
+                    spaceBetween: 10
+                },
+                550: {
+                    slidesPerView: 1.2,
+                    spaceBetween: 10
+                }
+            }
+        });
+        const expertAssistanceSwiper = new Swiper(".expertAssistanceSwiper", {
+            slidesPerView: 1.1,
+            spaceBetween: 10,
+            navigation: {
+                nextEl: ".expert-assistance__swiper-button-next",
+                prevEl: ".expert-assistance__swiper-button-prev"
+            },
+            pagination: {
+                el: '.expert-assistance__swiper-pagination',
+                type: 'custom',
+                renderCustom: function (swiper, current, total) {
+                    const currentFormatted = String(current).padStart(2, '0');
+                    const totalFormatted = String(total).padStart(2, '0');
+                    return `<span class="pagination-current">${currentFormatted}</span> / <span class="pagination-total">${totalFormatted}</span>`;
+                }
+            },
+            grabCursor: true,
+            breakpoints: {
+                1380: {
+                    slidesPerView: 3,
+                    spaceBetween: 20
+                },
+                830: {
+                    slidesPerView: 2,
+                    spaceBetween: 10
+                },
+                550: {
+                    slidesPerView: 1.2,
+                    spaceBetween: 10
+                }
+            }
+        });
+        const pathCirculationSwiper = new Swiper(".pathCirculationSwiper", {
+            slidesPerView: 1.1,
+            spaceBetween: 10,
+            navigation: {
+                nextEl: ".path-circulation__swiper-button-next",
+                prevEl: ".path-circulation__swiper-button-prev"
+            },
+            pagination: {
+                el: '.path-circulation__swiper-pagination',
+                type: 'custom',
+                renderCustom: function (swiper, current, total) {
+                    const currentFormatted = String(current).padStart(2, '0');
+                    const totalFormatted = String(total).padStart(2, '0');
+                    return `<span class="pagination-current">${currentFormatted}</span> / <span class="pagination-total">${totalFormatted}</span>`;
+                }
+            },
+            grabCursor: true,
+            breakpoints: {
+                1380: {
+                    slidesPerView: 3,
+                    spaceBetween: 20
+                },
+                830: {
+                    slidesPerView: 2,
+                    spaceBetween: 10
+                },
+                550: {
+                    slidesPerView: 1.2,
+                    spaceBetween: 10
+                }
+            }
+        });
+        const strengthReturningSwiper = new Swiper(".strengthReturningSwiper", {
+            slidesPerView: 1.1,
+            spaceBetween: 10,
+            navigation: {
+                nextEl: ".strength-returning__swiper-button-next",
+                prevEl: ".strength-returning__swiper-button-prev"
+            },
+            pagination: {
+                el: '.strength-returning__swiper-pagination',
+                type: 'custom',
+                renderCustom: function (swiper, current, total) {
+                    const currentFormatted = String(current).padStart(2, '0');
+                    const totalFormatted = String(total).padStart(2, '0');
+                    return `<span class="pagination-current">${currentFormatted}</span> / <span class="pagination-total">${totalFormatted}</span>`;
+                }
+            },
+            grabCursor: true,
+            breakpoints: {
+                1380: {
+                    slidesPerView: 4,
+                    spaceBetween: 20
+                },
+                830: {
+                    slidesPerView: 2,
+                    spaceBetween: 10
+                },
+                550: {
+                    slidesPerView: 1.2,
+                    spaceBetween: 10
+                }
+            }
+        });
 
-    // function initModalWorker() {
-    //     const modalList = document.querySelectorAll('.modal');
-    //     const modalWindow = document.querySelector('#modal-window');
-    //     const modalButtons = document.querySelectorAll('.modal-button');
-    //     const modalWindowCity = document.querySelector('#modal-window-city');
-    //     const modalButtonsCity = document.querySelectorAll('.modal-button-city');
-    //     const modalClosers = document.querySelectorAll('.modal-close');
+        /* simple spoiler */
+        document.querySelectorAll('[data-action="spoiler"]').forEach(function (element) {
+            element.addEventListener('click', function () {
+                let target = document.querySelector(`[data-spoiler="${this.dataset.target}"]`);
+                if (target) {
+                    target.classList.toggle('active');
+                    const spoiler = element.querySelector('.spoiler')
+                    if (spoiler) { spoiler.classList.toggle('active'); }
+                }
+            });
+        });
+    });
 
-    //     modalClosers.forEach((closer) => {
-    //         closer.addEventListener('click', () => {
-    //             const responseBlockList = document.querySelectorAll('.response-block');
-    //             bodyLock(false);
-    //             document.querySelector('html').style.paddingRight = 0;
-    //             modalList.forEach(function (modal) {
-    //                 modal.classList.remove('active');
-    //             });
-    //             responseBlockList.forEach(function (responseBlock) {
-    //                 responseBlock.remove();
-    //             });
-    //             modalWindow.querySelectorAll('.form').forEach((form) => {
-    //                 form.reset();
-    //             });
-    //         });
-    //     });
+    document.addEventListener("DOMContentLoaded", () => {
+        const cards = document.querySelectorAll(".patient-stories__card-content");
 
-    //     modalButtons.forEach((button) => {
-    //         button.addEventListener('click', () => {
-    //             const target = button.dataset?.target || 'application';
-    //             const title = button.dataset?.title || 'Заказать звонок';
-    //             const additional = button.dataset?.additional || '';
+        function checkCards() {
+            cards.forEach((card) => {
+                const text = card.querySelector("p");
+                const btn = card.querySelector(".patient-stories__card-btn");
 
-    //             bodyLock(true);
-    //             document.querySelector('html').style.paddingRight = setWidthScrollBar() + 'px';
-    //             modalWindow.classList.add('active');
-    //             modalWindow.querySelectorAll('.form').forEach((form) => {
-    //                 if (form.getAttribute('data-target') === target) {
-    //                     form.style.display = '';
-    //                     form.querySelector('.form__title').innerText = title;
+                if (!text || !btn) return;
 
-    //                     const addition = form.querySelector('.additional__field');
-    //                     if (addition) {
-    //                         addition.value = additional;
-    //                     }
-    //                 } else {
-    //                     form.style.display = 'none';
-    //                 }
-    //             });
-    //         });
-    //     })
+                // Сбрасываем состояние перед проверкой
+                text.classList.remove("hide");
+                btn.classList.remove("active");
+                btn.classList.remove("open");
 
-    //     modalButtonsCity.forEach((button) => {
-    //         button.addEventListener('click', () => {
-    //             const target = button.dataset?.target || 'application';
-    //             const title = button.dataset?.title || 'Выберите филиал клиники доктора Калюжной';
-    //             const additional = button.dataset?.additional || '';
+                const limit = window.innerWidth <= 1025 ? 120 : 132;
 
-    //             bodyLock(true);
-    //             document.querySelector('html').style.paddingRight = setWidthScrollBar() + 'px';
-    //             modalWindowCity.classList.add('active');
-    //         });
-    //     })
-    // }
+                if (text.scrollHeight > limit) {
+                    text.classList.add("hide");
+                    btn.classList.add("active");
+                }
+            });
+        }
 
-    // document.addEventListener('DOMContentLoaded', function () {
-    //     const body = document.querySelector('.body');
+        checkCards();
 
-    //     const menuBtns = document.querySelectorAll('button.menu__link');
-    //     const menuSubBtns = document.querySelectorAll('button.menu__sub-link');
+        let resizeTimer;
+        window.addEventListener("resize", () => {
+            clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(checkCards, 150);
+        });
 
-    //     if (menuBtns.length > 0) {
-    //         menuBtns.forEach(function (menuBtn) {
-    //             menuBtn.addEventListener('click', function () {
-    //                 menuSubBtns.forEach(el => {
-    //                     el.closest('.menu__sub-item').classList.remove('active');
-    //                 });
-    //                 menuBtns.forEach(el => {
-    //                     if (el != this) {
-    //                         el.closest('.menu__item').classList.remove('active');
-    //                     }
-    //                 });
-    //                 menuBtn.closest('.menu__item').classList.toggle('active');
-    //             });
+        document.addEventListener("click", (e) => {
+            const btn = e.target.closest(".patient-stories__card-btn");
+            if (!btn || !btn.classList.contains("active")) return;
 
-    //             window.addEventListener('click', function (e) {
-    //                 const target = e.target;
-    //                 if (!target.closest('.menu__item')) {
-    //                     menuBtn.classList.remove('active');
-    //                 }
-    //             });
-    //         });
-    //     }
+            const card = btn.closest(".patient-stories__card-content");
+            const text = card.querySelector("p");
 
-    //     if (menuSubBtns.length > 0) {
-    //         menuSubBtns.forEach(function (menuBtn) {
-    //             menuBtn.addEventListener('click', function () {
-    //                 menuSubBtns.forEach(el => {
-    //                     if (el != this) {
-    //                         el.closest('.menu__sub-item').classList.remove('active');
-    //                     }
-    //                 });
-    //                 menuBtn.closest('.menu__sub-item').classList.add('active');
-    //             });
-    //         });
-    //     }
+            text.classList.toggle("hide");
+            btn.classList.toggle("open");
+        });
+    });
 
-    //     window.addEventListener('click', function (e) {
-    //         const target = e.target;
 
-    //         if (!target.closest('.menu__sub-item')) {
-    //             menuSubBtns.forEach(el => {
-    //                 el.closest('.menu__sub-item').classList.remove('active');
-    //             });
-    //         }
+    document.addEventListener("DOMContentLoaded", () => {
+        const accordions = document.querySelectorAll(".js-accordion");
 
-    //         if (!target.closest('.menu__item')) {
-    //             menuBtns.forEach(el => {
-    //                 el.closest('.menu__item').classList.remove('active');
-    //             });
-    //         }
-    //     });
+        accordions.forEach((accordion) => {
+            const trigger = accordion.querySelector(".js-accordion-trigger");
+            const content = accordion.querySelector(".js-accordion-content");
 
-    //     // accordion
-    //     const ACCORDION_LIST = 'data-accordion-list'
-    //     const ACCORDION_BUTTON = 'data-accordion-button'
-    //     const ACCORDION_ARROW = 'data-accordion-arrow'
-    //     const ACCORDION_CONTENT = 'data-accordion-content'
-    //     const SECTION_OPENED = 'active'
-    //     const ICON_ROTATED = 'rotated'
+            if (!trigger || !content) return;
 
-    //     class Accordion {
-    //         static apply(accordionNode) {
-    //             if (!accordionNode) {
-    //                 return
-    //             }
+            trigger.addEventListener("click", () => {
+                if (accordion.classList.contains("is-open")) {
+                    content.style.maxHeight = content.scrollHeight + "px";
 
-    //             const acc = new Accordion()
-    //             acc.accordion = accordionNode
-    //             accordionNode.onclick = acc.onClick.bind(acc)
-    //         }
+                    requestAnimationFrame(() => {
+                        accordion.classList.remove("is-open");
+                        content.style.maxHeight = "0px";
+                    });
+                } else {
+                    accordion.classList.add("is-open");
 
-    //         handleClick(button) {
-    //             const innerSection = button.nextElementSibling
-    //             const isOpened = innerSection.classList.contains(SECTION_OPENED)
+                    requestAnimationFrame(() => {
+                        content.style.maxHeight = content.scrollHeight + "px";
+                    });
+                }
+            });
+        });
 
-    //             if (isOpened) {
-    //                 this.close(innerSection)
-    //                 return
-    //             } else {
-    //                 this.open(innerSection)
+        window.addEventListener("resize", () => {
+            accordions.forEach((accordion) => {
+                if (!accordion.classList.contains("is-open")) return;
 
-    //             }
-    //         }
+                const content = accordion.querySelector(".js-accordion-content");
+                content.style.maxHeight = content.scrollHeight + "px";
+            });
+        });
+    });
 
-    //         open(section) {
-    //             const accordion = section.querySelector(`[${ACCORDION_CONTENT}`).closest('.accor');
-    //             const accordionContent = section.querySelector(`[${ACCORDION_CONTENT}`)
-    //             const accordionList = accordionContent.querySelector(`[${ACCORDION_LIST}`)
-    //             const innerSectionHeight = accordionContent.clientHeight
-    //             let countOfScrollHeight = 0;
-    //             const allElementContentData = section.querySelectorAll(`[${ACCORDION_CONTENT}`)
-    //             accordion.classList.add(SECTION_OPENED)
-    //             section.classList.add(SECTION_OPENED)
-    //             this.rotateIconFor(section.previousElementSibling)
-
-    //             for (const item of allElementContentData) {
-    //                 countOfScrollHeight = countOfScrollHeight + item.scrollHeight;
-    //             }
-
-    //             if (accordionContent.contains(accordionList)) {
-    //                 section.style.maxHeight = `${innerSectionHeight + countOfScrollHeight}px`
-    //                 return
-    //             }
-    //             section.style.maxHeight = `${innerSectionHeight}px`
-    //         }
-
-    //         close(section) {
-    //             const accordion = section.querySelector(`[${ACCORDION_CONTENT}`).closest('.accor');
-    //             section.style.maxHeight = 0
-    //             accordion.classList.remove(SECTION_OPENED)
-    //             section.classList.remove(SECTION_OPENED)
-    //             this.rotateIconFor(section.previousElementSibling)
-    //         }
-
-    //         rotateIconFor(button) {
-    //             const rotatedIconClass = ICON_ROTATED
-    //             const arrowElement = button.dataset.hasOwnProperty('accordionArrow') ?
-    //                 button :
-    //                 button.querySelector(`[${ACCORDION_ARROW}]`)
-
-    //             if (!arrowElement) {
-    //                 return
-    //             }
-
-    //             const isOpened = arrowElement.classList.contains(rotatedIconClass)
-    //             if (!isOpened) {
-    //                 arrowElement.classList.add(rotatedIconClass)
-    //                 return
-    //             }
-    //             arrowElement.classList.remove(rotatedIconClass)
-    //         }
-
-    //         onClick(event) {
-    //             let button = event.target.closest(`[${ACCORDION_BUTTON}]`)
-    //             if (button && button.dataset.accordionButton !== undefined) {
-    //                 this.handleClick(button)
-    //             }
-    //         }
-    //     }
-
-    //     const accorWrapperList = document.querySelectorAll('.accor-wrapper');
-
-    //     if (accorWrapperList.length > 0) {
-    //         accorWrapperList.forEach(function (elem) {
-    //             if (elem.querySelector('.accor-open')) {
-    //                 Accordion.apply(elem);
-    //             }
-    //         });
-    //     }
-
-    //     // header menu mobile
-    //     let headerMenuButton = document.querySelector('.menu-burger');
-    //     let headerMenu = document.querySelector('.mobile-menu');
-
-    //     headerMenuButton.addEventListener('click', function () {
-    //         headerMenuButton.classList.toggle('active');
-    //         headerMenu.classList.toggle('active');
-    //         if (headerMenu.classList.contains('active')) {
-    //             body.classList.add('lock');
-    //         } else {
-    //             body.classList.remove('lock');
-    //         }
-    //     });
-
-    //     Fancybox.bind('[data-fancybox="documents"]', {
-    //         placeFocusBack: false,
-    //     });
-
-    //     const articleNavigation = document.querySelector('.article-navigation');
-
-    //     if (articleNavigation) {
-    //         const jsScrollBlockList = document.querySelectorAll('.article-navigation ~ section h2');
-
-    //         if (jsScrollBlockList.length > 0) {
-    //             for (let i = 0; i < jsScrollBlockList.length; i += 1) {
-    //                 const jsScrollBlock = jsScrollBlockList[i];
-    //                 const titleBlock = jsScrollBlock.textContent;
-    //                 const articleNavigationList = document.querySelector('.article-navigation__list');
-    //                 const articleNavigationItem = document.createElement('li');
-    //                 const articleNavigationLink = document.createElement('a');
-    //                 articleNavigationItem.classList.add('article-navigation__item');
-    //                 articleNavigationLink.classList.add('article-navigation__link');
-    //                 jsScrollBlock.setAttribute('id', `${i}`)
-    //                 articleNavigationLink.setAttribute('href', `#${i}`);
-    //                 articleNavigationLink.textContent = titleBlock;
-    //                 articleNavigationItem.append(articleNavigationLink);
-    //                 articleNavigationList.append(articleNavigationItem);
-    //             }
-
-    //             document.querySelectorAll('a[href^="#"').forEach(link => {
-
-    //                 link.addEventListener('click', function (e) {
-    //                     e.preventDefault();
-
-    //                     let href = this.getAttribute('href').substring(1);
-
-    //                     const scrollTarget = document.getElementById(href);
-
-    //                     // const topOffset = document.querySelector('.scrollto').offsetHeight;
-    //                     const topOffset = 80;
-    //                     const elementPosition = scrollTarget.getBoundingClientRect().top;
-    //                     const offsetPosition = elementPosition - topOffset;
-
-    //                     window.scrollBy({
-    //                         top: offsetPosition,
-    //                         behavior: 'smooth'
-    //                     });
-    //                 });
-    //             });
-    //         }
-    //     }
-
-    //     // rating
-    //     const ratings = document.querySelectorAll('.rating');
-    //     let articleID = '';
-    //     if (document.querySelector('[name="f_id_article"]')) {
-    //         articleID = document.querySelector('[name="f_id_article"]').value;
-    //     }
-
-    //     if (ratings.length > 0) {
-    //         initRatings();
-    //     }
-
-    //     function initRatings() {
-    //         let ratingActive, ratingValue;
-
-    //         for (let i = 0; i < ratings.length; i += 1) {
-    //             const rating = ratings[i];
-    //             initRating(rating);
-    //         }
-    //     }
-
-    //     function initRating(rating) {
-    //         initRatingVars(rating);
-
-    //         setRatingActiveWidth();
-
-    //         if (rating.classList.contains('rating__set')) {
-    //             setRating(rating);
-    //         }
-    //     }
-
-    //     function initRatingVars(rating) {
-    //         ratingActive = rating.querySelector('.rating__active');
-    //         ratingValue = rating.querySelector('.rating__value');
-    //     }
-
-    //     function setRatingActiveWidth(index = ratingValue.innerHTML) {
-    //         const ratingActiveWidth = index / 0.05;
-    //         ratingActive.style.width = `${ratingActiveWidth}%`;
-    //     }
-
-    //     function setRating(rating) {
-    //         const ratingItems = rating.querySelectorAll('.rating__item');
-
-    //         for (let i = 0; i < ratingItems.length; i += 1) {
-    //             const ratingItem = ratingItems[i];
-
-    //             ratingItem.addEventListener('mouseenter', (e) => {
-    //                 initRatingVars(rating);
-
-    //                 setRatingActiveWidth(ratingItem.value);
-    //             });
-
-    //             ratingItem.addEventListener('mouseleave', (e) => {
-    //                 setRatingActiveWidth();
-    //             });
-
-    //             ratingItem.addEventListener('click', (e) => {
-    //                 ratingItems.forEach((elem) => {
-    //                     elem.style.pointerEvents = 'all';
-    //                 });
-    //                 ratingItem.style.pointerEvents = 'none';
-    //                 initRatingVars(rating);
-
-    //                 ratingValue.innerHTML = i + 1;
-    //                 setRatingActiveWidth();
-
-    //                 $.ajax({
-    //                     url: '/ajax/',
-    //                     type: "POST",
-    //                     dataType: "html",
-    //                     data: {
-    //                         "ID_ARTICLE": articleID,
-    //                         "RATING": ratingValue.innerHTML,
-    //                     },
-    //                     success: function (response) {
-    //                     },
-    //                     error: function (response) {
-    //                         console.log(response);
-    //                     }
-    //                 });
-    //             });
-    //         }
-    //     }
-    //     initModalWorker();
-    // });
 })();
 
-
-// ['load', 'resize'].forEach((event) => {
-//     window.addEventListener(event, function () {
-//         const header = document.querySelector('.header');
-//         const main = document.querySelector('.main');
-//         let headerHeight = header.clientHeight;
-//         window.onscroll = function (e) {
-//             if (window.innerWidth < 992) {
-
-//                 if (window.scrollY > headerHeight) {
-//                     if (!header.classList.contains('fixed')) {
-//                         header.classList.add('fixed');
-//                         main.style.marginTop = headerHeight + 'px';
-//                     }
-//                 }
-//                 else {
-//                     header.classList.remove('fixed');
-//                     main.removeAttribute("style");
-
-//                 }
-//             }
-//             else {
-//                 header.classList.remove('fixed');
-//                 main.removeAttribute("style");
-//             }
-
-//         };
-//     })
-// })
 
 function setupLoadMore(selectorItem, selectorButton, initialCount, loadCount, displayStyle) {
     const items = document.querySelectorAll(selectorItem);
