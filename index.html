@@ -225,164 +225,208 @@
     </div>
   </div>
   <main class="main">
-    <section class="chief-physician">
-      <style>
-        .chief-physician__descp {
-          display: flex;
-          flex-direction: column;
-          gap: 6px;
-          flex-wrap: wrap;
-          margin-bottom: 12px;
-        }
 
-        .chief-physician__descp p {
-          border-radius: 8px;
-          padding: 6px 10px;
-          background: var(--fonovyy);
-          font-family: var(--second-family);
-          font-weight: 700;
-          font-size: 9px;
-          color: var(--tekst-dark-100);
-          width: fit-content;
-        }
-
-        .chief-physician__text {
-          font-weight: 500;
-          font-size: 16px;
-          line-height: 138%;
-          color: var(--tekst-dark-100);
-          padding-left: 16px;
-          border-left: 4px solid var(--fonovyy);
-          padding: 8px 0px 8px 16px;
-        }
-
-        .chief-physician__video {
-          border-radius: 30px;
-          overflow: hidden;
-          position: relative;
-          height: 100%;
-          display: block;
-          max-width: 795px;
-          max-height: 480px;
-
-        }
-
-        .chief-physician__video img {
-          object-fit: cover;
-          border-radius: 30px;
-        }
-
-        .chief-physician__video span {
-          border-radius: 40px;
-          background: var(--belyy-100);
-          padding: 16px 18px;
-          font-family: var(--second-family);
-          font-weight: 700;
-          font-size: 9px;
-          color: var(--tekst-dark-100);
-          bottom: 20px;
-          left: 50%;
-          transform: translateX(-50%);
-          position: absolute;
-          min-width: 196px;
-          transition: color .3s;
-        }
-
-        .chief-physician__video:hover span {
-          color: var(--ogon-vozrozhdeniya-800);
-        }
-
-        .chief-physician__name {
-          margin-bottom: 30px;
-        }
-
-        .chief-physician {
-          margin-bottom: 70px;
-        }
-
-        .chief-physician__content {
-          margin-bottom: 16px;
-        }
-
-        @media (min-width: 1025px) {
-          .chief-physician__descp {
-            margin-bottom: 24px;
-            flex-direction: row;
-          }
-
-          .chief-physician__descp p {
-            border-radius: 12px;
-            padding: 8px 14px;
-            font-size: 12px;
-          }
-
-          .chief-physician__text {
-            padding: 10px 0px 10px 24px;
-            font-size: 20px;
-          }
-
-          .chief-physician__video {
-            border-radius: 60px;
-          }
-
-          .chief-physician__video img {
-            border-radius: 60px;
-          }
-
-          .chief-physician__video span {
-            border-radius: 40px;
-            padding: 22px 28px;
-            font-size: 12px;
-          }
-
-          .chief-physician__name {
-            margin-bottom: 0px;
-          }
-
-          .chief-physician {
-            margin-bottom: 180px;
-          }
-        }
-
-        @media (min-width: 1536px) {
-
-          .chief-physician__main {
-            display: grid;
-            grid-template-columns: minmax(0, 1fr) 795px;
-            gap: 40px;
-          }
-
-          .chief-physician__content {
-            display: flex;
-            justify-content: space-between;
-            flex-direction: column;
-          }
-        }
-      </style>
-      <div class="chief-physician__container container">
-        <div class="chief-physician__main">
-          <div class="chief-physician__content">
-            <div class="chief-physician__info">
-              <div class="chief-physician__descp">
-                <p>Главный врач</p>
-                <p>Психиатр-нарколог со стажем более 17 лет</p>
-              </div>
-              <p class="chief-physician__name section__title-general">Калюжная Наталья Владимировна</p>
-            </div>
-            <p class="chief-physician__text">Автор методики медико-социальной реабилитации зависимых. Более 20 лет
-              опыта работы с химической зависимостью. Автор научных публикаций и образовательных программ для
-              специалистов в области наркологии и психотерапии</p>
-          </div>
-          <a class="chief-physician__video" href="#">
-            <picture>
-              <source srcset="assets/img/icons/chief-physician.webp" type="image/webp">
-              <img src="assets/img/icons/chief-physician.jpg" alt="Видео о главном враче клиники">
-              <span>Смотреть обращение (2:13)</span>
-            </picture>
-          </a>
+    <section class="package-programs section__general">
+      <div class="package-programs__container container">
+        <div class="package-programs__top section__top">
+          <p class="package-programs__title section__title-general"><span>Пакетные программы</span> реабилитации
+          </p>
+          <p class="package-programs__subtitle section__subtitle-general">Фиксированная стоимость без скрытых платежей.
+            Все медикаменты, питание и работа специалистов включены
+          </p>
         </div>
-      </div>
+        <style>
+          .package-programs__cards {
+            width: 810px;
+            display: flex;
+            gap: 10px;
+          }
+
+          .package-programs__card {
+            flex: 0 0 calc((100% - 20px)/3);
+            border-radius: 26px;
+            padding: 6px;
+            background: var(--fonovyy);
+          }
+
+          .package-programs__card-top {
+            min-height: 218px;
+            border-radius: 20px;
+            padding: 14px;
+            background: var(--belyy-100);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            margin-bottom: 14px;
+          }
+
+          .package-programs__card-list {
+            padding-top: 0;
+            padding-bottom: 0;
+          }
+
+          .package-programs__card-tag {
+            border-radius: 8px;
+            padding: 6px 10px;
+            background: var(--fonovyy);
+            font-family: var(--second-family);
+            font-weight: 700;
+            font-size: 9px;
+            color: var(--tekst-dark-100);
+            width: fit-content;
+          }
+
+          .package-programs__card-price {
+            font-family: var(--second-family);
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 120%;
+            text-transform: uppercase;
+            color: var(--tekst-dark-100);
+            margin-bottom: 8px;
+          }
+
+          .package-programs__card-price span {
+            font-size: 9px;
+            line-height: 133%;
+            color: var(--tekst-dark-60);
+          }
+
+          .package-programs__card-name {
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 133%;
+            color: var(--tekst-dark-80);
+            margin-bottom: 12px;
+          }
+
+          .package-programs__card-btn {
+            border-radius: 40px;
+            padding: 16px 18px;
+            background: var(--fonovyy);
+            font-family: var(--second-family);
+            font-weight: 700;
+            font-size: 9px;
+            color: var(--tekst-dark-100);
+          }
+
+          .package-programs__card--intensive .package-programs__card-tags {
+            display: flex;
+            gap: 4px;
+            flex-wrap: wrap;
+          }
+
+          .package-programs__card--intensive .package-programs__card-tag:first-child {
+            background: var(--belyy-15);
+            color: var(--belyy-100);
+          }
+
+          .package-programs__card--intensive .package-programs__card-tag:last-child {
+            background: var(--belyy-100);
+            color: var(--tekst-dark-100);
+          }
+
+          .package-programs__card--intensive .package-programs__card-top {
+            background: linear-gradient(154.84deg, #3c8fce 14.12%, #e9f5ff 128.83%);
+            position: relative;
+          }
+
+          .package-programs__card--intensive .package-programs__card-price,
+          .package-programs__card--intensive .package-programs__card-name {
+            color: white
+          }
+
+          .package-programs__card--intensive .package-programs__card-price span {
+            color: var(--tekst-white-60);
+          }
+
+          .package-programs__card-img {
+            position: absolute;
+            top: -100px;
+            right: -147px;
+            transform: rotate(147deg);
+          }
+        </style>
+        <div class="package-programs__main">
+          <div class="package-programs__cards">
+            <div class="package-programs__card">
+              <div class="package-programs__card-top">
+                <p class="package-programs__card-tag">
+                  Базовый курс
+                </p>
+                <div>
+                  <p class="package-programs__card-price">От 3500 ₽<span>/сутки</span></p>
+                  <p class="package-programs__card-name">Стационарное лечение с медицинским сопровождением</p>
+                  <button class="package-programs__card-btn popup-btn" data-path="popup-sing">
+                    оформить курс
+                  </button>
+                </div>
+              </div>
+              <ul class="package-programs__card-list">
+                <li>Проживание в 4-местной палате</li>
+                <li>4-разовое питание</li>
+                <li>Медикаментозное снятие абстиненции</li>
+                <li>Групповые занятия по авторской программе</li>
+                <li>Ежедневные врачебные обходы</li>
+                <li>Наблюдение персонала 24/7</li>
+              </ul>
+            </div>
+            <div class="package-programs__card package-programs__card--intensive">
+              <div class="package-programs__card-top">
+                <img class="package-programs__card-img" src="assets/img/doc/corner.svg" alt="">
+                <div class="package-programs__card-tags">
+                  <p class="package-programs__card-tag">
+                    Интенсивный курс
+                  </p>
+                  <p class="package-programs__card-tag">
+                    Рекомендуем
+                  </p>
+                </div>
+                <div>
+                  <p class="package-programs__card-price">От 5000 ₽<span>/сутки</span></p>
+                  <p class="package-programs__card-name">Полная авторская программа медико-социальной реабилитации</p>
+                  <button class="package-programs__card-btn popup-btn" data-path="popup-sing">
+                    оформить курс
+                  </button>
+                </div>
+              </div>
+              <ul class="package-programs__card-list">
+                <li>Проживание в 2-местной палате</li>
+                <li>Индивидуальное меню диетолога</li>
+                <li>Индивидуальные сессии с психотерапевтом</li>
+                <li>Авторская программа: КПТ, гештальт, арт-терапия</li>
+                <li>Семейные сессии с психотерапевтом</li>
+                <li>Полный курс ресоциализации и ПЛП</li>
+                <li>Гарантия от срыва по договору</li>
+              </ul>
+            </div>
+            <div class="package-programs__card">
+              <div class="package-programs__card-top">
+                <p class="package-programs__card-tag">
+                  VIP-программа
+                </p>
+                <div>
+                  <p class="package-programs__card-price">От 9500 ₽<span>/сутки</span></p>
+                  <p class="package-programs__card-name">Индивидуальный подход, максимальный комфорт
+                    и конфиденциальность</p>
+                  <button class="package-programs__card-btn popup-btn" data-path="popup-sing">
+                    оформить курс
+                  </button>
+                </div>
+              </div>
+              <ul class="package-programs__card-list">
+                <li>Одноместный VIP-люкс</li>
+                <li>Ежедневная личная психотерапия</li>
+                <li>Персональный куратор 24/7</li>
+                <li>Полная конфиденциальность</li>
+                <li>Доступ к SPA и расширенной спортивной инфраструктуре</li>
+                <li>Долгосрочное VIP-сопровождение в рамках ПЛП</li>
+              </ul>
+            </div>
+          </div>
+        </div>
     </section>
+
     <section class="medicine section__general">
       <div class="medicine__container container">
         <div class="medicine__top section__top">
@@ -1696,7 +1740,31 @@
       <pre class="anonymous-test__analis"></pre>
     </section>
     <script src="assets/js/test.js"></script>
-
+    <section class="chief-physician">
+      <div class="chief-physician__container container">
+        <div class="chief-physician__main">
+          <div class="chief-physician__content">
+            <div class="chief-physician__info">
+              <div class="chief-physician__descp">
+                <p>Главный врач</p>
+                <p>Психиатр-нарколог со стажем более 17 лет</p>
+              </div>
+              <p class="chief-physician__name section__title-general">Калюжная Наталья Владимировна</p>
+            </div>
+            <p class="chief-physician__text">Автор методики медико-социальной реабилитации зависимых. Более 20 лет
+              опыта работы с химической зависимостью. Автор научных публикаций и образовательных программ для
+              специалистов в области наркологии и психотерапии</p>
+          </div>
+          <a class="chief-physician__video" href="#">
+            <picture>
+              <source srcset="assets/img/icons/chief-physician.webp" type="image/webp">
+              <img src="assets/img/icons/chief-physician.jpg" alt="Видео о главном враче клиники">
+              <span>Смотреть обращение (2:13)</span>
+            </picture>
+          </a>
+        </div>
+      </div>
+    </section>
 
   </main>
   <footer class="footer">

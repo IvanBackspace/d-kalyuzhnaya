@@ -267,7 +267,7 @@ body.lock {
 .doctors__card-videointroduction::before {
     content: url("../img/doc/video.png");
 }
-
+.package-programs__card-list li::before,
 .spheres-rehabilitation__item-list li::before,
 .what-apart__rehab-list li::before,
 .what-apart__clinic-list li::before,
@@ -301,6 +301,7 @@ body.lock {
     top: 2px;
 }
 
+.package-programs__card-list li::before,
 .what-apart__clinic-list li::before {
     background: url("../img/icons/gren.svg") no-repeat center;
     width: 14px;
@@ -1884,6 +1885,7 @@ input {
     color: var(--belyy-100);
 }
 
+.package-programs__main,
 .doctor-detailed__qualifications-wrapper,
 .medicine__items {
     overflow-x: auto;
@@ -1891,6 +1893,7 @@ input {
     -ms-overflow-style: none;
 }
 
+.package-programs__main::-webkit-scrollbar,
 .doctor-detailed__qualifications-wrapper::-webkit-scrollbar,
 .medicine__items::-webkit-scrollbar {
     display: none;
@@ -2293,6 +2296,7 @@ input {
     padding-left: 14px;
 }
 
+.package-programs__card-list,
 .what-apart__rehab-list,
 .what-apart__clinic-list {
     border-radius: 20px;
@@ -2301,6 +2305,7 @@ input {
     padding-left: 14px;
 }
 
+.package-programs__card-list li,
 .what-apart__rehab-list li,
 .what-apart__clinic-list li {
     font-family: var(--font-family);
@@ -2311,6 +2316,13 @@ input {
     margin-bottom: 4px;
     position: relative;
     padding-left: 20px;
+}
+
+.package-programs__card-list li::after{
+    background: url("../img/icons/gren.svg") no-repeat center;
+    width: 14px;
+    height: 14px;
+    top: 2px;
 }
 
 .what-apart__clinic-top {
@@ -4542,4 +4554,136 @@ button.fServices--more.mobile {
     width: 12px;
     height: 12px;
     background: var(--ogon-vozrozhdeniya-800);
+}
+
+.chief-physician__descp {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    flex-wrap: wrap;
+    margin-bottom: 12px;
+}
+
+.chief-physician__descp p {
+    border-radius: 8px;
+    padding: 6px 10px;
+    background: var(--fonovyy);
+    font-family: var(--second-family);
+    font-weight: 700;
+    font-size: 9px;
+    color: var(--tekst-dark-100);
+    width: fit-content;
+}
+
+.chief-physician__text {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 138%;
+    color: var(--tekst-dark-100);
+    padding-left: 16px;
+    border-left: 4px solid var(--fonovyy);
+    padding: 8px 0px 8px 16px;
+}
+
+.chief-physician__video {
+    border-radius: 30px;
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+    display: block;
+    max-width: 795px;
+    max-height: 480px;
+
+}
+
+.chief-physician__video img {
+    object-fit: cover;
+    border-radius: 30px;
+}
+
+.chief-physician__video span {
+    border-radius: 40px;
+    background: var(--belyy-100);
+    padding: 16px 18px;
+    font-family: var(--second-family);
+    font-weight: 700;
+    font-size: 9px;
+    color: var(--tekst-dark-100);
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    min-width: 196px;
+    transition: color .3s;
+}
+
+.chief-physician__video:hover span {
+    color: var(--ogon-vozrozhdeniya-800);
+}
+
+.chief-physician__name {
+    margin-bottom: 30px;
+}
+
+.chief-physician {
+    margin-bottom: 70px;
+}
+
+.chief-physician__content {
+    margin-bottom: 16px;
+}
+
+@media (min-width: 1025px) {
+    .chief-physician__descp {
+        margin-bottom: 24px;
+        flex-direction: row;
+    }
+
+    .chief-physician__descp p {
+        border-radius: 12px;
+        padding: 8px 14px;
+        font-size: 12px;
+    }
+
+    .chief-physician__text {
+        padding: 10px 0px 10px 24px;
+        font-size: 20px;
+    }
+
+    .chief-physician__video {
+        border-radius: 60px;
+    }
+
+    .chief-physician__video img {
+        border-radius: 60px;
+    }
+
+    .chief-physician__video span {
+        border-radius: 40px;
+        padding: 22px 28px;
+        font-size: 12px;
+    }
+
+    .chief-physician__name {
+        margin-bottom: 0px;
+    }
+
+    .chief-physician {
+        margin-bottom: 180px;
+    }
+}
+
+@media (min-width: 1536px) {
+
+    .chief-physician__main {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) 795px;
+        gap: 40px;
+    }
+
+    .chief-physician__content {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
 }
