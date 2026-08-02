@@ -225,431 +225,6 @@
     </div>
   </div>
   <main class="main">
-    <section class="faq section__general">
-      <div class="faq__container container">
-        <div class="faq__wrapper">
-          <div class="faq__top section__top">
-            <p class="faq__title section__title-general">
-              <span>Вопросы</span> и ответы
-            </p>
-            <p class="faq__subtitle faq__subtitle--top section__subtitle-general">
-              Если у вас еще остались вопросы, можете задать нам, и наши консультанты ответят анонимно в любое время
-              суток</p>
-
-          </div>
-          <style>
-            .faq__btns {
-              display: flex;
-              flex-direction: column;
-              gap: 8px;
-            }
-
-            .faq__btn {
-              background: var(--fonovyy);
-            }
-
-
-            .js-accordion-trigger {
-              display: flex;
-              justify-content: space-between;
-              align-items: center;
-              gap: 20px;
-              cursor: pointer;
-            }
-
-            .js-accordion-content {
-              max-height: 0;
-              overflow: hidden;
-              transition: max-height .35s ease, padding .35s ease;
-            }
-
-            .accordion-icon {
-              position: relative;
-              width: 44px;
-              height: 44px;
-              border-radius: 10px;
-              flex-shrink: 0;
-              background: var(--belyy-100);
-            }
-
-            .accordion-icon span {
-              position: absolute;
-              left: 50%;
-              top: 50%;
-              width: 14px;
-              height: 2px;
-              background: currentColor;
-              border-radius: 2px;
-              transform: translate(-50%, -50%);
-              transition: transform .3s ease;
-            }
-
-            .accordion-icon span:last-child {
-              transform: translate(-50%, -50%) rotate(90deg);
-            }
-
-            .js-accordion.is-open .accordion-icon span:last-child {
-              transform: translate(-50%, -50%) rotate(0deg);
-            }
-
-            .faq__item-question {
-              border-radius: 20px;
-              padding: 20px;
-              background: var(--fonovyy);
-              font-family: var(--second-family);
-              font-weight: 700;
-              font-size: 12px;
-              line-height: 133%;
-              text-transform: uppercase;
-              color: var(--tekst-dark-100);
-              transition: margin-bottom .3s ease;
-            }
-
-            .faq__item.is-open .faq__item-question {
-              margin-bottom: 8px;
-            }
-
-            .faq__item-answer {
-              border-radius: 20px;
-              padding: 0px 20px 0px 20px;
-              background: var(--fonovyy);
-              font-family: var(--font-family);
-              font-weight: 500;
-              font-size: 14px;
-              line-height: 143%;
-              color: var(--tekst-dark-100);
-              transition: padding .3s ease;
-            }
-
-            .faq__item.is-open .faq__item-answer {
-              padding: 20px;
-            }
-
-            .faq__item-doctor {
-              background-color: white;
-              border-radius: 16px;
-              padding: 12px;
-              margin-bottom: 0;
-              min-height: auto;
-              margin-top: 20px;
-            }
-
-            .item-doctor__main {
-              background-color: white;
-              margin-bottom: 0;
-              min-height: auto;
-              padding: 0;
-              margin-bottom: 12px;
-            }
-
-
-            .item-doctor__picture {
-              background: linear-gradient(135deg, #d7dfeb 0%, #edf2f7 50%, #e0e8ee 100%);
-            }
-
-            .item-doctor__title {
-              border-radius: 8px;
-              padding: 6px 10px;
-              background: var(--fonovyy);
-              width: fit-content;
-              margin-bottom: 8px;
-            }
-
-            .item-doctor__like {
-              border-radius: 8px;
-              padding: 12px 14px;
-              background: var(--fonovyy);
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              gap: 8px;
-            }
-
-            .item-doctor__name {
-              font-size: 11px;
-            }
-
-            .item-doctor__content {
-              justify-content: space-between;
-              display: flex;
-              flex-direction: column;
-            }
-
-            .faq__items {
-              display: flex;
-              flex-direction: column;
-              gap: 8px;
-            }
-          </style>
-          <div class="faq__items">
-            <div class="faq__item js-accordion">
-              <div class="faq__item-question js-accordion-trigger">
-                <p>Лечите ли вы нехимические зависимости?</p>
-                <span class="accordion-icon" aria-hidden="true">
-                  <span></span>
-                  <span></span>
-                </span>
-              </div>
-              <div class="faq__item-answer">
-                <div class="js-accordion-content">
-                  <p>«Самое ценное – это обретённая свобода и возможность начать всё с чистого листа. Анонимность
-                    лечения
-                    позволила мне избежать ненужных переживаний и сосредоточиться на реабилитации. После выписки я
-                    чувствую себя уверенно и готов к вызовам жизни без наркотиков! Самое ценное – это обретённая свобода
-                    и
-                    возможность начать всё с чистого листа. Анонимность лечения позволила мне избежать ненужных
-                    переживаний и сосредоточиться на реабилитации. После выписки я чувствую себя уверенно и готов к
-                    вызовам жизни без наркотиков!» </p>
-                  <div class="faq__item-doctor">
-                    <p class="item-doctor__title">
-                      Отвечает на вопрос:
-                    </p>
-                    <div class="item-doctor__main">
-                      <picture class="item-doctor__picture">
-                        <source srcset="assets/img/doc/photo.jpg" type="image/webp" />
-                        <img src="assets/img/doc/photo.jpg" alt="Калюжная марина александровна"
-                          title="Калюжная марина александровна" loading="lazy" />
-                      </picture>
-                      <div class="item-doctor__content">
-                        <p class="item-doctor__name">Калюжная марина александровна</p>
-                        <p class="item-doctor__job">
-                          Директор клиники, психиатр-нарколог
-                        </p>
-                      </div>
-                    </div>
-                    <p class="item-doctor__like">
-                      <img src="assets/img/icons/like.png" alt="Иконка"> 24
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="faq__item js-accordion">
-              <div class="faq__item-question js-accordion-trigger">
-                <p>Лечите ли вы нехимические зависимости?</p>
-                <span class="accordion-icon" aria-hidden="true">
-                  <span></span>
-                  <span></span>
-                </span>
-              </div>
-              <div class="faq__item-answer">
-                <div class="js-accordion-content">
-                  <p>«Самое ценное – это обретённая свобода и возможность начать всё с чистого листа. Анонимность
-                    лечения
-                    позволила мне избежать ненужных переживаний и сосредоточиться на реабилитации. После выписки я
-                    чувствую себя уверенно и готов к вызовам жизни без наркотиков! Самое ценное – это обретённая свобода
-                    и
-                    возможность начать всё с чистого листа. Анонимность лечения позволила мне избежать ненужных
-                    переживаний и сосредоточиться на реабилитации. После выписки я чувствую себя уверенно и готов к
-                    вызовам жизни без наркотиков!» </p>
-                  <div class="faq__item-doctor">
-                    <p class="item-doctor__title">
-                      Отвечает на вопрос:
-                    </p>
-                    <div class="item-doctor__main">
-                      <picture class="item-doctor__picture">
-                        <source srcset="assets/img/doc/photo.jpg" type="image/webp" />
-                        <img src="assets/img/doc/photo.jpg" alt="Калюжная марина александровна"
-                          title="Калюжная марина александровна" loading="lazy" />
-                      </picture>
-                      <div class="item-doctor__content">
-                        <p class="item-doctor__name">Калюжная марина александровна</p>
-                        <p class="item-doctor__job">
-                          Директор клиники, психиатр-нарколог
-                        </p>
-                      </div>
-                    </div>
-                    <p class="item-doctor__like">
-                      <img src="assets/img/icons/like.png" alt="Иконка"> 24
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="faq__item js-accordion">
-              <div class="faq__item-question js-accordion-trigger">
-                <p>Лечите ли вы нехимические зависимости?</p>
-                <span class="accordion-icon" aria-hidden="true">
-                  <span></span>
-                  <span></span>
-                </span>
-              </div>
-              <div class="faq__item-answer">
-                <div class="js-accordion-content">
-                  <p>«Самое ценное – это обретённая свобода и возможность начать всё с чистого листа. Анонимность
-                    лечения
-                    позволила мне избежать ненужных переживаний и сосредоточиться на реабилитации. После выписки я
-                    чувствую себя уверенно и готов к вызовам жизни без наркотиков! Самое ценное – это обретённая свобода
-                    и
-                    возможность начать всё с чистого листа. Анонимность лечения позволила мне избежать ненужных
-                    переживаний и сосредоточиться на реабилитации. После выписки я чувствую себя уверенно и готов к
-                    вызовам жизни без наркотиков!» </p>
-                  <div class="faq__item-doctor">
-                    <p class="item-doctor__title">
-                      Отвечает на вопрос:
-                    </p>
-                    <div class="item-doctor__main">
-                      <picture class="item-doctor__picture">
-                        <source srcset="assets/img/doc/photo.jpg" type="image/webp" />
-                        <img src="assets/img/doc/photo.jpg" alt="Калюжная марина александровна"
-                          title="Калюжная марина александровна" loading="lazy" />
-                      </picture>
-                      <div class="item-doctor__content">
-                        <p class="item-doctor__name">Калюжная марина александровна</p>
-                        <p class="item-doctor__job">
-                          Директор клиники, психиатр-нарколог
-                        </p>
-                      </div>
-                    </div>
-                    <p class="item-doctor__like">
-                      <img src="assets/img/icons/like.png" alt="Иконка"> 24
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="faq__item js-accordion">
-              <div class="faq__item-question js-accordion-trigger">
-                <p>Лечите ли вы нехимические зависимости?</p>
-                <span class="accordion-icon" aria-hidden="true">
-                  <span></span>
-                  <span></span>
-                </span>
-              </div>
-              <div class="faq__item-answer">
-                <div class="js-accordion-content">
-                  <p>«Самое ценное – это обретённая свобода и возможность начать всё с чистого листа. Анонимность
-                    лечения
-                    позволила мне избежать ненужных переживаний и сосредоточиться на реабилитации. После выписки я
-                    чувствую себя уверенно и готов к вызовам жизни без наркотиков! Самое ценное – это обретённая свобода
-                    и
-                    возможность начать всё с чистого листа. Анонимность лечения позволила мне избежать ненужных
-                    переживаний и сосредоточиться на реабилитации. После выписки я чувствую себя уверенно и готов к
-                    вызовам жизни без наркотиков!» </p>
-                  <div class="faq__item-doctor">
-                    <p class="item-doctor__title">
-                      Отвечает на вопрос:
-                    </p>
-                    <div class="item-doctor__main">
-                      <picture class="item-doctor__picture">
-                        <source srcset="assets/img/doc/photo.jpg" type="image/webp" />
-                        <img src="assets/img/doc/photo.jpg" alt="Калюжная марина александровна"
-                          title="Калюжная марина александровна" loading="lazy" />
-                      </picture>
-                      <div class="item-doctor__content">
-                        <p class="item-doctor__name">Калюжная марина александровна</p>
-                        <p class="item-doctor__job">
-                          Директор клиники, психиатр-нарколог
-                        </p>
-                      </div>
-                    </div>
-                    <p class="item-doctor__like">
-                      <img src="assets/img/icons/like.png" alt="Иконка"> 24
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="faq__item js-accordion">
-              <div class="faq__item-question js-accordion-trigger">
-                <p>Лечите ли вы нехимические зависимости?</p>
-                <span class="accordion-icon" aria-hidden="true">
-                  <span></span>
-                  <span></span>
-                </span>
-              </div>
-              <div class="faq__item-answer">
-                <div class="js-accordion-content">
-                  <p>«Самое ценное – это обретённая свобода и возможность начать всё с чистого листа. Анонимность
-                    лечения
-                    позволила мне избежать ненужных переживаний и сосредоточиться на реабилитации. После выписки я
-                    чувствую себя уверенно и готов к вызовам жизни без наркотиков! Самое ценное – это обретённая свобода
-                    и
-                    возможность начать всё с чистого листа. Анонимность лечения позволила мне избежать ненужных
-                    переживаний и сосредоточиться на реабилитации. После выписки я чувствую себя уверенно и готов к
-                    вызовам жизни без наркотиков!» </p>
-                  <div class="faq__item-doctor">
-                    <p class="item-doctor__title">
-                      Отвечает на вопрос:
-                    </p>
-                    <div class="item-doctor__main">
-                      <picture class="item-doctor__picture">
-                        <source srcset="assets/img/doc/photo.jpg" type="image/webp" />
-                        <img src="assets/img/doc/photo.jpg" alt="Калюжная марина александровна"
-                          title="Калюжная марина александровна" loading="lazy" />
-                      </picture>
-                      <div class="item-doctor__content">
-                        <p class="item-doctor__name">Калюжная марина александровна</p>
-                        <p class="item-doctor__job">
-                          Директор клиники, психиатр-нарколог
-                        </p>
-                      </div>
-                    </div>
-                    <p class="item-doctor__like">
-                      <img src="assets/img/icons/like.png" alt="Иконка"> 24
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="faq__item js-accordion">
-              <div class="faq__item-question js-accordion-trigger">
-                <p>Лечите ли вы нехимические зависимости?</p>
-                <span class="accordion-icon" aria-hidden="true">
-                  <span></span>
-                  <span></span>
-                </span>
-              </div>
-              <div class="faq__item-answer">
-                <div class="js-accordion-content">
-                  <p>«Самое ценное – это обретённая свобода и возможность начать всё с чистого листа. Анонимность
-                    лечения
-                    позволила мне избежать ненужных переживаний и сосредоточиться на реабилитации. После выписки я
-                    чувствую себя уверенно и готов к вызовам жизни без наркотиков! Самое ценное – это обретённая свобода
-                    и
-                    возможность начать всё с чистого листа. Анонимность лечения позволила мне избежать ненужных
-                    переживаний и сосредоточиться на реабилитации. После выписки я чувствую себя уверенно и готов к
-                    вызовам жизни без наркотиков!» </p>
-                  <div class="faq__item-doctor">
-                    <p class="item-doctor__title">
-                      Отвечает на вопрос:
-                    </p>
-                    <div class="item-doctor__main">
-                      <picture class="item-doctor__picture">
-                        <source srcset="assets/img/doc/photo.jpg" type="image/webp" />
-                        <img src="assets/img/doc/photo.jpg" alt="Калюжная марина александровна"
-                          title="Калюжная марина александровна" loading="lazy" />
-                      </picture>
-                      <div class="item-doctor__content">
-                        <p class="item-doctor__name">Калюжная марина александровна</p>
-                        <p class="item-doctor__job">
-                          Директор клиники, психиатр-нарколог
-                        </p>
-                      </div>
-                    </div>
-                    <p class="item-doctor__like">
-                      <img src="assets/img/icons/like.png" alt="Иконка"> 24
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="faq__btns">
-            <button class="faq__btn primary-btn  popup-btn" data-path="popup-sing">
-              <i></i>Задать вопрос<span></span>
-            </button>
-            <button class="faq__btn tertiary-btn  popup-btn" data-path="popup-program">
-              <i></i>Написать нам в онлайн-чат<span><svg width="10" height="16" viewBox="0 0 10 16" fill="none"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path d="M0 16L6.68516 8L0 0H3.29412L10 8L3.29412 16H0Z" fill="#07253F"></path>
-                </svg>
-              </span>
-            </button>
-          </div>
-        </div>
-      </div>
-    </section>
     <section class="medicine section__general">
       <div class="medicine__container container">
         <div class="medicine__top section__top">
@@ -2389,6 +1964,491 @@
           <i></i>Читать все отзывы<span></span>
         </a>
       </div>
+      </div>
+    </section>
+    <section class="faq section__general">
+      <div class="faq__container container">
+        <div class="faq__wrapper">
+          <div class="faq__top section__top">
+            <p class="faq__title section__title-general">
+              <span>Вопросы</span> и ответы
+            </p>
+            <p class="faq__subtitle faq__subtitle--top section__subtitle-general">
+              Если у вас еще остались вопросы, можете задать нам, и наши консультанты ответят анонимно в любое время
+              суток</p>
+          </div>
+          <div class="faq__items">
+            <div class="faq__item js-accordion">
+              <div class="faq__item-question js-accordion-trigger">
+                <p>Лечите ли вы нехимические зависимости?</p>
+                <span class="accordion-icon" aria-hidden="true">
+                  <span></span>
+                  <span></span>
+                </span>
+              </div>
+              <div class="faq__item-answer">
+                <div class="js-accordion-content">
+                  <p>«Самое ценное – это обретённая свобода и возможность начать всё с чистого листа. Анонимность
+                    лечения
+                    позволила мне избежать ненужных переживаний и сосредоточиться на реабилитации. После выписки я
+                    чувствую себя уверенно и готов к вызовам жизни без наркотиков! Самое ценное – это обретённая свобода
+                    и
+                    возможность начать всё с чистого листа. Анонимность лечения позволила мне избежать ненужных
+                    переживаний и сосредоточиться на реабилитации. После выписки я чувствую себя уверенно и готов к
+                    вызовам жизни без наркотиков!» </p>
+                  <div class="faq__item-doctor">
+                    <div class="item-doctor__main">
+                      <picture class="item-doctor__picture">
+                        <source srcset="assets/img/doc/photo.jpg" type="image/webp" />
+                        <img src="assets/img/doc/photo.jpg" alt="Калюжная марина александровна"
+                          title="Калюжная марина александровна" loading="lazy" />
+                      </picture>
+                      <div class="item-doctor__content">
+                        <p class="item-doctor__title">
+                          Отвечает на вопрос:
+                        </p>
+                        <p class="item-doctor__name">Калюжная марина александровна</p>
+                        <p class="item-doctor__job">
+                          Директор клиники, психиатр-нарколог
+                        </p>
+                      </div>
+                    </div>
+                    <p class="item-doctor__like">
+                      <img src="assets/img/icons/like.png" alt="Иконка"> 24
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="faq__item js-accordion">
+              <div class="faq__item-question js-accordion-trigger">
+                <p>Лечите ли вы нехимические зависимости?</p>
+                <span class="accordion-icon" aria-hidden="true">
+                  <span></span>
+                  <span></span>
+                </span>
+              </div>
+              <div class="faq__item-answer">
+                <div class="js-accordion-content">
+                  <p>«Самое ценное – это обретённая свобода и возможность начать всё с чистого листа. Анонимность
+                    лечения
+                    позволила мне избежать ненужных переживаний и сосредоточиться на реабилитации. После выписки я
+                    чувствую себя уверенно и готов к вызовам жизни без наркотиков! Самое ценное – это обретённая свобода
+                    и
+                    возможность начать всё с чистого листа. Анонимность лечения позволила мне избежать ненужных
+                    переживаний и сосредоточиться на реабилитации. После выписки я чувствую себя уверенно и готов к
+                    вызовам жизни без наркотиков!» </p>
+                  <div class="faq__item-doctor">
+                    <div class="item-doctor__main">
+                      <picture class="item-doctor__picture">
+                        <source srcset="assets/img/doc/photo.jpg" type="image/webp" />
+                        <img src="assets/img/doc/photo.jpg" alt="Калюжная марина александровна"
+                          title="Калюжная марина александровна" loading="lazy" />
+                      </picture>
+                      <div class="item-doctor__content">
+                        <p class="item-doctor__title">
+                          Отвечает на вопрос:
+                        </p>
+                        <p class="item-doctor__name">Калюжная марина александровна</p>
+                        <p class="item-doctor__job">
+                          Директор клиники, психиатр-нарколог
+                        </p>
+                      </div>
+                    </div>
+                    <p class="item-doctor__like">
+                      <img src="assets/img/icons/like.png" alt="Иконка"> 24
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="faq__item js-accordion">
+              <div class="faq__item-question js-accordion-trigger">
+                <p>Лечите ли вы нехимические зависимости?</p>
+                <span class="accordion-icon" aria-hidden="true">
+                  <span></span>
+                  <span></span>
+                </span>
+              </div>
+              <div class="faq__item-answer">
+                <div class="js-accordion-content">
+                  <p>«Самое ценное – это обретённая свобода и возможность начать всё с чистого листа. Анонимность
+                    лечения
+                    позволила мне избежать ненужных переживаний и сосредоточиться на реабилитации. После выписки я
+                    чувствую себя уверенно и готов к вызовам жизни без наркотиков! Самое ценное – это обретённая свобода
+                    и
+                    возможность начать всё с чистого листа. Анонимность лечения позволила мне избежать ненужных
+                    переживаний и сосредоточиться на реабилитации. После выписки я чувствую себя уверенно и готов к
+                    вызовам жизни без наркотиков!» </p>
+                  <div class="faq__item-doctor">
+                    <div class="item-doctor__main">
+                      <picture class="item-doctor__picture">
+                        <source srcset="assets/img/doc/photo.jpg" type="image/webp" />
+                        <img src="assets/img/doc/photo.jpg" alt="Калюжная марина александровна"
+                          title="Калюжная марина александровна" loading="lazy" />
+                      </picture>
+                      <div class="item-doctor__content">
+                        <p class="item-doctor__title">
+                          Отвечает на вопрос:
+                        </p>
+                        <p class="item-doctor__name">Калюжная марина александровна</p>
+                        <p class="item-doctor__job">
+                          Директор клиники, психиатр-нарколог
+                        </p>
+                      </div>
+                    </div>
+                    <p class="item-doctor__like">
+                      <img src="assets/img/icons/like.png" alt="Иконка"> 24
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="faq__item js-accordion">
+              <div class="faq__item-question js-accordion-trigger">
+                <p>Лечите ли вы нехимические зависимости?</p>
+                <span class="accordion-icon" aria-hidden="true">
+                  <span></span>
+                  <span></span>
+                </span>
+              </div>
+              <div class="faq__item-answer">
+                <div class="js-accordion-content">
+                  <p>«Самое ценное – это обретённая свобода и возможность начать всё с чистого листа. Анонимность
+                    лечения
+                    позволила мне избежать ненужных переживаний и сосредоточиться на реабилитации. После выписки я
+                    чувствую себя уверенно и готов к вызовам жизни без наркотиков! Самое ценное – это обретённая свобода
+                    и
+                    возможность начать всё с чистого листа. Анонимность лечения позволила мне избежать ненужных
+                    переживаний и сосредоточиться на реабилитации. После выписки я чувствую себя уверенно и готов к
+                    вызовам жизни без наркотиков!» </p>
+                  <div class="faq__item-doctor">
+                    <div class="item-doctor__main">
+                      <picture class="item-doctor__picture">
+                        <source srcset="assets/img/doc/photo.jpg" type="image/webp" />
+                        <img src="assets/img/doc/photo.jpg" alt="Калюжная марина александровна"
+                          title="Калюжная марина александровна" loading="lazy" />
+                      </picture>
+                      <div class="item-doctor__content">
+                        <p class="item-doctor__title">
+                          Отвечает на вопрос:
+                        </p>
+                        <p class="item-doctor__name">Калюжная марина александровна</p>
+                        <p class="item-doctor__job">
+                          Директор клиники, психиатр-нарколог
+                        </p>
+                      </div>
+                    </div>
+                    <p class="item-doctor__like">
+                      <img src="assets/img/icons/like.png" alt="Иконка"> 24
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="faq__item js-accordion">
+              <div class="faq__item-question js-accordion-trigger">
+                <p>Лечите ли вы нехимические зависимости?</p>
+                <span class="accordion-icon" aria-hidden="true">
+                  <span></span>
+                  <span></span>
+                </span>
+              </div>
+              <div class="faq__item-answer">
+                <div class="js-accordion-content">
+                  <p>«Самое ценное – это обретённая свобода и возможность начать всё с чистого листа. Анонимность
+                    лечения
+                    позволила мне избежать ненужных переживаний и сосредоточиться на реабилитации. После выписки я
+                    чувствую себя уверенно и готов к вызовам жизни без наркотиков! Самое ценное – это обретённая свобода
+                    и
+                    возможность начать всё с чистого листа. Анонимность лечения позволила мне избежать ненужных
+                    переживаний и сосредоточиться на реабилитации. После выписки я чувствую себя уверенно и готов к
+                    вызовам жизни без наркотиков!» </p>
+                  <div class="faq__item-doctor">
+                    <div class="item-doctor__main">
+                      <picture class="item-doctor__picture">
+                        <source srcset="assets/img/doc/photo.jpg" type="image/webp" />
+                        <img src="assets/img/doc/photo.jpg" alt="Калюжная марина александровна"
+                          title="Калюжная марина александровна" loading="lazy" />
+                      </picture>
+                      <div class="item-doctor__content">
+                        <p class="item-doctor__title">
+                          Отвечает на вопрос:
+                        </p>
+                        <p class="item-doctor__name">Калюжная марина александровна</p>
+                        <p class="item-doctor__job">
+                          Директор клиники, психиатр-нарколог
+                        </p>
+                      </div>
+                    </div>
+                    <p class="item-doctor__like">
+                      <img src="assets/img/icons/like.png" alt="Иконка"> 24
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="faq__item js-accordion">
+              <div class="faq__item-question js-accordion-trigger">
+                <p>Лечите ли вы нехимические зависимости?</p>
+                <span class="accordion-icon" aria-hidden="true">
+                  <span></span>
+                  <span></span>
+                </span>
+              </div>
+              <div class="faq__item-answer">
+                <div class="js-accordion-content">
+                  <p>«Самое ценное – это обретённая свобода и возможность начать всё с чистого листа. Анонимность
+                    лечения
+                    позволила мне избежать ненужных переживаний и сосредоточиться на реабилитации. После выписки я
+                    чувствую себя уверенно и готов к вызовам жизни без наркотиков! Самое ценное – это обретённая свобода
+                    и
+                    возможность начать всё с чистого листа. Анонимность лечения позволила мне избежать ненужных
+                    переживаний и сосредоточиться на реабилитации. После выписки я чувствую себя уверенно и готов к
+                    вызовам жизни без наркотиков!» </p>
+                  <div class="faq__item-doctor">
+                    <div class="item-doctor__main">
+                      <picture class="item-doctor__picture">
+                        <source srcset="assets/img/doc/photo.jpg" type="image/webp" />
+                        <img src="assets/img/doc/photo.jpg" alt="Калюжная марина александровна"
+                          title="Калюжная марина александровна" loading="lazy" />
+                      </picture>
+                      <div class="item-doctor__content">
+                        <p class="item-doctor__title">
+                          Отвечает на вопрос:
+                        </p>
+                        <p class="item-doctor__name">Калюжная марина александровна</p>
+                        <p class="item-doctor__job">
+                          Директор клиники, психиатр-нарколог
+                        </p>
+                      </div>
+                    </div>
+                    <p class="item-doctor__like">
+                      <img src="assets/img/icons/like.png" alt="Иконка"> 24
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="faq__item js-accordion">
+              <div class="faq__item-question js-accordion-trigger">
+                <p>Лечите ли вы нехимические зависимости?</p>
+                <span class="accordion-icon" aria-hidden="true">
+                  <span></span>
+                  <span></span>
+                </span>
+              </div>
+              <div class="faq__item-answer">
+                <div class="js-accordion-content">
+                  <p>«Самое ценное – это обретённая свобода и возможность начать всё с чистого листа. Анонимность
+                    лечения
+                    позволила мне избежать ненужных переживаний и сосредоточиться на реабилитации. После выписки я
+                    чувствую себя уверенно и готов к вызовам жизни без наркотиков! Самое ценное – это обретённая свобода
+                    и
+                    возможность начать всё с чистого листа. Анонимность лечения позволила мне избежать ненужных
+                    переживаний и сосредоточиться на реабилитации. После выписки я чувствую себя уверенно и готов к
+                    вызовам жизни без наркотиков!» </p>
+                  <div class="faq__item-doctor">
+                    <div class="item-doctor__main">
+                      <picture class="item-doctor__picture">
+                        <source srcset="assets/img/doc/photo.jpg" type="image/webp" />
+                        <img src="assets/img/doc/photo.jpg" alt="Калюжная марина александровна"
+                          title="Калюжная марина александровна" loading="lazy" />
+                      </picture>
+                      <div class="item-doctor__content">
+                        <p class="item-doctor__title">
+                          Отвечает на вопрос:
+                        </p>
+                        <p class="item-doctor__name">Калюжная марина александровна</p>
+                        <p class="item-doctor__job">
+                          Директор клиники, психиатр-нарколог
+                        </p>
+                      </div>
+                    </div>
+                    <p class="item-doctor__like">
+                      <img src="assets/img/icons/like.png" alt="Иконка"> 24
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="faq__btns">
+            <button class="faq__btn primary-btn  popup-btn" data-path="popup-sing">
+              <i></i>Задать вопрос<span></span>
+            </button>
+            <button class="faq__btn tertiary-btn  popup-btn" data-path="popup-program">
+              <i></i>Написать нам в онлайн-чат<span><svg width="10" height="16" viewBox="0 0 10 16" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0 16L6.68516 8L0 0H3.29412L10 8L3.29412 16H0Z" fill="#07253F"></path>
+                </svg>
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="authorization-documentation section__general">
+      <div class="authorization-documentation__container container">
+        <div class="authorization-documentation__wrapper">
+          <div class="authorization-documentation__top section__top">
+            <p class="authorization-documentation__title section__title-general">
+              <span>Лицензии и</span>
+              разрешительная документация
+            </p>
+            <p
+              class="authorization-documentation__subtitle authorization-documentation__subtitle--top section__subtitle-general">
+              Документы, подтверждающие право на оказание наркологической и медицинской помощи</p>
+          </div>
+          <div class="authorization-documentation__main">
+            <div class="authorization-documentation__documents">
+              <a class="authorization-documentation__document" href="assets/img/icons/doc.jpg" data-fancybox="Лицензии">
+                <span class="authorization-documentation__document-img"><svg width="40" height="40" viewBox="0 0 40 40"
+                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="40" height="40" rx="12" fill="#F2F5F7" />
+                    <path
+                      d="M19.9996 14.1821C23.1195 14.1821 25.718 15.9486 27.7558 19.3849L27.9158 19.6606L27.9485 19.7333L27.9703 19.7936L27.9805 19.8336L27.9907 19.8933L27.9987 19.966V20.046L27.9885 20.1267C27.9837 20.1537 27.9774 20.1804 27.9696 20.2067L27.9412 20.2853L27.915 20.3398L27.9034 20.3616C25.8933 23.8786 23.3217 25.7288 20.2272 25.8153L19.9996 25.8182C16.8026 25.8182 14.1546 23.9645 12.0958 20.3609C12.033 20.251 12 20.1267 12 20.0002C12 19.8737 12.033 19.7493 12.0958 19.6395C14.1546 16.0359 16.8026 14.1821 19.9996 14.1821ZM19.9996 17.8184C19.4209 17.8184 18.866 18.0483 18.4568 18.4574C18.0477 18.8666 17.8178 19.4215 17.8178 20.0002C17.8178 20.5788 18.0477 21.1338 18.4568 21.5429C18.866 21.9521 19.4209 22.1819 19.9996 22.1819C20.5782 22.1819 21.1332 21.9521 21.5423 21.5429C21.9515 21.1338 22.1814 20.5788 22.1814 20.0002C22.1814 19.4215 21.9515 18.8666 21.5423 18.4574C21.1332 18.0483 20.5782 17.8184 19.9996 17.8184Z"
+                      fill="#07253F" />
+                  </svg></span>
+                <div class="authorization-documentation__document-text">
+                  <p class="authorization-documentation__document-name">Выписка из реестра лицензий</p>
+                  <p class="authorization-documentation__document-desc">Приложение, стр. 2</p>
+                </div>
+                <picture class="authorization-documentation__document-picture">
+                  <source srcset="assets/img/icons/doc.jpg" type="image/webp">
+                  <img src="assets/img/icons/doc.jpg" loading="lazy" alt="Иконка лицензий"
+                    title="Иконка реестра лицензий">
+                </picture>
+              </a>
+              <a class="authorization-documentation__document" href="assets/img/icons/doc.jpg" data-fancybox="Лицензии">
+                <span class="authorization-documentation__document-img"><svg width="40" height="40" viewBox="0 0 40 40"
+                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="40" height="40" rx="12" fill="#F2F5F7" />
+                    <path
+                      d="M19.9996 14.1821C23.1195 14.1821 25.718 15.9486 27.7558 19.3849L27.9158 19.6606L27.9485 19.7333L27.9703 19.7936L27.9805 19.8336L27.9907 19.8933L27.9987 19.966V20.046L27.9885 20.1267C27.9837 20.1537 27.9774 20.1804 27.9696 20.2067L27.9412 20.2853L27.915 20.3398L27.9034 20.3616C25.8933 23.8786 23.3217 25.7288 20.2272 25.8153L19.9996 25.8182C16.8026 25.8182 14.1546 23.9645 12.0958 20.3609C12.033 20.251 12 20.1267 12 20.0002C12 19.8737 12.033 19.7493 12.0958 19.6395C14.1546 16.0359 16.8026 14.1821 19.9996 14.1821ZM19.9996 17.8184C19.4209 17.8184 18.866 18.0483 18.4568 18.4574C18.0477 18.8666 17.8178 19.4215 17.8178 20.0002C17.8178 20.5788 18.0477 21.1338 18.4568 21.5429C18.866 21.9521 19.4209 22.1819 19.9996 22.1819C20.5782 22.1819 21.1332 21.9521 21.5423 21.5429C21.9515 21.1338 22.1814 20.5788 22.1814 20.0002C22.1814 19.4215 21.9515 18.8666 21.5423 18.4574C21.1332 18.0483 20.5782 17.8184 19.9996 17.8184Z"
+                      fill="#07253F" />
+                  </svg></span>
+                <div class="authorization-documentation__document-text">
+                  <p class="authorization-documentation__document-name">Выписка из реестра лицензий</p>
+                  <p class="authorization-documentation__document-desc">Приложение, стр. 2</p>
+                </div>
+                <picture class="authorization-documentation__document-picture">
+                  <source srcset="assets/img/icons/doc.jpg" type="image/webp">
+                  <img src="assets/img/icons/doc.jpg" loading="lazy" alt="Иконка лицензий"
+                    title="Иконка реестра лицензий">
+                </picture>
+              </a>
+              <a class="authorization-documentation__document" href="assets/img/icons/doc.jpg" data-fancybox="Лицензии">
+                <span class="authorization-documentation__document-img"><svg width="40" height="40" viewBox="0 0 40 40"
+                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="40" height="40" rx="12" fill="#F2F5F7" />
+                    <path
+                      d="M19.9996 14.1821C23.1195 14.1821 25.718 15.9486 27.7558 19.3849L27.9158 19.6606L27.9485 19.7333L27.9703 19.7936L27.9805 19.8336L27.9907 19.8933L27.9987 19.966V20.046L27.9885 20.1267C27.9837 20.1537 27.9774 20.1804 27.9696 20.2067L27.9412 20.2853L27.915 20.3398L27.9034 20.3616C25.8933 23.8786 23.3217 25.7288 20.2272 25.8153L19.9996 25.8182C16.8026 25.8182 14.1546 23.9645 12.0958 20.3609C12.033 20.251 12 20.1267 12 20.0002C12 19.8737 12.033 19.7493 12.0958 19.6395C14.1546 16.0359 16.8026 14.1821 19.9996 14.1821ZM19.9996 17.8184C19.4209 17.8184 18.866 18.0483 18.4568 18.4574C18.0477 18.8666 17.8178 19.4215 17.8178 20.0002C17.8178 20.5788 18.0477 21.1338 18.4568 21.5429C18.866 21.9521 19.4209 22.1819 19.9996 22.1819C20.5782 22.1819 21.1332 21.9521 21.5423 21.5429C21.9515 21.1338 22.1814 20.5788 22.1814 20.0002C22.1814 19.4215 21.9515 18.8666 21.5423 18.4574C21.1332 18.0483 20.5782 17.8184 19.9996 17.8184Z"
+                      fill="#07253F" />
+                  </svg></span>
+                <div class="authorization-documentation__document-text">
+                  <p class="authorization-documentation__document-name">Выписка из реестра лицензий</p>
+                  <p class="authorization-documentation__document-desc">Приложение, стр. 2</p>
+                </div>
+                <picture class="authorization-documentation__document-picture">
+                  <source srcset="assets/img/icons/doc.jpg" type="image/webp">
+                  <img src="assets/img/icons/doc.jpg" loading="lazy" alt="Иконка лицензий"
+                    title="Иконка реестра лицензий">
+                </picture>
+              </a>
+            </div>
+            <div class="authorization-documentation__license">
+              <p><span>Полное наименование:</span> ООО «Айтиинвест»</p>
+              <p><span>ИНН/КПП:</span> 2312305298/231101001</p>
+              <p><span>Дата выдачи:</span> 19 февраля 2024 г</p>
+              <p><span>Кем выдана:</span> Министерство здравоохранения Краснодарского края</p>
+              <p><span>ОГРН:</span> 1212300059718</p>
+              <p><span>Медицинская лицензия:</span> Л041-01126-23/01066181</p>
+              <p><span>Срок действия:</span> бессрочно</p>
+              <img class="authorization-documentation__license-img" src="assets/img/icons/imglicense.png" alt="Иконка">
+            </div>
+          </div>
+          <div class="authorization-documentation__links">
+            <a class="authorization-documentation__link primary-link" href="">
+              <i></i>Проверить лицензию в реестре<span></span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="useful-resources section__general">
+      <div class="useful-resources__container container">
+        <div class="useful-resources__wrapper">
+          <div class="useful-resources__top section__top">
+            <div>
+              <p class="useful-resources__title section__title-general">
+                <span>Полезные материалы</span> от врачей
+              </p>
+              <p class="useful-resources__subtitle section__subtitle-general">
+                Статьи от врачей нашей наркологической клиники о всех  видах зависимостей и способах её лечения
+              </p>
+            </div>
+            <a class="useful-resources__link primary-link" href="№">
+              <i></i>Смотреть весь блог<span></span>
+            </a>
+          </div>
+
+          <div class="useful-resources__main">
+            <div class="useful-resources__items">
+              <a class="useful-resources__item" href="#">
+                <p class="useful-resources__item-name">
+                  Ситенкова К. В. (Психиатр-нарколог)
+                </p>
+                <div class="useful-resources__item-main">
+                  <p class="useful-resources__item-date">
+                    15 марта 2025
+                  </p>
+                  <p class="useful-resources__item-title">
+                    Передозировка габапентином: симптомы, первая помощь, лечение
+                    в стационаре
+                  </p>
+                </div>
+                <p class="useful-resources__item-read">
+                  Читать статью
+                </p>
+              </a>
+              <a class="useful-resources__item" href="#">
+                <p class="useful-resources__item-name">
+                  Ситенкова К. В. (Психиатр-нарколог)
+                </p>
+                <div class="useful-resources__item-main">
+                  <p class="useful-resources__item-date">
+                    15 марта 2025
+                  </p>
+                  <p class="useful-resources__item-title">
+                    Передозировка габапентином: симптомы, первая помощь, лечение
+                    в стационаре
+                  </p>
+                </div>
+                <p class="useful-resources__item-read">
+                  Читать статью
+                </p>
+              </a>
+              <a class="useful-resources__item" href="#">
+                <p class="useful-resources__item-name">
+                  Ситенкова К. В. (Психиатр-нарколог)
+                </p>
+                <div class="useful-resources__item-main">
+                  <p class="useful-resources__item-date">
+                    15 марта 2025
+                  </p>
+                  <p class="useful-resources__item-title">
+                    Передозировка габапентином: симптомы, первая помощь, лечение
+                    в стационаре
+                  </p>
+                </div>
+                <p class="useful-resources__item-read">
+                  Читать статью
+                </p>
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   </main>

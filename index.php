@@ -1,100 +1,101 @@
-   <section class="faq section__general">
-      <div class="faq__container container">
-        <div class="faq__wrapper">
-          <div class="faq__top section__top">
-            <p class="faq__title section__title-general">
-              <span>Вопросы</span> и ответы
-            </p>
-            <p class="faq__subtitle faq__subtitle--top section__subtitle-general">
-              Если у вас еще остались вопросы, можете задать нам, и наши консультанты ответят анонимно в любое время
-              суток</p>
+  <section class="useful-resources section__general">
+      <style>
+        .useful-resources__items {
+          width: 810px;
+          display: flex;
+          gap: 10px;
+          align-items: center;
+        }
 
-          </div>
-          <style>
-            .faq__btns {
-              display: flex;
-              flex-direction: column;
-              gap: 8px;
-            }
+        .useful-resources__item {
+          flex: 0 0 calc((100% - 20px)/3);
+          border-radius: 26px;
+          padding: 19px;
+          background: var(--fonovyy);
+          gap: 32px;
+          align-items: center;
+          transition: border .3s;
+        }
 
-            .faq__btn {
-              background: var(--fonovyy);
-            }
+        .useful-resources__item:hover {
+          border: 1px solid #eb591f;
+        }
 
+        .useful-resources__item-read,
+        .useful-resources__item-name {
+          border-radius: 10px;
+          padding: 6px 10px;
+          background: var(--belyy-100);
+          font-family: var(--second-family);
+          font-weight: 700;
+          font-size: 9px;
+          line-height: 133%;
+          text-transform: uppercase;
+          text-align: center;
+          color: var(--tekst-dark-100);
+        }
 
-            .js-accordion-trigger {
-              display: flex;
-              justify-content: space-between;
-              align-items: center;
-              gap: 20px;
-              cursor: pointer;
-            }
+        .useful-resources__item-date {
+          font-weight: 500;
+          font-size: 12px;
+          text-align: center;
+          margin-bottom: 12px;
+          color: var(--tekst-dark-60);
+        }
 
-            .js-accordion-content {
-              max-height: 0;
-              overflow: hidden;
-              transition: max-height .35s ease;
-            }
+        .useful-resources__item-title {
+          font-family: var(--second-family);
+          font-weight: 700;
+          font-size: 14px;
+          line-height: 129%;
+          text-transform: uppercase;
+          text-align: center;
+          color: var(--tekst-dark-100);
+        }
 
-            .accordion-icon {
-              position: relative;
-              width: 22px;
-              height: 22px;
-              flex-shrink: 0;
-            }
-
-            .accordion-icon span {
-              position: absolute;
-              left: 50%;
-              top: 50%;
-              width: 22px;
-              height: 2px;
-              background: currentColor;
-              border-radius: 2px;
-              transform: translate(-50%, -50%);
-              transition: transform .3s ease;
-            }
-
-            .accordion-icon span:last-child {
-              transform: translate(-50%, -50%) rotate(90deg);
-            }
-
-            .js-accordion.is-open .accordion-icon span:last-child {
-              transform: translate(-50%, -50%) rotate(0deg);
-            }
-            
-            .faq__item-question {
-              
-            }
-          </style>
-
-          <div class="faq__item js-accordion">
-            <div class="faq__item-question js-accordion-trigger">
-              <p>Лечите ли вы нехимические зависимости?</p>
-
-              <span class="accordion-icon" aria-hidden="true">
-                <span></span>
-                <span></span>
-              </span>
-            </div>
-
-            <div class="faq__item-answer js-accordion-content">
-              <p>
-                «Самое ценное – это обретённая свобода и возможность начать всё с чистого листа...»
+        .useful-resources__item-read {
+          border-radius: 40px;
+          padding: 16px 18px;
+          background: var(--belyy-100);
+          width: fit-content;
+        }
+      </style>
+      <div class="useful-resources__container container">
+        <div class="useful-resources__wrapper">
+          <div class="useful-resources__top section__top">
+            <div>
+              <p class="useful-resources__title section__title-general">
+                <span>Полезные материалы</span> от врачей
+              </p>
+              <p class="useful-resources__subtitle section__subtitle-general">
+                Статьи от врачей нашей наркологической клиники о всех  видах зависимостей и способах её лечения
               </p>
             </div>
+            <a class="useful-resources__link primary-link" href="№">
+              <i></i>Смотреть весь блог<span></span>
+            </a>
           </div>
-          <div class="faq__btns">
-            <button class="faq__btn primary-btn  popup-btn" data-path="popup-sing">
-              <i></i>Задать вопрос<span></span>
-            </button>
-            <button class="faq__btn tertiary-btn  popup-btn" data-path="popup-program">
-              <i></i>Написать нам в онлайн-чат<span><svg width="10" height="16" viewBox="0 0 10 16" fill="none"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path d="M0 16L6.68516 8L0 0H3.29412L10 8L3.29412 16H0Z" fill="#07253F"></path>
-                </svg>
-              </span>
-            </button>
+
+          <div class="useful-resources__main">
+            <div class="useful-resources__items">
+              <a class="useful-resources__item" href="#">
+                <p class="useful-resources__item-name">
+                  Ситенкова К. В. (Психиатр-нарколог)
+                </p>
+                <div class="useful-resources__item-main">
+                  <p class="useful-resources__item-date">
+                    15 марта 2025
+                  </p>
+                  <p class="useful-resources__item-title">
+                    Передозировка габапентином: симптомы, первая помощь, лечение
+                    в стационаре
+                  </p>
+                </div>
+                <p class="useful-resources__item-read">
+                  Читать статью
+                </p>
+              </a>
+            </div>
           </div>
         </div>
       </div>
