@@ -1462,6 +1462,7 @@ input {
     }
 }
 
+.item-doctor__job::before,
 .form-doctor__experience::before,
 .form-doctor__job::before {
     content: "";
@@ -1487,6 +1488,7 @@ input {
     background: var(--fonovyy);
 }
 
+.item-doctor__main,
 .intro__form-doctor {
     border-radius: 20px;
     background: var(--fonovyy);
@@ -1498,6 +1500,7 @@ input {
     margin-bottom: 20px;
 }
 
+.item-doctor__picture,
 .form-doctor__picture {
     border-radius: 10px;
     max-width: 70px;
@@ -1507,6 +1510,8 @@ input {
     display: flex;
 }
 
+.item-doctor__picture,
+.item-doctor__picture img,
 .form-doctor__picture img,
 .form-doctor__picture {
     border-radius: 10px;
@@ -1524,6 +1529,7 @@ input {
     gap: 4px;
 }
 
+.item-doctor__name,
 .form-doctor__name {
     font-family: var(--second-family);
     font-weight: 700;
@@ -1533,6 +1539,7 @@ input {
     color: var(--tekst-dark-100);
 }
 
+.item-doctor__job,
 .form-doctor__experience,
 .form-doctor__job {
     font-family: var(--font-family);
@@ -1652,6 +1659,7 @@ input {
         max-width: 523px;
     }
 
+    .item-doctor__main,
     .intro__form-doctor {
         border-radius: 30px;
         padding: 30px;
@@ -1660,12 +1668,15 @@ input {
         margin-bottom: 52px;
     }
 
+    .item-doctor__picture,
     .form-doctor__picture {
         border-radius: 20px;
         max-width: 120px;
         max-height: 120px;
     }
 
+    .item-doctor__picture,
+    .item-doctor__picture img,
     .form-doctor__picture img,
     .form-doctor__picture {
         border-radius: 20px;
@@ -1679,11 +1690,13 @@ input {
         gap: 8px;
     }
 
+    .item-doctor__name,
     .form-doctor__name {
         font-size: 20px;
         margin-bottom: 12px;
     }
 
+    .item-doctor__job,
     .form-doctor__experience,
     .form-doctor__job {
         font-size: 14px;
@@ -1732,6 +1745,8 @@ input {
         padding-top: 44px;
     }
 
+    .item-doctor__picture,
+    .item-doctor__picture img,
     .form-doctor__picture img,
     .form-doctor__picture {
         border-radius: 20px;
