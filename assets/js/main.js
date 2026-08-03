@@ -438,7 +438,7 @@
             }
             document.querySelectorAll('a[href^="#"]').forEach((link) => {
                 link.addEventListener("click", function (e) {
-                
+
                     let href = this.getAttribute("href").substring(1);
                     const scrollTarget = document.getElementById(href);
                     if (scrollTarget) {
@@ -458,6 +458,33 @@
                 navigationList.remove();
             }
         }
+    }
+
+    const tabBtns = document.querySelectorAll('.tab-btn');
+    const tabContents = document.querySelectorAll('.tab-content');
+
+    if (tabBtns.length > 0 && tabContents.length > 0) {
+
+        tabContents.forEach(content => content.classList.add('active'));
+
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const category = btn.dataset.faqCategory;
+
+                tabBtns.forEach(item => item.classList.remove('active'));
+                btn.classList.add('active');
+
+                tabContents.forEach(content => content.classList.remove('active'));
+
+                const activeContent = document.querySelector(
+                    `.tab-content[data-faq-category="${category}"]`
+                );
+
+                if (activeContent) {
+                    activeContent.classList.add('active');
+                }
+            });
+        });
     }
 
 })();
