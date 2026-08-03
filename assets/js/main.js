@@ -413,6 +413,53 @@
         });
     });
 
+
+
+    const articleNavigation = document.querySelector(".navigation-js");
+    if (articleNavigation) {
+        const jsScrollBlockList = document.querySelectorAll(
+            ".text-block__navigation h2",
+        );
+
+        if (jsScrollBlockList.length > 0) {
+            for (let i = 0; i < jsScrollBlockList.length; i += 1) {
+                const jsScrollBlock = jsScrollBlockList[i];
+                const titleBlock = jsScrollBlock.textContent;
+                const articleNavigationList =
+                    document.querySelector(".navigation__list");
+                const articleNavigationItem = document.createElement("li");
+                const articleNavigationLink = document.createElement("a");
+                articleNavigationItem.classList.add("navigation__item");
+                jsScrollBlock.setAttribute("id", `section-${i}`);
+                articleNavigationLink.setAttribute("href", `#section-${i}`);
+                articleNavigationLink.textContent = " " + titleBlock;
+                articleNavigationItem.append(articleNavigationLink);
+                articleNavigationList.append(articleNavigationItem);
+            }
+            document.querySelectorAll('a[href^="#"]').forEach((link) => {
+                link.addEventListener("click", function (e) {
+                
+                    let href = this.getAttribute("href").substring(1);
+                    const scrollTarget = document.getElementById(href);
+                    if (scrollTarget) {
+                        const topOffset = 120;
+                        const elementPosition = scrollTarget.getBoundingClientRect().top;
+                        const offsetPosition = elementPosition - topOffset;
+                        window.scrollBy({
+                            top: offsetPosition,
+                            behavior: "smooth",
+                        });
+                    }
+                });
+            });
+        } else {
+            const navigationList = articleNavigation.querySelector(".navigation__list");
+            if (navigationList) {
+                navigationList.remove();
+            }
+        }
+    }
+
 })();
 
 
@@ -567,3 +614,7 @@ if (moreBtnsList.length > 0) {
         });
     })
 }
+
+
+
+
