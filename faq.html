@@ -81,7 +81,43 @@
                 <span></span>
               </button>
             </div>
+            <style>
+              .header__mobile {
+                border-radius: 60px;
+                padding: 8px 8px 8px 18px;
+                background: var(--fonovyy);
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+              }
+
+              @media (max-width: 1024px) {
+                .header__bottom-info {
+                  padding: 10px;
+                }
+              }
+            </style>
             <div class="header__bottom-info" id="header__bottom-info">
+              <div class="header__mobile">
+                <a href="/" class="header__logo header__logo--mobile">
+                  <picture class="logo">
+                    <source srcset="assets/img/logo/logo-mob.svg" type="image/svg+xml">
+                    <img src="assets/img/logo/logo-mob.png" alt="логотип наркологической клиники"
+                      title="логотип наркологической клиники">
+                  </picture>
+                </a>
+                <div class="header__btns">
+                  <div>
+                    <a href="tel:+79034110003"><img src="assets/img/logo/phone-mob.svg" alt="Иконка телефона"></a>
+                  </div>
+                  <button class="burger" id="burger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </button>
+                </div>
+              </div>
               <nav class="menu">
                 <ul class="menu__list">
                   <li class="menu__item menu__item--submenu">
@@ -1459,7 +1495,7 @@
               <img class="faq-page__answer-img" src="assets/img/doc/corner.svg" alt="Иконка">
             </div>
           </aside>
-          
+
         </div>
         <div class="container">
           <div class="faq-page__answer faq-page__answer--mob">
