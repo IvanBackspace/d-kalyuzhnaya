@@ -83,6 +83,16 @@
             </div>
             <style>
               .header__mobile {
+                padding: 10px;
+                width: 100%;
+                position: sticky;
+                top: 0;
+                right: 0;
+                left: 0;
+                z-index: 100;
+              }
+
+              .header__mobile-main {
                 border-radius: 60px;
                 padding: 8px 8px 8px 18px;
                 background: var(--fonovyy);
@@ -92,30 +102,95 @@
                 width: 100%;
               }
 
+              .menu {
+                padding-left: 10px;
+              }
+
+              .header__mobile-info {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                border-radius: 20px 20px 0 0;
+                padding: 40px 10px 20px;
+                width: 100%;
+                background: var(--fonovyy);
+              }
+
+              .header__mobile-info p {
+                font-family: var(--font-family);
+                font-weight: 500;
+                font-size: 12px;
+                line-height: 133%;
+                color: var(--tekst-dark-60);
+                display: flex;
+                gap: 5px;
+                flex-direction: column;
+              }
+
+              .header__mobile-info p span {
+                font-family: var(--second-family);
+                font-weight: 700;
+                font-size: 14px;
+                line-height: 129%;
+                text-transform: uppercase;
+                color: var(--tekst-dark-100);
+              }
+
+              .header__mobile-info .header__info::before {
+                display: none;
+              }
+
+              .header__mobile-info .header__info {
+                padding-left: 0;
+              }
+
+
+
+              @media (min-width: 1024px) {
+                .header__mobile-info {
+                  display: none;
+                }
+              }
+
               @media (max-width: 1024px) {
                 .header__bottom-info {
-                  padding: 10px;
+                  padding: 0px;
+                  gap: 20px;
+                }
+
+                .menu__link {
+                  padding: 8px 0px;
+                }
+
+                .menu {
+                  overflow: visible;
+                }
+
+                .header__bottom-info.active {
+                  overflow: auto;
                 }
               }
             </style>
             <div class="header__bottom-info" id="header__bottom-info">
               <div class="header__mobile">
-                <a href="/" class="header__logo header__logo--mobile">
-                  <picture class="logo">
-                    <source srcset="assets/img/logo/logo-mob.svg" type="image/svg+xml">
-                    <img src="assets/img/logo/logo-mob.png" alt="логотип наркологической клиники"
-                      title="логотип наркологической клиники">
-                  </picture>
-                </a>
-                <div class="header__btns">
-                  <div>
-                    <a href="tel:+79034110003"><img src="assets/img/logo/phone-mob.svg" alt="Иконка телефона"></a>
+                <div class="header__mobile-main">
+                  <a href="/" class="header__logo header__logo--mobile">
+                    <picture class="logo">
+                      <source srcset="assets/img/logo/logo-mob.svg" type="image/svg+xml">
+                      <img src="assets/img/logo/logo-mob.png" alt="логотип наркологической клиники"
+                        title="логотип наркологической клиники">
+                    </picture>
+                  </a>
+                  <div class="header__btns">
+                    <div>
+                      <a href="tel:+79034110003"><img src="assets/img/logo/phone-mob.svg" alt="Иконка телефона"></a>
+                    </div>
+                    <button class="burger" id="burger">
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                    </button>
                   </div>
-                  <button class="burger" id="burger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                  </button>
                 </div>
               </div>
               <nav class="menu">
@@ -170,6 +245,26 @@
                   </li>
                 </ul>
               </nav>
+              <div class="header__mobile-info">
+                <div class="header__info header__info--address">
+                  <p>Адрес клиники <span>Краснодар, ул. Алма-Атинская, д. 99</span></p>
+                </div>
+                <div class="header__info header__info--time">
+                  <p>Режим работы<span>Круглосуточно, работаем 24/7</span></p>
+                </div>
+                <div class="header__info header__info--license">
+                  <p><span>Лицензия № Л041-01126-<br>23/01066181</span> <a href="#">Проверить</a></p>
+                </div>
+                <div class="header__info header__info--address">
+                  <p>Адрес клиники <span>Краснодар, ул. Алма-Атинская, д. 99</span></p>
+                </div>
+                <div class="header__info header__info--time">
+                  <p>Режим работы<span>Круглосуточно, работаем 24/7</span></p>
+                </div>
+                <div class="header__info header__info--license">
+                  <p><span>Лицензия № Л041-01126-<br>23/01066181</span> <a href="#">Проверить</a></p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
