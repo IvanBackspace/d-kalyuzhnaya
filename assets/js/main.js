@@ -1,11 +1,16 @@
 (() => {
     const burger = document.getElementById('burger');
+    const burgerMob = document.getElementById('burger--mob');
     const menu = document.getElementById('header__bottom-info');
-    burger.addEventListener('click', () => {
+
+    function toggleMenu() {
         menu.classList.toggle('active');
         burger.classList.toggle('active');
-    });
+        burgerMob.classList.toggle('active');
+    }
 
+    burger.addEventListener('click', toggleMenu);
+    burgerMob.addEventListener('click', toggleMenu);
 
     function setWidthScrollBar() {
         let div = document.createElement('div');
