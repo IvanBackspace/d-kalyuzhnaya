@@ -88,7 +88,20 @@
                 }
               }
 
+              .menu__link--chapter {
+                display: block;
+              }
+
+              .menu__link--text {
+                display: none;
+              }
+
               @media (max-width: 1024px) {
+                .submenu__list {
+                  background: white;
+                  padding-top: 24px;
+                }
+
                 .header__mobile {
                   padding: 10px;
                   width: 100%;
@@ -167,6 +180,59 @@
                 .header__bottom-info.active {
                   overflow: auto;
                 }
+
+                .submenu__toggle {
+                  font-family: var(--font-family);
+                  font-weight: 500;
+                  font-size: 14px;
+                  line-height: 143%;
+                  color: var(--tekst-dark-60);
+                }
+
+                .menu__link--chapter {
+                  display: none;
+                }
+
+                .menu__link--text {
+                  display: block;
+                }
+
+                .menu__toggle {
+                  display: flex;
+                  gap: 10px;
+                  align-items: center;
+                }
+
+                .submenu__toggle {
+                  margin-bottom: 31px;
+                }
+
+                .submenu__info {
+                  position: relative;
+                  background: white;
+                }
+
+                .submenu__info::after {
+                  content: "";
+                  position: absolute;
+                  left: 0;
+                  right: 0;
+                  bottom: 0;
+                  height: 1px;
+                  background: linear-gradient(90deg,
+                      rgba(0, 121, 181, 0.15) 0%,
+                      rgba(0, 121, 181, 0) 100%);
+                }
+
+                .submenu__info-text {
+                  font-family: var(--second-family);
+                  font-weight: 700;
+                  font-size: 16px;
+                  line-height: 125%;
+                  text-transform: uppercase;
+                  color: var(--tekst-dark-100);
+                  padding-bottom: 12px;
+                }
               }
             </style>
             <div class="header__bottom-info" id="header__bottom-info">
@@ -194,11 +260,70 @@
               <nav class="menu">
                 <ul class="menu__list">
                   <li class="menu__item menu__item--submenu">
-                    <a class="menu__link" href="#">О центре</a>
-                    <button class="menu__toggle"></button>
+                    <a class="menu__link menu__link--chapter" href="#">О центре</a>
+                    <button class="menu__toggle">
+                      <p class="menu__link menu__link--text">О центре</p>
+                    </button>
                     <div class="submenu">
                       <button class="submenu__toggle">Назад</button>
+                      <div class="submenu__info">
+                        <p class="submenu__info-text">О центре</p>
+                      </div>
                       <ul class="submenu__list">
+                        <li><a class="submenu__link" href="#">О центре 1</a></li>
+                        <li><a class="submenu__link" href="#">О центре 2</a></li>
+                        <li><a class="submenu__link" href="#">О центре 3</a></li>
+                        <li><a class="submenu__link" href="#">О центре 1</a></li>
+                        <li><a class="submenu__link" href="#">О центре 2</a></li>
+                        <li><a class="submenu__link" href="#">О центре 3</a></li>
+                        <li><a class="submenu__link" href="#">О центре 1</a></li>
+                        <li><a class="submenu__link" href="#">О центре 2</a></li>
+                        <li><a class="submenu__link" href="#">О центре 3</a></li>
+                        <li><a class="submenu__link" href="#">О центре 1</a></li>
+                        <li><a class="submenu__link" href="#">О центре 2</a></li>
+                        <li><a class="submenu__link" href="#">О центре 3</a></li>
+                        <li><a class="submenu__link" href="#">О центре 1</a></li>
+                        <li><a class="submenu__link" href="#">О центре 2</a></li>
+                        <li><a class="submenu__link" href="#">О центре 3</a></li>
+                        <li><a class="submenu__link" href="#">О центре 1</a></li>
+                        <li><a class="submenu__link" href="#">О центре 2</a></li>
+                        <li><a class="submenu__link" href="#">О центре 3</a></li>
+                        <li><a class="submenu__link" href="#">О центре 1</a></li>
+                        <li><a class="submenu__link" href="#">О центре 2</a></li>
+                        <li><a class="submenu__link" href="#">О центре 3</a></li>
+                        <li><a class="submenu__link" href="#">О центре 1</a></li>
+                        <li><a class="submenu__link" href="#">О центре 2</a></li>
+                        <li><a class="submenu__link" href="#">О центре 3</a></li>
+                        <li><a class="submenu__link" href="#">О центре 1</a></li>
+                        <li><a class="submenu__link" href="#">О центре 2</a></li>
+                        <li><a class="submenu__link" href="#">О центре 3</a></li>
+                        <li><a class="submenu__link" href="#">О центре 1</a></li>
+                        <li><a class="submenu__link" href="#">О центре 2</a></li>
+                        <li><a class="submenu__link" href="#">О центре 3</a></li>
+                        <li><a class="submenu__link" href="#">О центре 1</a></li>
+                        <li><a class="submenu__link" href="#">О центре 2</a></li>
+                        <li><a class="submenu__link" href="#">О центре 3</a></li>
+                        <li><a class="submenu__link" href="#">О центре 1</a></li>
+                        <li><a class="submenu__link" href="#">О центре 2</a></li>
+                        <li><a class="submenu__link" href="#">О центре 3</a></li>
+                        <li><a class="submenu__link" href="#">О центре 1</a></li>
+                        <li><a class="submenu__link" href="#">О центре 2</a></li>
+                        <li><a class="submenu__link" href="#">О центре 3</a></li>
+                        <li><a class="submenu__link" href="#">О центре 1</a></li>
+                        <li><a class="submenu__link" href="#">О центре 2</a></li>
+                        <li><a class="submenu__link" href="#">О центре 3</a></li>
+                        <li><a class="submenu__link" href="#">О центре 1</a></li>
+                        <li><a class="submenu__link" href="#">О центре 2</a></li>
+                        <li><a class="submenu__link" href="#">О центре 3</a></li>
+                        <li><a class="submenu__link" href="#">О центре 1</a></li>
+                        <li><a class="submenu__link" href="#">О центре 2</a></li>
+                        <li><a class="submenu__link" href="#">О центре 3</a></li>
+                        <li><a class="submenu__link" href="#">О центре 1</a></li>
+                        <li><a class="submenu__link" href="#">О центре 2</a></li>
+                        <li><a class="submenu__link" href="#">О центре 3</a></li>
+                        <li><a class="submenu__link" href="#">О центре 1</a></li>
+                        <li><a class="submenu__link" href="#">О центре 2</a></li>
+                        <li><a class="submenu__link" href="#">О центре 3</a></li>
                         <li><a class="submenu__link" href="#">О центре 1</a></li>
                         <li><a class="submenu__link" href="#">О центре 2</a></li>
                         <li><a class="submenu__link" href="#">О центре 3</a></li>
@@ -206,11 +331,34 @@
                     </div>
                   </li>
                   <li class="menu__item menu__item--submenu">
-                    <a class="menu__link" href="#">Программа</a>
-                    <button class="menu__toggle"></button>
+                    <a class="menu__link menu__link--chapter" href="#">Программа</a>
+                    <button class="menu__toggle">
+                      <p class="menu__link menu__link--text">Программа</p>
+                    </button>
                     <div class="submenu">
                       <button class="submenu__toggle">Назад</button>
+                      <div class="submenu__info">
+                        <p class="submenu__info-text">Программа</p>
+                      </div>
                       <ul class="submenu__list">
+                        <li><a class="submenu__link" href="#">Программа 1</a></li>
+                        <li><a class="submenu__link" href="#">Программа 2</a></li>
+                        <li><a class="submenu__link" href="#">Программа 3</a></li>
+                        <li><a class="submenu__link" href="#">Программа 1</a></li>
+                        <li><a class="submenu__link" href="#">Программа 2</a></li>
+                        <li><a class="submenu__link" href="#">Программа 3</a></li>
+                        <li><a class="submenu__link" href="#">Программа 1</a></li>
+                        <li><a class="submenu__link" href="#">Программа 2</a></li>
+                        <li><a class="submenu__link" href="#">Программа 3</a></li>
+                        <li><a class="submenu__link" href="#">Программа 1</a></li>
+                        <li><a class="submenu__link" href="#">Программа 2</a></li>
+                        <li><a class="submenu__link" href="#">Программа 3</a></li>
+                        <li><a class="submenu__link" href="#">Программа 1</a></li>
+                        <li><a class="submenu__link" href="#">Программа 2</a></li>
+                        <li><a class="submenu__link" href="#">Программа 3</a></li>
+                        <li><a class="submenu__link" href="#">Программа 1</a></li>
+                        <li><a class="submenu__link" href="#">Программа 2</a></li>
+                        <li><a class="submenu__link" href="#">Программа 3</a></li>
                         <li><a class="submenu__link" href="#">Программа 1</a></li>
                         <li><a class="submenu__link" href="#">Программа 2</a></li>
                         <li><a class="submenu__link" href="#">Программа 3</a></li>

@@ -709,8 +709,9 @@ body.lock {
     .menu__toggle::after {
         display: block;
         content: "";
-        width: 8px;
-        height: 6px;
+        margin-top: 2px;
+        width: 13px;
+        height: 17px;
         -ms-flex-negative: 0;
         flex-shrink: 0;
         background: url('../img/icons/arrow-black.png') center center no-repeat;

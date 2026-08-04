@@ -22,19 +22,32 @@
 
         return scrollWidth;
     }
+    const menuMob = document.querySelector('.menu');
 
     document.querySelectorAll('.menu__item--submenu').forEach(item => {
         const openBtn = item.querySelector('.menu__toggle');
         const closeBtn = item.querySelector('.submenu__toggle');
         const submenu = item.querySelector('.submenu');
-        console.log(submenu);
+        const submenuList = item.querySelector('.submenu__list');
 
         openBtn.addEventListener('click', () => {
             submenu.classList.add('active');
+
+            // Устанавливаем высоту меню по высоте подменю
+            menuMob.style.minHeight = `${submenuList.scrollHeight}px`;
+
+            // Поднимаем выбранный пункт к верху меню
+            menuMob.scrollTop = item.offsetTop;
         });
 
         closeBtn.addEventListener('click', () => {
             submenu.classList.remove('active');
+
+            // Возвращаем исходную высоту
+            menuMob.style.minHeight = '400px';
+
+            // Возвращаем меню в начало
+            menuMob.scrollTop = 0;
         });
     });
 
