@@ -53,10 +53,10 @@
               <p>Звонок анонимен</p>
             </div>
             <div class="header__contacts">
-              <button class="header__contacts-btn btn--belyy-15">
+              <button class="header__contacts-btn btn--belyy-15 popup-btn" data-path="popup-call">
                 Вызвать врача
               </button>
-              <button class="header__contacts-btn btn--white">
+              <button class="header__contacts-btn btn--white popup-btn" data-path="popup-consult">
                 Консультация
               </button>
             </div>
@@ -1543,7 +1543,7 @@
               <p class="faq-page__answer-descp">
                 Наш телефон горячей линии работает круглосуточно и полностью анонимно
               </p>
-              <button class="faq-page__answer-btn primary-btn  popup-btn" data-path="popup-sing">
+              <button class="faq-page__answer-btn primary-btn  popup-btn" data-path="popup-consult">
                 <i></i>Задать вопрос<span></span>
               </button>
               <img class="faq-page__answer-img" src="assets/img/doc/corner.svg" alt="Иконка">
@@ -1559,7 +1559,7 @@
             <p class="faq-page__answer-descp">
               Наш телефон горячей линии работает круглосуточно и полностью анонимно
             </p>
-            <button class="faq-page__answer-btn primary-btn  popup-btn" data-path="popup-sing">
+            <button class="faq-page__answer-btn primary-btn  popup-btn" data-path="popup-consult">
               <i></i>Задать вопрос<span></span>
             </button>
             <img class="faq-page__answer-img" src="assets/img/doc/corner.svg" alt="Иконка">
@@ -1680,7 +1680,7 @@
           </div>
           <div class="footer__item footer__item--btns">
             <div class="footer__item footer__item--btns">
-              <button class="intro__btn primary-btn  popup-btn" data-path="popup-sing">
+              <button class="intro__btn primary-btn  popup-btn" data-path="popup-consult">
                 <i></i>Консультация<span></span>
               </button>
             </div>
@@ -1906,6 +1906,65 @@
       </div>
     </div>
   </footer>
+  <div class="popup popup--consult" data-target="popup-consult">
+    <div class="popup__body">
+      <div class="popup__content">
+        <div class="popup__close close-popup">
+          <span></span>
+          <span></span>
+        </div>
+        <p class="popup__title">Консультация
+          специалиста</p>
+        <p class="popup__subtitle">Оставьте номер телефона — и наш специалист свяжется с вами  в течение 3-х минут.
+          Абсолютно анонимно и бесплатно</p>
+        <form class="form__general">
+          <div class="form__general-wrap">
+            <input type="tel" name="params[name][]" class="form__general-input form__general-input--name"
+              placeholder="Введите ваше имя*" required="">
+            <input type="tel" name="params[phone][]" class="form__general-input form__general-input--phone"
+              placeholder="Введите ваш номер телефона*" required="">
+            <div class="politic intro__form-politic">
+              <input type="checkbox" id="politic2" checked="">
+              <label for="politic2">
+                Нажимая на кнопку «Заказать звонок», вы соглашаетесь <a href="#">с обработкой персональных
+                  данных</a></label>
+            </div>
+            <button class="form__general-btn intro__btn primary-btn" type="submit">
+              <i></i>Оставить заявку<span></span>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="popup" data-target="popup-call">
+    <div class="popup__body">
+      <div class="popup__content">
+        <div class="popup__close close-popup">
+          <span></span>
+          <span></span>
+        </div>
+        <p class="popup__title">Вызвать врача</p>
+        <p class="popup__subtitle">Оставьте номер телефона — и наш специалист свяжется с вами в течение 3-х минут.
+          Абсолютно анонимно и бесплатно</p>
+        <form class="form__general">
+          <div class="form__general-wrap">
+            <input type="tel" name="params[phone][]" class="form__general-input form__general-input--phone"
+              placeholder="Введите ваш номер телефона*" required="">
+            <div class="politic intro__form-politic">
+              <input type="checkbox" id="politic2" checked="">
+              <label for="politic2">
+                Нажимая на кнопку «Заказать звонок», вы соглашаетесь <a href="#">с обработкой персональных
+                  данных</a></label>
+            </div>
+            <button class="form__general-btn intro__btn primary-btn" type="submit">
+              <i></i>Оставить заявку<span></span>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
   <script src="assets/js/build/swiper-bundle.min.js" defer></script>
   <script src="assets/js/main.js" defer></script>
 </body>

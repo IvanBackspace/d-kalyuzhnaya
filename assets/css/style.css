@@ -1200,6 +1200,7 @@ body.lock {
     margin-bottom: 20px;
 }
 
+.form__general-btn,
 .intro__form-btn {
     width: 100%;
 }
@@ -1516,6 +1517,7 @@ input {
     top: 3.5px;
 }
 
+.form__general,
 .intro__form {
     border-radius: 26px;
     padding: 6px 6px 20px 6px;
@@ -1610,6 +1612,7 @@ input {
     margin-bottom: 6px;
 }
 
+.form__general-input--phone,
 .get-help__form-input--phone,
 .intro__form-input--phone {
     margin-bottom: 12px;
@@ -1695,6 +1698,7 @@ input {
         gap: 20px;
     }
 
+    .form__general,
     .intro__form {
         border-radius: 40px;
         padding: 10px 10px 40px 10px;
@@ -6924,5 +6928,207 @@ button.fServices--more.mobile {
 @media (min-width: 1500px) {
     .header__info--desc.header__info--time {
         display: block;
+    }
+}
+
+
+.popup {
+    height: 100vh;
+    left: 50%;
+    opacity: 0;
+    pointer-events: none;
+    position: fixed;
+    top: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    width: 100%;
+    z-index: 2000;
+    transition: opacity 0.4s ease;
+    overflow-y: auto;
+    background: rgba(0, 8, 84, 0.27);
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+    display: none;
+}
+
+.popup.active {
+    display: block;
+}
+
+.popup__body {
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 10px 20px;
+}
+
+.popup.open {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.popup__content {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    scale: 0.3;
+    transition: scale 0.4s ease;
+    background: var(--belyy-100);
+    box-shadow: 0px 0px 30px 0px rgba(255, 255, 255, 0.1);
+    border-radius: 30px;
+    padding: 40px 20px;
+}
+
+.popup.open .popup__content {
+    scale: 1;
+}
+
+.popup__close {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    cursor: pointer;
+    height: 28px;
+    width: 28px;
+    border-radius: 40px;
+    background: var(--fonovyy);
+    transition: width 0.3s linear, height 0.3s linear, top 0.3s linear, right 0.3s linear;
+}
+
+.popup__close {
+    display: inline-block;
+    transition: transform .3s ease;
+}
+
+.popup__close:hover {
+    transform: rotate(180deg);
+}
+
+.popup__title {
+    font-family: var(--second-family);
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 122%;
+    text-transform: uppercase;
+    color: var(--tekst-dark-100);
+    margin-bottom: 2px;
+}
+
+.popup__subtitle {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 143%;
+    color: var(--tekst-dark-80);
+    margin-bottom: 20px;
+}
+
+.popup__close span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 14px;
+    height: 2px;
+    background: #07253F;
+    transform-origin: center;
+}
+
+.popup__close span:first-child {
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.popup__close span:last-child {
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.form__general {
+    padding: 0;
+}
+
+.form__general-btn {
+    background: var(--fonovyy);
+}
+
+.form__general-input--name {
+    margin-bottom: 6px;
+}
+
+.popup--consult .form__general-input--phone {
+    margin-bottom: 12px;
+}
+
+
+@media (min-width: 1024px) {
+    .popup--consult .form__general-input--name {
+        margin-bottom: 16px;
+    }
+
+    .form__general-input--phone {
+        margin-bottom: 28px;
+    }
+
+    .popup--consult .form__general-input--phone {
+        margin-bottom: 28px;
+    }
+
+
+    .popup__content {
+        width: 100%;
+        border-radius: 60px;
+        padding: 52px;
+        max-width: 600px;
+    }
+
+    .popup.open .popup__content {
+        scale: 1;
+    }
+
+    .popup__close {
+        top: 32px;
+        right: 32px;
+        height: 32px;
+        width: 32px;
+    }
+
+    .popup__title {
+        font-size: 32px;
+        margin-bottom: 10px;
+    }
+
+    .popup__subtitle {
+        font-size: 16px;
+        margin-bottom: 30px;
+    }
+
+    .popup__close span {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 14px;
+        height: 2px;
+        background: #07253F;
+        transform-origin: center;
+    }
+
+    .popup__close span:first-child {
+        transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+    .popup__close span:last-child {
+        transform: translate(-50%, -50%) rotate(-45deg);
+    }
+
+    .form__general {
+        padding: 0;
+    }
+
+    .form__general-btn {
+        background: var(--fonovyy);
     }
 }
