@@ -248,6 +248,46 @@
                 }
             }
         });
+        const patientStoriesSwiperDoc = new Swiper(".patientStoriesSwiperDoc", {
+            slidesPerView: 1.1,
+            spaceBetween: 10,
+            navigation: {
+                nextEl: ".patient-stories__swiper-button-next",
+                prevEl: ".patient-stories__swiper-button-prev"
+            },
+            pagination: {
+                el: '.patient-stories__swiper-pagination',
+                type: 'custom',
+                renderCustom: function (swiper, current, total) {
+                    const currentFormatted = String(current).padStart(2, '0');
+                    const totalFormatted = String(total).padStart(2, '0');
+                    return `<span class="pagination-current">${currentFormatted}</span> / <span class="pagination-total">${totalFormatted}</span>`;
+                }
+            },
+            grabCursor: true,
+            breakpoints: {
+                1520: {
+                    slidesPerView: 2,
+                    spaceBetween: 20
+                },
+                1380: {
+                    slidesPerView: 1.3,
+                    spaceBetween: 20
+                },
+                1210: {
+                    slidesPerView: 1.2,
+                    spaceBetween: 10
+                },
+                690: {
+                    slidesPerView: 2,
+                    spaceBetween: 10
+                },
+                550: {
+                    slidesPerView: 1.2,
+                    spaceBetween: 10
+                }
+            }
+        });
         const expertAssistanceSwiper = new Swiper(".expertAssistanceSwiper", {
             slidesPerView: 1.1,
             spaceBetween: 10,
@@ -558,10 +598,6 @@ function setupLoadMore(selectorItem, selectorButton, initialCount, loadCount, di
     });
 }
 
-setupLoadMore('.smi-video__item', '.smi-video__button', 6, 3, 'block');
-setupLoadMore('.smi-stati__item', '.smi-stati__button', 6, 3, 'flex');
-
-
 
 function getHeight(el) {
     if (el) {
@@ -575,9 +611,6 @@ function setBlockMinHeight(absoluteBlock, block) {
         blockDOM.style.minHeight = height + 'px';
     }
 }
-
-
-
 
 // more text
 let windowWidth = document.body.clientWidth;
@@ -727,7 +760,6 @@ document.addEventListener("DOMContentLoaded", function () {
                     }
                     originalTop.innerHTML = newTitle;
                 };
-                // scrollWidthFunc();
                 document.querySelector('html').classList.add('lock');
             }
         });

@@ -248,7 +248,7 @@ body.lock {
 }
 
 .container {
-    max-width: 1610px;
+    max-width: 1620px;
     padding: 0 15px;
     margin: 0 auto;
 }
@@ -6707,7 +6707,7 @@ button.fServices--more.mobile {
     }
 
     .submenu__toggle {
-        margin-bottom: 31px;
+        margin-bottom: 29px;
     }
 
     .submenu__info {
@@ -7130,5 +7130,37 @@ button.fServices--more.mobile {
 
     .form__general-btn {
         background: var(--fonovyy);
+    }
+}
+
+.doctor-detailed__item--reviews .patient-stories__card {
+    background: var(--belyy-100);
+}
+
+.doctor-detailed__item-top .swiper-btns {
+    display: none;
+}
+
+.doctor-detailed__item--reviews .patient-stories__card-top {
+    background: var(--fonovyy);
+}
+
+@media (min-width: 1024px) {
+    .doctor-detailed__item-top .swiper-btns {
+        display: none;
+    }
+}
+
+@media (min-width: 1500px) {
+
+    .doctor-detailed__item-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+        margin-bottom: 24px;
+    }
+
+    .doctor-detailed__item-top .swiper-btns {
+        display: block;
     }
 }
