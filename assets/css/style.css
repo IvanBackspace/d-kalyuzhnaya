@@ -767,10 +767,11 @@ body.lock {
     padding: 10px 16px;
     color: #000;
     text-decoration: none;
+    transition: color .3s;
 }
 
 .submenu__link:hover {
-    background: #f5f5f5;
+    color: var(--ogon-vozrozhdeniya-800);
 }
 
 @media (max-width:1024px) {
@@ -3570,10 +3571,6 @@ input {
     line-height: 129%;
     text-transform: uppercase;
     color: var(--belyy-100);
-}
-
-.hero {
-    overflow: hidden;
 }
 
 .intro__doctor-svg {

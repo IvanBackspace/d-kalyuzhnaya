@@ -27,6 +27,8 @@
 
         return scrollWidth;
     }
+
+
     const menuMob = document.querySelector('.menu');
 
     document.querySelectorAll('.menu__item--submenu').forEach(item => {
@@ -38,24 +40,30 @@
         openBtn.addEventListener('click', () => {
             submenu.classList.add('active');
 
-            // Устанавливаем высоту меню по высоте подменю
-            menuMob.style.minHeight = `${submenuList.scrollHeight}px`;
+            // Проверяем наличие .submenu__items только в текущем родителе
+            const submenuItems = item.querySelector('.submenu__items');
 
-            // Поднимаем выбранный пункт к верху меню
+            if (submenuItems) {
+                // Если есть .submenu__items — берем его высоту
+                menuMob.style.minHeight = `${submenuItems.scrollHeight}px`;
+            } else {
+                // Иначе оставляем прежнюю логику
+                menuMob.style.minHeight = `${submenuList.scrollHeight}px`;
+            }
+
             menuMob.scrollTop = item.offsetTop;
         });
 
         closeBtn.addEventListener('click', () => {
             submenu.classList.remove('active');
 
-            // Возвращаем исходную высоту
             menuMob.style.minHeight = '400px';
-
-            // Возвращаем меню в начало
             menuMob.scrollTop = 0;
         });
     });
 
+
+    
     function bodyLock(bool) {
         if (bool) {
             document.body.classList.add('lock');

@@ -92,11 +92,39 @@
                 display: block;
               }
 
+              .submenu__info,
               .menu__link--text {
                 display: none;
               }
 
               @media (max-width: 1024px) {
+
+                .submenu__items {
+                  display: flex;
+                  gap: 56px;
+                  min-width: 1110px;
+                }
+
+                .submenu__items .submenu__list {
+                  padding-top: 0px;
+                }
+
+                .submenu__item-title {
+                  margin-bottom: 6px;
+                }
+
+                .submenu__link {
+                  font-family: var(--font-family);
+                  font-weight: 500;
+                  font-size: 14px;
+                  line-height: 143%;
+                  color: var(--tekst-dark-100);
+                  padding-left: 0;
+                }
+
+                .submenu__info {
+                  display: block;
+                }
 
                 .header__mobile .header__btns img {
                   width: 40px;
@@ -142,6 +170,7 @@
                   background: var(--fonovyy);
                 }
 
+                .header__mobile-info a,
                 .header__mobile-info p {
                   font-family: var(--font-family);
                   font-weight: 500;
@@ -153,6 +182,7 @@
                   flex-direction: column;
                 }
 
+                .header__info--phone a,
                 .header__mobile-info p span {
                   font-family: var(--second-family);
                   font-weight: 700;
@@ -239,6 +269,122 @@
                   color: var(--tekst-dark-100);
                   padding-bottom: 12px;
                 }
+
+                .submenu__items {
+                  display: flex;
+                  flex-direction: column;
+                  gap: 40px;
+                  background: white;
+                  padding-top: 24px;
+                }
+
+                .submenu__item-title {
+                  font-family: var(--second-family);
+                  font-weight: 700;
+                  font-size: 9px;
+                  line-height: 133%;
+                  text-transform: uppercase;
+                  color: var(--tekst-dark-60);
+                  margin-bottom: 16px;
+                }
+              }
+
+              @media (min-width: 1025px) {
+                .submenu__item-title {
+                  font-family: var(--second-family);
+                  font-weight: 700;
+                  font-size: 9px;
+                  line-height: 133%;
+                  text-transform: uppercase;
+                  color: var(--tekst-dark-60);
+                }
+
+                .submenu {
+                  border-radius: 30px;
+                  padding: 30px;
+                }
+
+                .submenu__list {
+                  display: flex;
+                  flex-direction: column;
+                  gap: 10px;
+
+                }
+
+                .submenu__link {
+                  font-family: var(--font-family);
+                  font-weight: 500;
+                  font-size: 16px;
+                  line-height: 138%;
+                  color: var(--tekst-dark-100);
+                  padding: 3px;
+                }
+
+                .menu__item--submenu:hover>.submenu {
+                  z-index: 1000;
+                }
+
+                .menu__item--submenu {
+                  position: relative;
+                }
+
+                .submenu::before {
+                  width: 30px;
+                  height: 30px;
+                  background-color: white;
+                  content: "";
+                  display: flex;
+                  position: absolute;
+                  top: 0;
+                  left: 60px;
+                  transform: translate(-50%, -33%) rotate(45deg);
+                  z-index: -1;
+                  border-radius: 5px;
+                }
+
+                .submenu {
+                  top: 100%;
+                  left: -38px;
+                  min-width: 344px;
+                }
+
+                .submenu__items {
+                  display: flex;
+                  min-width: 1100px;
+                  justify-content: space-between;
+                }
+
+                .submenu__item-title {
+                  font-family: var(--second-family);
+                  font-weight: 700;
+                  font-size: 12px;
+                  line-height: 150%;
+                  text-transform: uppercase;
+                  color: var(--tekst-dark-60);
+                  margin-bottom: 28px;
+                }
+              }
+
+              @media (min-width: 1025px) {
+                .submenu__items {
+                  display: flex;
+                  min-width: 373px;
+                  justify-content: space-between;
+                  flex-wrap: wrap;
+                  gap: 20px;
+                }
+              }
+
+              @media (min-width: 1230px) {
+                .submenu__items {
+                  min-width: 953px;
+                }
+              }
+
+              @media (min-width: 1410px) {
+                .submenu__items {
+                  min-width: 1100px;
+                }
               }
             </style>
             <div class="header__bottom-info" id="header__bottom-info">
@@ -276,63 +422,13 @@
                         <p class="submenu__info-text">О центре</p>
                       </div>
                       <ul class="submenu__list">
-                        <li><a class="submenu__link" href="#">О центре 1</a></li>
-                        <li><a class="submenu__link" href="#">О центре 2</a></li>
-                        <li><a class="submenu__link" href="#">О центре 3</a></li>
-                        <li><a class="submenu__link" href="#">О центре 1</a></li>
-                        <li><a class="submenu__link" href="#">О центре 2</a></li>
-                        <li><a class="submenu__link" href="#">О центре 3</a></li>
-                        <li><a class="submenu__link" href="#">О центре 1</a></li>
-                        <li><a class="submenu__link" href="#">О центре 2</a></li>
-                        <li><a class="submenu__link" href="#">О центре 3</a></li>
-                        <li><a class="submenu__link" href="#">О центре 1</a></li>
-                        <li><a class="submenu__link" href="#">О центре 2</a></li>
-                        <li><a class="submenu__link" href="#">О центре 3</a></li>
-                        <li><a class="submenu__link" href="#">О центре 1</a></li>
-                        <li><a class="submenu__link" href="#">О центре 2</a></li>
-                        <li><a class="submenu__link" href="#">О центре 3</a></li>
-                        <li><a class="submenu__link" href="#">О центре 1</a></li>
-                        <li><a class="submenu__link" href="#">О центре 2</a></li>
-                        <li><a class="submenu__link" href="#">О центре 3</a></li>
-                        <li><a class="submenu__link" href="#">О центре 1</a></li>
-                        <li><a class="submenu__link" href="#">О центре 2</a></li>
-                        <li><a class="submenu__link" href="#">О центре 3</a></li>
-                        <li><a class="submenu__link" href="#">О центре 1</a></li>
-                        <li><a class="submenu__link" href="#">О центре 2</a></li>
-                        <li><a class="submenu__link" href="#">О центре 3</a></li>
-                        <li><a class="submenu__link" href="#">О центре 1</a></li>
-                        <li><a class="submenu__link" href="#">О центре 2</a></li>
-                        <li><a class="submenu__link" href="#">О центре 3</a></li>
-                        <li><a class="submenu__link" href="#">О центре 1</a></li>
-                        <li><a class="submenu__link" href="#">О центре 2</a></li>
-                        <li><a class="submenu__link" href="#">О центре 3</a></li>
-                        <li><a class="submenu__link" href="#">О центре 1</a></li>
-                        <li><a class="submenu__link" href="#">О центре 2</a></li>
-                        <li><a class="submenu__link" href="#">О центре 3</a></li>
-                        <li><a class="submenu__link" href="#">О центре 1</a></li>
-                        <li><a class="submenu__link" href="#">О центре 2</a></li>
-                        <li><a class="submenu__link" href="#">О центре 3</a></li>
-                        <li><a class="submenu__link" href="#">О центре 1</a></li>
-                        <li><a class="submenu__link" href="#">О центре 2</a></li>
-                        <li><a class="submenu__link" href="#">О центре 3</a></li>
-                        <li><a class="submenu__link" href="#">О центре 1</a></li>
-                        <li><a class="submenu__link" href="#">О центре 2</a></li>
-                        <li><a class="submenu__link" href="#">О центре 3</a></li>
-                        <li><a class="submenu__link" href="#">О центре 1</a></li>
-                        <li><a class="submenu__link" href="#">О центре 2</a></li>
-                        <li><a class="submenu__link" href="#">О центре 3</a></li>
-                        <li><a class="submenu__link" href="#">О центре 1</a></li>
-                        <li><a class="submenu__link" href="#">О центре 2</a></li>
-                        <li><a class="submenu__link" href="#">О центре 3</a></li>
-                        <li><a class="submenu__link" href="#">О центре 1</a></li>
-                        <li><a class="submenu__link" href="#">О центре 2</a></li>
-                        <li><a class="submenu__link" href="#">О центре 3</a></li>
-                        <li><a class="submenu__link" href="#">О центре 1</a></li>
-                        <li><a class="submenu__link" href="#">О центре 2</a></li>
-                        <li><a class="submenu__link" href="#">О центре 3</a></li>
-                        <li><a class="submenu__link" href="#">О центре 1</a></li>
-                        <li><a class="submenu__link" href="#">О центре 2</a></li>
-                        <li><a class="submenu__link" href="#">О центре 3</a></li>
+                        <li><a class="submenu__link" href="#">О нас</a></li>
+                        <li><a class="submenu__link" href="#">Наши специалисты</a></li>
+                        <li><a class="submenu__link" href="#">Юридическая информация</a></li>
+                        <li><a class="submenu__link" href="#">Лицензии</a></li>
+                        <li><a class="submenu__link" href="#">Фотогалерея</a></li>
+                        <li><a class="submenu__link" href="#">Отзывы</a></li>
+                        <li><a class="submenu__link" href="#">Мы в СМИ</a></li>
                       </ul>
                     </div>
                   </li>
@@ -346,29 +442,36 @@
                       <div class="submenu__info">
                         <p class="submenu__info-text">Программа</p>
                       </div>
-                      <ul class="submenu__list">
-                        <li><a class="submenu__link" href="#">Программа 1</a></li>
-                        <li><a class="submenu__link" href="#">Программа 2</a></li>
-                        <li><a class="submenu__link" href="#">Программа 3</a></li>
-                        <li><a class="submenu__link" href="#">Программа 1</a></li>
-                        <li><a class="submenu__link" href="#">Программа 2</a></li>
-                        <li><a class="submenu__link" href="#">Программа 3</a></li>
-                        <li><a class="submenu__link" href="#">Программа 1</a></li>
-                        <li><a class="submenu__link" href="#">Программа 2</a></li>
-                        <li><a class="submenu__link" href="#">Программа 3</a></li>
-                        <li><a class="submenu__link" href="#">Программа 1</a></li>
-                        <li><a class="submenu__link" href="#">Программа 2</a></li>
-                        <li><a class="submenu__link" href="#">Программа 3</a></li>
-                        <li><a class="submenu__link" href="#">Программа 1</a></li>
-                        <li><a class="submenu__link" href="#">Программа 2</a></li>
-                        <li><a class="submenu__link" href="#">Программа 3</a></li>
-                        <li><a class="submenu__link" href="#">Программа 1</a></li>
-                        <li><a class="submenu__link" href="#">Программа 2</a></li>
-                        <li><a class="submenu__link" href="#">Программа 3</a></li>
-                        <li><a class="submenu__link" href="#">Программа 1</a></li>
-                        <li><a class="submenu__link" href="#">Программа 2</a></li>
-                        <li><a class="submenu__link" href="#">Программа 3</a></li>
-                      </ul>
+
+                      <div class="submenu__items">
+                        <div class="submenu__item">
+                          <p class="submenu__item-title">Направления</p>
+                          <ul class="submenu__list">
+                            <li><a class="submenu__link" href="#">Лечение алкоголизма</a></li>
+                            <li><a class="submenu__link" href="#">Лечение наркомании</a></li>
+                            <li><a class="submenu__link" href="#">Вывод из запоя/Снятие ПС</a></li>
+                            <li><a class="submenu__link" href="#">Психиатрия (Депрессии, Фобии)</a></li>
+                          </ul>
+                        </div>
+                        <div class="submenu__item">
+                          <p class="submenu__item-title">методы и терапия</p>
+                          <ul class="submenu__list">
+                            <li><a class="submenu__link" href="#">Индивидуальная психотерапия</a></li>
+                            <li><a class="submenu__link" href="#">Программа «12 шагов»</a></li>
+                            <li><a class="submenu__link" href="#">Терапевтическое сообщество Day Top</a></li>
+                            <li><a class="submenu__link" href="#">Групповая арт-терапия</a></li>
+                          </ul>
+                        </div>
+                        <div class="submenu__item">
+                          <p class="submenu__item-title">Условия и адаптация</p>
+                          <ul class="submenu__list">
+                            <li><a class="submenu__link" href="#">Круглосуточный стационар</a></li>
+                            <li><a class="submenu__link" href="#">Амбулаторное лечение</a></li>
+                            <li><a class="submenu__link" href="#">Медико-социальная реабилитация</a></li>
+                            <li><a class="submenu__link" href="#">Помощь в трудоустройстве</a></li>
+                          </ul>
+                        </div>
+                      </div>
                     </div>
                   </li>
                   <li class="menu__item">
@@ -398,23 +501,35 @@
                 </ul>
               </nav>
               <div class="header__mobile-info">
-                <div class="header__info header__info--address">
-                  <p>Адрес клиники <span>Краснодар, ул. Алма-Атинская, д. 99</span></p>
-                </div>
                 <div class="header__info header__info--time">
                   <p>Режим работы<span>Круглосуточно, работаем 24/7</span></p>
-                </div>
-                <div class="header__info header__info--license">
-                  <p><span>Лицензия № Л041-01126-<br>23/01066181</span> <a href="#">Проверить</a></p>
                 </div>
                 <div class="header__info header__info--address">
                   <p>Адрес клиники <span>Краснодар, ул. Алма-Атинская, д. 99</span></p>
                 </div>
-                <div class="header__info header__info--time">
-                  <p>Режим работы<span>Круглосуточно, работаем 24/7</span></p>
-                </div>
                 <div class="header__info header__info--license">
                   <p><span>Лицензия № Л041-01126-<br>23/01066181</span> <a href="#">Проверить</a></p>
+                </div>
+                <div class="header__info header__info--phone">
+                  <p>Номер телефона (анонимный звонок) <a href="tel:+79034110003">+7 (903) 411-00-03</a></a>
+                  </p>
+                </div>
+                <div class="header__info header__info--phone">
+                  <p>Наши социальные сети</p>
+                </div>
+                <div class="header__social">
+                  <a href="#">
+                    <picture class="logo">
+                      <source srcset="assets/img/icons/wh.svg" type="image/svg+xml">
+                      <img src="assets/img/icons/wh.png" alt="логотип whatsapp" title="whatsapp">
+                    </picture>
+                  </a>
+                  <a href="#">
+                    <picture class="logo">
+                      <source srcset="assets/img/icons/tg.svg" type="image/svg+xml">
+                      <img src="assets/img/icons/tg.png" alt="логотип telegram" title="telegram">
+                    </picture>
+                  </a>
                 </div>
               </div>
             </div>
