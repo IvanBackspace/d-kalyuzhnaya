@@ -39,15 +39,11 @@
 
         openBtn.addEventListener('click', () => {
             submenu.classList.add('active');
-
-            // Проверяем наличие .submenu__items только в текущем родителе
             const submenuItems = item.querySelector('.submenu__items');
 
             if (submenuItems) {
-                // Если есть .submenu__items — берем его высоту
                 menuMob.style.minHeight = `${submenuItems.scrollHeight}px`;
             } else {
-                // Иначе оставляем прежнюю логику
                 menuMob.style.minHeight = `${submenuList.scrollHeight}px`;
             }
 
@@ -63,7 +59,7 @@
     });
 
 
-    
+
     function bodyLock(bool) {
         if (bool) {
             document.body.classList.add('lock');
@@ -202,14 +198,19 @@
             }
         });
 
-        /* simple spoiler */
-        document.querySelectorAll('[data-action="spoiler"]').forEach(function (element) {
-            element.addEventListener('click', function () {
-                let target = document.querySelector(`[data-spoiler="${this.dataset.target}"]`);
-                if (target) {
-                    target.classList.toggle('active');
-                    const spoiler = element.querySelector('.spoiler')
-                    if (spoiler) { spoiler.classList.toggle('active'); }
+        document.querySelectorAll('.fServices--more').forEach(button => {
+            button.addEventListener('click', function () {
+                const services = this.closest('.footer__item--services');
+                if (!services) return;
+
+                services.classList.toggle('active');
+
+                const textNode = this.childNodes[0];
+
+                if (services.classList.contains('active')) {
+                    textNode.textContent = 'Убрать все';
+                } else {
+                    textNode.textContent = 'Показать все';
                 }
             });
         });
