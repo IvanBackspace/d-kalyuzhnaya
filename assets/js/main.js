@@ -528,26 +528,32 @@
             }
         }
 
-        const tabBtns = document.querySelectorAll('.tab-btn');
-        const tabContents = document.querySelectorAll('.tab-content');
-        const priceTabs = document.querySelector('.price__tabs');
+        function initTabs() {
+            const tabBtns = document.querySelectorAll('.tab-btn');
+            const tabContents = document.querySelectorAll('.tab-content');
+            const faqTabs = document.querySelector('.faq-page__tabs');
+            const priceTabs = document.querySelector('.price__tabs');
+            const insideCenterTabs = document.querySelector('.inside-center__tabs');
 
-        if (tabBtns.length > 0 && tabContents.length > 0) {
-            if (!priceTabs) {
+            if (!tabBtns.length || !tabContents.length) return;
+
+            if (faqTabs) {
                 tabContents.forEach(content => content.classList.add('active'));
             }
 
             tabBtns.forEach(btn => {
                 btn.addEventListener('click', () => {
-                    const category = btn.dataset.faqCategory;
+                    const [attr, value] = Object.entries(btn.dataset)[0] || [];
+
+                    if (!attr) return;
 
                     tabBtns.forEach(item => item.classList.remove('active'));
                     btn.classList.add('active');
 
                     tabContents.forEach(content => content.classList.remove('active'));
 
-                    const activeContent = document.querySelector(
-                        `.tab-content[data-faq-category="${category}"]`
+                    const activeContent = [...tabContents].find(
+                        content => content.dataset[attr] === value
                     );
 
                     if (activeContent) {
@@ -556,6 +562,8 @@
                 });
             });
         }
+
+        initTabs('faqCategory');
     });
     document.addEventListener("DOMContentLoaded", () => {
 
