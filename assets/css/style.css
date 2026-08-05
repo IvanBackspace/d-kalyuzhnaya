@@ -8707,6 +8707,79 @@ button.fServices--more.mobile {
 
 }
 
+.navigation__title .accordion-icon span {
+    transition: background-color .3s;
+}
+
+.navigation__title:hover .accordion-icon span {
+    background-color: var(--ogon-vozrozhdeniya-800);
+}
+
+.text-block__safety {
+    border-radius: 24px;
+    padding: 6px;
+    background: var(--belyy-100);
+    height: fit-content;
+}
+
+.text-block__safety-title {
+    padding: 14px;
+    font-family: var(--second-family);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 125%;
+    text-transform: uppercase;
+    color: var(--tekst-dark-100);
+}
+
+.text-block__safety-items {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.text-block__safety-item {
+    border-radius: 18px;
+    padding: 14px;
+    background: var(--fonovyy);
+}
+
+.text-block__safety-item p:first-child {
+    font-family: var(--second-family);
+    font-weight: 700;
+    font-size: 11px;
+    line-height: 136%;
+    text-transform: uppercase;
+    color: var(--tekst-dark-100);
+    padding-left: 11px;
+    margin-bottom: 11px;
+    position: relative;
+}
+
+.text-block__safety-item p:last-child {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 133%;
+    color: var(--tekst-dark-80);
+}
+
+.text-block__safety-item p:first-child::before {
+    content: "";
+    display: block;
+    width: 7px;
+    height: 8px;
+    background: url(../img/doc/next.svg) no-repeat center;
+    background-size: contain;
+    position: absolute;
+    left: 0;
+    top: 3.5px;
+}
+
+.text-block--conditions .text-block__wrapper {
+    flex-direction: column;
+}
+
 @media (min-width:1025px) {
 
     .daily-routine__items {
@@ -8723,12 +8796,34 @@ button.fServices--more.mobile {
         border-radius: 30px;
         padding: 24px;
     }
-}
 
-.navigation__title .accordion-icon span {
-    transition: background-color .3s;
-}
+    .text-block__safety {
+        border-radius: 30px;
+        padding: 12px;
+    }
 
-.navigation__title:hover .accordion-icon span {
-    background-color: var(--ogon-vozrozhdeniya-800);
+    .text-block__safety-title {
+        font-size: 16px;
+        padding: 20px;
+    }
+
+    .text-block__safety-item {
+        border-radius: 18px;
+        padding: 20px;
+    }
+
+    .text-block__safety-item p:first-child {
+        font-size: 12px;
+        padding-left: 15px;
+    }
+
+    .text-block__safety-item p:last-child {
+        font-size: 14px;
+    }
+
+    .text-block__safety-item p:first-child::before {
+        width: 8px;
+        height: 10px;
+    }
+
 }
