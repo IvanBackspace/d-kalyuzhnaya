@@ -486,7 +486,7 @@
         const articleNavigation = document.querySelector(".navigation-js");
         if (articleNavigation) {
             const jsScrollBlockList = document.querySelectorAll(
-                ".text-block__navigation h2",
+                ".text-block__navigation h2, .text-block__navigation h3",
             );
 
             if (jsScrollBlockList.length > 0) {
@@ -530,10 +530,12 @@
 
         const tabBtns = document.querySelectorAll('.tab-btn');
         const tabContents = document.querySelectorAll('.tab-content');
+        const priceTabs = document.querySelector('.price__tabs');
 
         if (tabBtns.length > 0 && tabContents.length > 0) {
-
-            tabContents.forEach(content => content.classList.add('active'));
+            if (!priceTabs) {
+                tabContents.forEach(content => content.classList.add('active'));
+            }
 
             tabBtns.forEach(btn => {
                 btn.addEventListener('click', () => {
@@ -591,43 +593,6 @@
                 });
             }
         }
-
-        window.addEventListener('resize', () => {
-            if (windowWidth != document.body.clientWidth) {
-                setBlockMinHeight('.doctor-page__picture', '.doctor-page');
-                setBlockMinHeight('.article-detail__author', '.article-detail__wrapper');
-                if (document.body.clientWidth <= 575) {
-                    if (moreTextList.length > 0) {
-                        moreTextList.forEach(function (moreText) {
-                            const textWrapper = moreText.querySelector('.more-text-wrapper');
-                            const textContent = moreText.querySelector('.more-text-content');
-                            const heightTextContent = getHeight(textContent);
-                            const btnMore = moreText.querySelector('.more-text-btn');
-
-                            if (heightTextContent <= 140) {
-                                btnMore.style.display = 'none';
-                                textWrapper.style.height = 'auto';
-                            } else {
-                                btnMore.style.display = 'flex';
-                                textWrapper.style.height = 140 + 'px';
-                                btnMore.textContent = 'Показать полностью';
-                            }
-                        });
-                    }
-                } else {
-                    if (moreTextList.length > 0) {
-                        moreTextList.forEach(function (moreText) {
-                            const textWrapper = moreText.querySelector('.more-text-wrapper');
-                            const btnMore = moreText.querySelector('.more-text-btn');
-
-                            btnMore.style.display = 'none';
-                            textWrapper.style.height = 'auto';
-                        });
-                    }
-                }
-                windowWidth = document.body.clientWidth;
-            }
-        });
 
         if (moreBtnsList.length > 0) {
             moreBtnsList.forEach(function (btn) {
@@ -712,3 +677,41 @@
     });
 
 })();
+
+
+// new
+document.addEventListener("DOMContentLoaded", () => {
+    const pathRemissionSwiper = new Swiper(".pathRemissionSwiper", {
+        slidesPerView: 1.1,
+        spaceBetween: 10,
+        navigation: {
+            nextEl: ".path-remission__swiper-button-next",
+            prevEl: ".path-remission__swiper-button-prev"
+        },
+        pagination: {
+            el: '.path-remission__swiper-pagination',
+            type: 'custom',
+            renderCustom: function (swiper, current, total) {
+                const currentFormatted = String(current).padStart(2, '0');
+                const totalFormatted = String(total).padStart(2, '0');
+                return `<span class="pagination-current">${currentFormatted}</span> / <span class="pagination-total">${totalFormatted}</span>`;
+            }
+        },
+        grabCursor: true,
+        autoHeight: false,
+        breakpoints: {
+            1380: {
+                slidesPerView: 3,
+                spaceBetween: 20
+            },
+            830: {
+                slidesPerView: 2,
+                spaceBetween: 10
+            },
+            550: {
+                slidesPerView: 1.2,
+                spaceBetween: 10
+            }
+        }
+    });
+});
