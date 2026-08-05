@@ -1947,6 +1947,7 @@ input {
     color: var(--belyy-100);
 }
 
+.choose-us__main,
 .price__tabs-btns,
 .faq-page__tabs-main,
 .useful-resources__main,
@@ -1958,6 +1959,7 @@ input {
     -ms-overflow-style: none;
 }
 
+.choose-us__main::-webkit-scrollbar,
 .price__tabs-btns::-webkit-scrollbar,
 .faq-page__tabs-main::-webkit-scrollbar,
 .useful-resources__main::-webkit-scrollbar,
@@ -7891,7 +7893,28 @@ button.fServices--more.mobile {
     gap: 8px;
 }
 
+.hero--clinic {
+    background-image: url(../img/icons/clinic-mob.jpg);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: clamp(348px, 83vw, 1000px);
+}
+
+
 @media (min-width: 1025px) {
+
+    .hero--clinic::before {
+        display: none;
+    }
+
+    .hero--clinic {
+        background-image: url("../img/icons/clinic.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding-bottom: 52px;
+    }
 
     .text-block__bottom {
         border-radius: 30px;
@@ -7957,5 +7980,454 @@ button.fServices--more.mobile {
     .text-block__bottom {
         display: flex;
         justify-content: space-between;
+    }
+}
+
+.medicine--clinic {
+    background-color: white;
+}
+
+.medicine--clinic .medicine__items-main {
+    width: 100%;
+    flex-direction: column;
+}
+
+.medicine--clinic .medicine__bottom {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 10px;
+}
+
+.medicine--clinic .medicine__content-bottom {
+    padding: 20px;
+    overflow: hidden;
+}
+
+.medicine__content--btn {
+    background-color: white;
+
+}
+
+.medicine__content-title {
+    font-family: var(--second-family);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 125%;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--belyy-100);
+    margin-bottom: 10px;
+}
+
+.medicine__content-desc {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 143%;
+    text-align: center;
+    color: var(--belyy-100);
+    margin-bottom: 16px;
+}
+
+.medicine--clinic .medicine__item {
+    flex: 0 0 100%;
+    height: 100%;
+    width: 100%;
+}
+
+.medicine--clinic .medicine__content {
+    position: relative;
+
+}
+
+.medicine--clinic .medicine__item-num {
+    margin-bottom: 16px;
+}
+
+.medicine--clinic .medicine__content-bottom {
+    position: relative;
+    overflow: hidden;
+}
+
+.medicine--clinic .get-help__img-corner--bottom {
+    display: block;
+    position: absolute;
+    right: 305px;
+    top: -978px;
+    transform: rotate(39deg);
+    height: 1500px;
+}
+
+.medicine--clinic .get-help__img-corner--top {
+    right: -403px;
+    bottom: -890px;
+    transform: rotate(216deg);
+    height: 1443px;
+}
+
+@media (min-width: 600px) {
+    .medicine--clinic .medicine__item {
+        flex: 0 0 calc((100% - 10px)/2);
+        gap: 98px;
+    }
+}
+
+@media (min-width: 1025px) {
+
+
+
+    .medicine--clinic .medicine__item {
+        flex: 0 0 calc((100% - 20px)/2);
+        height: auto;
+    }
+
+    .hero--clinic .intro__content {
+        padding-right: 209px;
+    }
+
+    .medicine--clinic .medicine__item-num {
+        margin-bottom: 24px;
+    }
+
+    .medicine--clinic .medicine__content-bottom {
+        padding: 52px;
+        min-width: 795px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .medicine__content-title {
+        font-size: 32px;
+        margin-bottom: 20px;
+    }
+
+    .medicine__content-desc {
+        font-size: 20px;
+        margin-bottom: 40px;
+    }
+
+    .medicine__content-btn {
+        width: fit-content;
+    }
+
+    .medicine--clinic .medicine__bottom {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+}
+
+@media (min-width: 1300px) {
+    .medicine--clinic .medicine__bottom {
+        flex-direction: row-reverse;
+    }
+
+    .hero--clinic .intro__content {
+        padding-right: 0px;
+    }
+
+}
+
+@media (min-width: 1560px) {
+    .medicine--clinic .medicine__items-main {
+        width: 100%;
+        flex-direction: row;
+    }
+
+}
+
+.choose-us__items {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    width: fit-content;
+}
+
+.choose-us__item {
+    display: flex;
+    flex-direction: column;
+    gap: 52px;
+    border-radius: 26px;
+    padding: 20px;
+    background: var(--fonovyy);
+    flex-basis: calc((100% - 30px) / 4);
+    flex-shrink: 0;
+    flex-grow: 0
+}
+
+.choose-us__item-num {
+    border-radius: 10px;
+    width: 40px;
+    height: 40px;
+    background: var(--ogon-vozrozhdeniya-800);
+    font-family: var(--second-family);
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 129%;
+    text-transform: uppercase;
+    color: var(--belyy-100);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.choose-us__item-title {
+    font-family: var(--second-family);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 125%;
+    text-transform: uppercase;
+    color: var(--tekst-dark-100);
+    margin-bottom: 8px;
+}
+
+.choose-us__item-desc {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 143%;
+    color: var(--tekst-dark-80);
+}
+
+.medicine__content--btn {
+    padding: 0;
+}
+
+@media (min-width: 1025px) {
+    .choose-us__items {
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .choose-us__item {
+        border-radius: 40px;
+        padding: 40px;
+        flex-basis: calc((100% - 20px) / 2);
+        gap: 42px;
+    }
+
+    .choose-us__item-num {
+        border-radius: 20px;
+        width: 60px;
+        height: 60px;
+    }
+
+    .choose-us__item-title {
+        font-size: 24px;
+        margin-bottom: 12px;
+    }
+
+    .choose-us__item-desc {
+        font-size: 16px;
+    }
+}
+
+.clinic-ratings__card-link {
+    border-radius: 26px;
+    padding: 6px;
+    background: var(--fonovyy);
+    display: flex;
+}
+
+.clinic-ratings__card-main {
+    display: flex;
+    background: rgba(255, 255, 255, 0.09);
+    border-radius: 20px;
+    gap: 12px;
+    box-shadow: inset 0 2px 6px rgba(255, 255, 255, .8), inset 0 -4px 10px rgba(0, 0, 0, .08);
+    width: 100%;
+    padding: 14px;
+    transition: box-shadow .3s;
+}
+
+.clinic-ratings__card-link:hover .clinic-ratings__card-main {
+    box-shadow: inset 0 2px 6px rgb(255 157 157 / 80%), inset 0 -4px 10px rgb(255 0 0 / 13%);
+}
+
+.clinic-ratings__card-icon {
+    border-radius: 15px;
+    padding: 8px;
+    width: 64px;
+    height: 64px;
+    background: var(--belyy-100);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.clinic-ratings__card-title {
+    font-family: var(--second-family);
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 133%;
+    text-transform: uppercase;
+    color: var(--tekst-dark-100);
+    margin-bottom: 4px;
+}
+
+.clinic-ratings__card-num {
+    font-family: var(--second-family);
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 133%;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--ogon-vozrozhdeniya-800);
+    margin-bottom: 8px;
+}
+
+.clinic-ratings__card-star {
+    height: 12px;
+    display: flex;
+}
+
+.clinic-ratings__card-num {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.clinic-ratings__card-num img {
+    height: 12px;
+}
+
+.clinic-ratings__card-quantity {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 133%;
+    color: var(--tekst-dark-60);
+}
+
+.clinic-ratings__card-icon img {
+    width: 28px;
+    height: 28px;
+}
+
+.spheres-rehabilitation__item-text {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 143%;
+    color: var(--tekst-dark-100);
+}
+
+.spheres-rehabilitation__item-bottom {
+    position: relative;
+    z-index: 4;
+}
+
+.spheres-rehabilitation--clinic {
+    background: var(--fonovyy);
+    border-radius: 30px;
+    padding: 70px 10px;
+}
+
+.spheres-rehabilitation--clinic .section__title-general {
+    max-width: 100%;
+}
+
+.spheres-rehabilitation--clinic .spheres-rehabilitation__item {
+    background: var(--belyy-100);
+}
+
+.spheres-rehabilitation--clinic .spheres-rehabilitation__items {
+    width: fit-content;
+}
+
+.spheres-rehabilitation--clinic .spheres-rehabilitation__item {
+    flex-basis: calc((100% - 10px) / 2);
+}
+
+.spheres-rehabilitation__item-img--next {
+    width: 80px;
+}
+
+.spheres-rehabilitation--clinic .spheres-rehabilitation__item {
+    min-width: 260px;
+}
+
+@media (min-width: 1025px) {
+    .spheres-rehabilitation--clinic .spheres-rehabilitation__item {
+        flex-basis: calc((100% - 20px) / 2);
+    }
+
+    .spheres-rehabilitation__item-text {
+        font-size: 16px;
+        max-width: 430px;
+        height: auto;
+    }
+
+    .clinic-ratings__card-link {
+        border-radius: 40px;
+        padding: 10px;
+    }
+
+    .clinic-ratings__card-main {
+        border-radius: 30px;
+        padding: 20px;
+    }
+
+    .clinic-ratings__card-link:hover .clinic-ratings__card-main {
+        box-shadow: inset 0 2px 6px rgb(255 157 157 / 80%), inset 0 -4px 10px rgb(255 0 0 / 13%);
+    }
+
+    .clinic-ratings__card-icon {
+        border-radius: 20px;
+        padding: 20px;
+        width: 110px;
+        height: 110px;
+    }
+
+    .clinic-ratings__card-title {
+        font-size: 24px;
+        margin-bottom: 6px;
+    }
+
+    .clinic-ratings__card-num {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+    .clinic-ratings__card-star {
+        height: 18px;
+    }
+
+    .clinic-ratings__card-num {
+        gap: 10px;
+    }
+
+    .clinic-ratings__card-num img {
+        height: 18px;
+    }
+
+    .clinic-ratings__card-quantity {
+        font-size: 16px;
+    }
+
+    .clinic-ratings__top {
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
+    }
+
+    .clinic-ratings__card-icon img {
+        width: 56px;
+        height: 56px;
+    }
+
+    .spheres-rehabilitation--clinic {
+        background: var(--fonovyy);
+        padding: 160px 0px;
+        border-radius: 60px;
+    }
+
+    .spheres-rehabilitation--clinic .section__title-general {
+        max-width: 100%;
+    }
+
+    .spheres-rehabilitation--clinic .spheres-rehabilitation__item {
+        background: var(--belyy-100);
     }
 }
