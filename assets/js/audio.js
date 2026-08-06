@@ -5,16 +5,20 @@ document.addEventListener("DOMContentLoaded", function () {
         const BAR_SELECTOR = ".audio-player__bar";
         const BTN_SELECTOR = ".audio-player__btn";
         const TIME_SELECTOR = ".audio-player__time";
-        const AllTIME_SELECTOR = ".audio-player__time-all";
+        const ALLTIME_SELECTOR = ".audio-player__time-all";
 
         const BAR_WIDTH = 4;
         const BAR_GAP = 3;
         const BAR_STEP = BAR_WIDTH + BAR_GAP;
 
+        const MAX_BARS = 30;
+
         function formatTime(seconds) {
             if (!Number.isFinite(seconds)) return "00:00";
+
             const mins = Math.floor(seconds / 60);
             const secs = Math.floor(seconds % 60);
+
             return `${String(mins).padStart(2, "0")}:${String(secs).padStart(2, "0")}`;
         }
 
@@ -24,7 +28,11 @@ document.addEventListener("DOMContentLoaded", function () {
             for (let i = 0; i < count; i++) {
                 const t = i / Math.max(count - 1, 1);
 
-                const base = 10 + Math.abs(Math.sin(t * 8.5)) * 14 + Math.abs(Math.cos(t * 17)) * 8 + Math.abs(Math.sin((t + 0.3) * 31)) * 10;
+                const base =
+                    10 +
+                    Math.abs(Math.sin(t * 8.5)) * 14 +
+                    Math.abs(Math.cos(t * 17)) * 8 +
+                    Math.abs(Math.sin((t + 0.3) * 31)) * 10;
 
                 heights.push(Math.round(Math.min(base, 52)));
             }
@@ -33,7 +41,9 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         function getBarsCount(containerWidth) {
-            return Math.max(1, Math.floor((containerWidth + BAR_GAP) / BAR_STEP));
+            const count = Math.floor((containerWidth + BAR_GAP) / BAR_STEP);
+
+            return Math.min(MAX_BARS, Math.max(1, count));
         }
 
         function renderWave(player) {
@@ -43,23 +53,28 @@ document.addEventListener("DOMContentLoaded", function () {
             if (!wave) return;
 
             const width = wave.clientWidth;
+
             if (!width) return;
 
             const barsCount = getBarsCount(width);
             const prevCount = Number(wave.dataset.count || 0);
 
-            if (prevCount === barsCount) return;
+            if (barsCount === prevCount) return;
 
-            const progress = audio && audio.duration ? audio.currentTime / audio.duration : 0;
+            const progress =
+                audio && audio.duration
+                    ? audio.currentTime / audio.duration
+                    : 0;
 
             wave.innerHTML = "";
-            wave.dataset.count = String(barsCount);
+            wave.dataset.count = barsCount;
 
             const heights = generateBarHeights(barsCount);
 
             heights.forEach((height, index) => {
                 const bar = document.createElement("div");
-                bar.className = BAR_SELECTOR.slice(1);
+
+                bar.className = "audio-player__bar";
                 bar.style.height = `${height}px`;
 
                 if (index < Math.floor(progress * barsCount)) {
@@ -79,7 +94,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
             time.textContent = formatTime(audio.currentTime);
 
-            const progress = audio.duration ? audio.currentTime / audio.duration : 0;
+            const progress = audio.duration
+                ? audio.currentTime / audio.duration
+                : 0;
+
             const activeCount = Math.floor(progress * bars.length);
 
             bars.forEach((bar, index) => {
@@ -108,7 +126,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const audio = player.querySelector("audio");
             const btn = player.querySelector(BTN_SELECTOR);
             const time = player.querySelector(TIME_SELECTOR);
-            const timeAll = player.querySelector(AllTIME_SELECTOR);
+            const timeAll = player.querySelector(ALLTIME_SELECTOR);
 
             if (!audio || !btn || !time) return;
 
@@ -117,7 +135,7 @@ document.addEventListener("DOMContentLoaded", function () {
             audio.addEventListener("loadedmetadata", () => {
                 time.textContent = "00:00";
 
-                if (Number.isFinite(audio.duration)) {
+                if (timeAll && Number.isFinite(audio.duration)) {
                     timeAll.textContent = formatTime(audio.duration);
                 }
 
@@ -148,11 +166,12 @@ document.addEventListener("DOMContentLoaded", function () {
             btn.addEventListener("click", async () => {
                 if (audio.paused) {
                     pauseOtherPlayers(player);
+
                     try {
                         await audio.play();
                         btn.textContent = "❚❚";
                     } catch (error) {
-                        console.error("Ошибка воспроизведения аудио:", error);
+                        console.error("Ошибка воспроизведения:", error);
                     }
                 } else {
                     audio.pause();
@@ -161,10 +180,9 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         }
 
-        const players = document.querySelectorAll(PLAYER_SELECTOR);
-        players.forEach(initPlayer);
+        document.querySelectorAll(PLAYER_SELECTOR).forEach(initPlayer);
 
-        let resizeTimeout = null;
+        let resizeTimeout;
 
         window.addEventListener("resize", () => {
             clearTimeout(resizeTimeout);

@@ -9420,7 +9420,7 @@ button.fServices--more.mobile {
     display: flex;
     align-items: center;
     gap: 4px;
-    padding: 0 30px;
+    padding: 0 15px;
 }
 
 .audio-player__btn {
@@ -9463,6 +9463,7 @@ button.fServices--more.mobile {
     border-radius: 40px;
     background-color: var(--belyy-100);
     padding: 7px 10px;
+    justify-content: space-between;
 }
 
 .audio-player__bar {
@@ -9493,6 +9494,9 @@ button.fServices--more.mobile {
     text-transform: uppercase;
     color: var(--tekst-dark-100);
     background: white;
+    display: flex;
+    gap: 8px;
+    align-items: center;
 }
 
 .audio-player__time-all {
@@ -9518,91 +9522,33 @@ button.fServices--more.mobile {
 
 
 @media (min-width: 1025px) {
-    .voice__card {
-        border-radius: 26px;
-        padding: 6px 6px 20px;
-        overflow: hidden;
-        background: var(--fonovyy);
-        font-family: var(--second-family);
-        font-weight: 700;
-        font-size: 16px;
-        line-height: 125%;
-        text-transform: uppercase;
-        color: var(--tekst-dark-100);
-        box-shadow: inset 0 2px 6px rgba(255, 255, 255, .8), inset 0 -4px 10px rgba(0, 0, 0, .08);
+    .page-reviews__item .voice__card {
+        border-radius: 40px;
+        padding: 10px 10px 40px;
     }
 
     .voice__text {
-        font-family: var(--second-family);
-        font-weight: 700;
-        font-size: 9px;
-        line-height: 133%;
-        text-transform: uppercase;
-        color: var(--tekst-dark-100);
+        font-size: 16px;
     }
 
     .audio-player__bottom {
-        border-radius: 20px;
-        background: var(--belyy-10);
-        display: flex;
-        align-items: center;
-        padding: 14px;
-        margin-bottom: 10px;
-        justify-content: space-between;
-        box-shadow: inset 0 2px 6px rgba(255, 255, 255, .8), inset 0 -4px 10px rgba(0, 0, 0, .08);
-    }
-
-    .voice__swiper-slide {
-        height: auto;
-    }
-
-    .voice__swiper-pagination {
-        display: none;
-    }
-
-    .audio-player__main {
-        display: flex;
-        align-items: center;
-        gap: 20px;
-        padding: 0 30px;
+        border-radius: 30px;
+        padding: 30px;
+        margin-bottom: 24px;
     }
 
     .audio-player__btn {
-        width: 60px;
-        height: 60px;
-        border: none;
-        border-radius: 50%;
-        background: #fff;
-        color: black;
-        font-size: 18px;
-        font-weight: 700;
-        cursor: pointer;
-        flex-shrink: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border: 1px solid white;
         border-radius: 60px;
         padding: 2px;
-        width: 44px;
-        height: 44px;
-        box-shadow: 0 4px 25px 0 rgba(0, 0, 0, 0.04);
-        background: var(--belyy-100);
-        transition: color .3s;
-        background: var(--fonovyy);
-    }
-
-    .audio-player__btn:hover {
-        color: var(--ogon-vozrozhdeniya-800);
+        width: 64px;
+        height: 64px;
     }
 
     .audio-player__wave {
-        flex: 1;
-        min-width: 0;
+        border-radius: 40px;
         height: 56px;
-        display: flex;
-        align-items: center;
-        overflow: hidden;
+        padding: 0 20px;
+        width: fit-content;
     }
 
     .audio-player__bar {
@@ -9614,45 +9560,238 @@ button.fServices--more.mobile {
         flex-shrink: 0;
     }
 
-    .audio-player__bar:last-child {
-        margin-right: 0;
-    }
-
-    .audio-player__bar.is-active {
-        background: var(--ogon-vozrozhdeniya-800);
-        opacity: 1;
-    }
 
     .audio-player__times {
-        border-radius: 8px;
-        padding: 6px 10px;
+        border-radius: 12px;
+        padding: 8px 14px;
+        font-size: 12px;
+    }
+}
+
+.display-item__btns {
+    display: flex;
+    justify-content: center;
+    padding-top: 24px;
+}
+
+.display-item__btns button {
+    border-radius: 40px;
+    padding: 16px 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--fonovyy);
+    font-family: var(--second-family);
+    font-weight: 700;
+    font-size: 9px;
+    line-height: 133%;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--tekst-dark-100);
+    transition: color .3s ease;
+}
+
+.display-item__btns button:hover {
+    color: #EB591F;
+}
+
+@media (min-width: 1025px) {
+    .display-item__btns button {
+        border-radius: 60px;
+        padding: 22px 28px;
+        font-size: 12px;
+    }
+
+    .display-item__btns {
+        padding-top: 40px;
+    }
+
+
+    .page-reviews__item .voice__card {
+        flex: 0 0 calc((100% - 40px)/3);
+    }
+}
+
+.page-reviews__item-cards .patient-stories__card {
+    height: fit-content;
+}
+
+.get-help__tabs {
+    display: flex;
+    align-items: center;
+    background: var(--belyy-10);
+    padding: 4px 10px;
+    margin-bottom: 24px;
+    justify-content: space-between;
+    border-radius: 10px;
+}
+
+.get-help__tab {
+    border-radius: 10px;
+    padding: 10px;
+    font-family: var(--second-family);
+    font-weight: 700;
+    font-size: 9px;
+    line-height: 133%;
+    text-transform: uppercase;
+    color: var(--belyy-100);
+    transition: color .3s, background-color .3s;
+    cursor: pointer;
+}
+
+.get-help__tab:hover,
+.get-help__tab.active {
+    background-color: var(--belyy-100);
+    color: var(--tekst-dark-100);
+}
+
+
+.get-help__download {
+    border: 1px dashed var(--belyy-15);
+    border-radius: 15px;
+    padding: 20px;
+    background: var(--belyy-10);
+    margin-bottom: 14px;
+}
+
+.get-help__download-title {
+    font-family: var(--second-family);
+    font-weight: 700;
+    font-size: 11px;
+    line-height: 136%;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--belyy-100);
+    margin-bottom: 4px;
+}
+
+.get-help__download-desc {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 133%;
+    text-align: center;
+    color: var(--tekst-white-60);
+}
+
+.get-help textarea {
+    border: 1px solid var(--belyy-15);
+    border-radius: 15px;
+    padding: 20px;
+    line-height: 350%;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 14px;
+    color: var(--tekst-white-60);
+    background: var(--belyy-10);
+    width: 100%;
+    margin-bottom: 12px;
+}
+
+.get-help textarea::placeholder {
+    line-height: 160%;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 143%;
+    color: var(--tekst-white-60);
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+@media (min-width: 1025px) {
+    .get-help__tabs {
+        border-radius: 18px;
+        padding: 0;
+        font-size: 14px;
+        margin-bottom: 44px;
+    }
+
+    .get-help__tab {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 70px;
+        border-radius: 18px;
+        padding: 29px 44px;
         font-family: var(--second-family);
         font-weight: 700;
-        font-size: 9px;
+        font-size: 14px;
         line-height: 133%;
         text-transform: uppercase;
-        color: var(--tekst-dark-100);
-        background: white;
+        color: var(--belyy-100);
+        transition: color .3s, background-color .3s;
+        cursor: pointer;
     }
 
-    .audio-player__time-all {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 8px;
+    .get-help__tab.active {
+        background-color: var(--belyy-100);
+        color: var(--tekst-dark-100);
+    }
+
+
+    .get-help__download {
+        border: 1px dashed var(--belyy-15);
+        border-radius: 15px;
+        padding: 20px;
+        background: var(--belyy-10);
+        margin-bottom: 14px;
+    }
+
+    .get-help__download-title {
         font-family: var(--second-family);
         font-weight: 700;
-        font-size: 12px;
-        line-height: 150%;
+        font-size: 11px;
+        line-height: 136%;
         text-transform: uppercase;
-        color: var(--tekst-dark-100);
+        text-align: center;
+        color: var(--belyy-100);
+        margin-bottom: 4px;
     }
 
-    .audio-player__time {
+    .get-help__download-desc {
+        font-family: var(--font-family);
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 133%;
+        text-align: center;
+        color: var(--tekst-white-60);
+    }
+
+    .get-help textarea {
+        border: 1px solid var(--belyy-15);
+        border-radius: 15px;
+        padding: 20px;
+        line-height: 350%;
+        font-family: var(--font-family);
+        font-weight: 500;
+        font-size: 14px;
+        color: var(--tekst-white-60);
+        background: var(--belyy-10);
+        width: 100%;
+        margin-bottom: 12px;
+    }
+
+    .get-help textarea::placeholder {
+        line-height: 160%;
+        font-family: var(--font-family);
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 143%;
+        color: var(--tekst-white-60);
+    }
+
+    .tab-content {
         display: none;
     }
 
-    .audio-player audio {
-        display: none;
+    .tab-content.active {
+        display: block;
     }
 }

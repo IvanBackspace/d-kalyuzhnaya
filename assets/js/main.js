@@ -400,51 +400,6 @@
     });
 
     document.addEventListener("DOMContentLoaded", () => {
-        const cards = document.querySelectorAll(".patient-stories__card-content");
-
-        function checkCards() {
-            cards.forEach((card) => {
-                const text = card.querySelector("p");
-                const btn = card.querySelector(".patient-stories__card-btn");
-
-                if (!text || !btn) return;
-
-                // Сбрасываем состояние перед проверкой
-                text.classList.remove("hide");
-                btn.classList.remove("active");
-                btn.classList.remove("open");
-
-                const limit = window.innerWidth <= 1025 ? 120 : 132;
-
-                if (text.scrollHeight > limit) {
-                    text.classList.add("hide");
-                    btn.classList.add("active");
-                }
-            });
-        }
-
-        checkCards();
-
-        let resizeTimer;
-        window.addEventListener("resize", () => {
-            clearTimeout(resizeTimer);
-            resizeTimer = setTimeout(checkCards, 150);
-        });
-
-        document.addEventListener("click", (e) => {
-            const btn = e.target.closest(".patient-stories__card-btn");
-            if (!btn || !btn.classList.contains("active")) return;
-
-            const card = btn.closest(".patient-stories__card-content");
-            const text = card.querySelector("p");
-
-            text.classList.toggle("hide");
-            btn.classList.toggle("open");
-        });
-    });
-
-
-    document.addEventListener("DOMContentLoaded", () => {
         const accordions = document.querySelectorAll(".js-accordion");
 
         accordions.forEach((accordion) => {
@@ -534,6 +489,17 @@
             const faqTabs = document.querySelector('.faq-page__tabs');
             const priceTabs = document.querySelector('.price__tabs');
             const insideCenterTabs = document.querySelector('.inside-center__tabs');
+            const tabBtnAll = document.querySelector('.tab-btn--all');
+
+            if (tabBtnAll && tabBtnAll.classList.contains('active')) {
+                tabContents.forEach(content => content.classList.add('active'));
+            }
+
+            if (tabBtnAll) {
+                tabBtnAll.addEventListener('click', () => {
+                    tabContents.forEach(content => content.classList.add('active'));
+                });
+            }
 
             if (!tabBtns.length || !tabContents.length) return;
 
@@ -721,5 +687,175 @@ document.addEventListener("DOMContentLoaded", () => {
                 spaceBetween: 10
             }
         }
+    });
+
+    const doctorsCards = document.querySelectorAll('.doctors__card');
+    const doctorsBtn = document.querySelector('.doctors__btns');
+
+    const width = window.innerWidth;
+
+    if (doctorsCards.length > 12 && width > 1200 && doctorsBtn) {
+        doctorsBtn.style.display = 'flex';
+        doctorsCards.forEach((element, index) => {
+            if (index > 11) {
+                element.style.display = 'none';
+            }
+        });
+    }
+
+    if (doctorsCards.length > 10 && width < 1200 && doctorsBtn) {
+        doctorsBtn.style.display = 'flex';
+        doctorsCards.forEach((element, index) => {
+            if (index > 9) {
+                element.style.display = 'none';
+            }
+        });
+    }
+    if (doctorsCards.length > 0 && doctorsBtn) {
+        doctorsBtn.addEventListener("click", () => {
+            doctorsCards.forEach((element, index) => {
+                element.style.display = 'block';
+            });
+            doctorsBtn.style.display = 'none';
+        })
+
+    }
+
+
+    const voiceCards = document.querySelectorAll('.voice__card');
+    const voiceBtn = document.querySelector('.voice__card-btns');
+
+    if (voiceCards.length > 8 && width > 1200 && voiceBtn) {
+        voiceBtn.style.display = 'flex';
+        voiceCards.forEach((element, index) => {
+            if (index > 8) {
+                element.style.display = 'none';
+            }
+        });
+    }
+
+    if (voiceCards.length > 6 && width < 1200 && voiceBtn) {
+        voiceBtn.style.display = 'flex';
+        voiceCards.forEach((element, index) => {
+            if (index > 6) {
+                element.style.display = 'none';
+            }
+        });
+    }
+    if (voiceCards.length > 0 && voiceBtn) {
+        voiceBtn.addEventListener("click", () => {
+            voiceCards.forEach((element, index) => {
+                element.style.display = 'block';
+            });
+            voiceBtn.style.display = 'none';
+        })
+
+    }
+
+
+    const storiesCards = document.querySelectorAll('.patient-stories__card');
+    const storiesBtn = document.querySelector('.patient-stories__btns');
+
+    if (storiesCards.length > 8 && width > 1200 && storiesBtn) {
+        storiesBtn.style.display = 'flex';
+        storiesCards.forEach((element, index) => {
+            if (index > 8) {
+                element.style.display = 'none';
+            }
+        });
+    }
+
+    if (storiesCards.length > 6 && width < 1200 && storiesBtn) {
+        storiesBtn.style.display = 'flex';
+        storiesCards.forEach((element, index) => {
+            if (index > 6) {
+                element.style.display = 'none';
+            }
+        });
+    }
+    if (storiesCards.length > 0 && storiesBtn) {
+        storiesBtn.addEventListener("click", () => {
+            storiesCards.forEach((element, index) => {
+                element.style.display = 'flex';
+            });
+            storiesBtn.style.display = 'none';
+        })
+
+    }
+
+    const videoCards = document.querySelectorAll('.video-review');
+    const videoBtn = document.querySelector('.video-review__btns');
+
+    if (videoCards.length > 8 && width > 1200 && videoBtn) {
+        videoBtn.style.display = 'flex';
+        videoCards.forEach((element, index) => {
+            if (index > 8) {
+                element.style.display = 'none';
+            }
+        });
+    }
+
+    if (videoCards.length > 6 && width < 1200 && videoBtn) {
+        videoBtn.style.display = 'flex';
+        videoCards.forEach((element, index) => {
+            if (index > 6) {
+                element.style.display = 'none';
+            }
+        });
+    }
+    if (videoCards.length < 6 && videoBtn) {
+        videoBtn.style.display = 'none';
+    }
+    if (videoCards.length > 0 && videoBtn) {
+        videoBtn.addEventListener("click", () => {
+            videoCards.forEach((element, index) => {
+                element.style.display = 'flex';
+            });
+            videoBtn.style.display = 'none';
+        })
+
+    }
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+    const cards = document.querySelectorAll(".patient-stories__card-content");
+
+    function checkCards() {
+        cards.forEach((card) => {
+            const text = card.querySelector("p");
+            const btn = card.querySelector(".patient-stories__card-btn");
+
+            if (!text || !btn) return;
+
+            text.classList.remove("hide");
+            btn.classList.remove("active");
+            btn.classList.remove("open");
+
+            const limit = window.innerWidth <= 1025 ? 120 : 132;
+
+            if (text.scrollHeight > limit) {
+                text.classList.add("hide");
+                btn.classList.add("active");
+            }
+        });
+    }
+
+    checkCards();
+
+    let resizeTimer;
+    window.addEventListener("resize", () => {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(checkCards, 150);
+    });
+
+    document.addEventListener("click", (e) => {
+        const btn = e.target.closest(".patient-stories__card-btn");
+        if (!btn || !btn.classList.contains("active")) return;
+
+        const card = btn.closest(".patient-stories__card-content");
+        const text = card.querySelector("p");
+
+        text.classList.toggle("hide");
+        btn.classList.toggle("open");
     });
 });

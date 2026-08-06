@@ -1057,37 +1057,6 @@
           <button>Показать еще</button>
         </div>
     </section>
-    <script>
-      const doctorsCards = document.querySelectorAll('.doctors__card');
-      const doctorsBtn = document.querySelector('.doctors__btns');
-
-      const width = window.innerWidth;
-
-      if (doctorsCards.length > 12 && width > 1200 && doctorsBtn) {
-        doctorsBtn.style.display = 'flex';
-        doctorsCards.forEach((element, index) => {
-          if (index > 11) {
-            element.style.display = 'none';
-          }
-        });
-      }
-
-      if (doctorsCards.length > 10 && width < 1200 && doctorsBtn) {
-        doctorsBtn.style.display = 'flex';
-        doctorsCards.forEach((element, index) => {
-          if (index > 9) {
-            element.style.display = 'none';
-          }
-        });
-      }
-
-      doctorsBtn.addEventListener("click", () => {
-        doctorsCards.forEach((element, index) => {
-          element.style.display = 'block';
-        });
-        doctorsBtn.style.display = 'none';
-      })
-    </script>
     <section class="get-help section__general">
       <div class="get-help__container container">
         <div class="get-help__wrapper">
