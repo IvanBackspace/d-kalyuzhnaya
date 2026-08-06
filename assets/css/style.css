@@ -9795,3 +9795,14 @@ button.fServices--more.mobile {
         display: block;
     }
 }
+
+.contact-page__item-text--mailto,
+.contact-page__item-text--phone {
+    display: block;
+    transition: color .3s;
+}
+
+.contact-page__item-text--mailto:hover,
+.contact-page__item-text--phone:hover {
+    color: var(--ogon-vozrozhdeniya-800);
+}
