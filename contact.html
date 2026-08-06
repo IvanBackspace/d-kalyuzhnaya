@@ -250,119 +250,6 @@
   </div>
   <main class="main">
     <section class="contact-page">
-      <style>
-        .contact-page__items {
-          display: flex;
-          flex-direction: column;
-          gap: 6px;
-          border-radius: 30px;
-          padding: 10px;
-          background: var(--fonovyy);
-          margin-bottom: 10px;
-        }
-
-        .contact-page__item {
-          border-radius: 20px;
-          padding: 16px;
-          background: var(--belyy-100);
-        }
-
-        .contact-page__item-tag {
-          border-radius: 8px;
-          padding: 6px 10px;
-          width: fit-content;
-          font-family: var(--second-family);
-          font-weight: 700;
-          font-size: 9px;
-          line-height: 133%;
-          text-transform: uppercase;
-          text-align: center;
-          color: var(--tekst-dark-100);
-          margin-bottom: 10px;
-          display: flex;
-          align-items: center;
-          gap: 6px;
-          background: var(--fonovyy);
-        }
-
-        .contact-page__item-text {
-          font-family: var(--second-family);
-          font-weight: 700;
-          font-size: 14px;
-          line-height: 129%;
-          text-transform: uppercase;
-          color: var(--tekst-dark-100);
-          margin-bottom: 8px;
-        }
-
-        .contact-page__item-descp {
-          font-family: var(--font-family);
-          font-weight: 500;
-          font-size: 12px;
-          line-height: 133%;
-          color: var(--tekst-dark-60);
-        }
-
-        .contact-page__item-num {
-          display: none;
-        }
-
-        @media (min-width: 1025px) {
-          .contact-page__items {
-            border-radius: 60px;
-            padding: 20px;
-            flex-direction: row;
-            justify-content: space-between;
-            flex-wrap: wrap;
-          }
-
-          .contact-page__item {
-            border-radius: 40px;
-            padding: 24px;
-            display: flex;
-            justify-content: space-between;
-            gap: 65px;
-            flex-direction: column;
-            flex: 0 0 calc((100% - 10px)/2);
-          }
-
-          .contact-page__item-tag {
-            border-radius: 12px;
-            padding: 8px 14px;
-            font-size: 12px;
-          }
-
-          .contact-page__item-tag img {
-            width: 20px;
-          }
-
-          .contact-page__item-text {
-            font-size: 20px;
-            margin-bottom: 12px;
-          }
-
-          .contact-page__item-descp {
-            font-size: 14px;
-          }
-
-          .contact-page__item-num {
-            font-family: var(--second-family);
-            font-weight: 700;
-            font-size: 16px;
-            line-height: 125%;
-            text-transform: uppercase;
-            color: var(--tekst-dark-30);
-            display: block;
-          }
-        }
-
-        @media (min-width: 1300px) {
-
-          .contact-page__item {
-            flex: 0 0 calc((100% - 30px)/4);
-          }
-        }
-      </style>
       <div class="contact-page__container container">
         <div class="contact-page__items">
           <div class="contact-page__item contact-page__item--address">
@@ -430,39 +317,140 @@
             </p>
           </div>
         </div>
+        <div class="contact-page__maps-wrapper">
+          <div class="contact-page__maps">
+            <div class="contact-page__map" id="map__container">
+              <div class="map" style="width: 100%; height: 100%"
+                data-points='[ {"coords":[45.040636, 38.924307],"hint":"Алма-Атинская, 99","balloon":"Алма-Атинская, 99"} ]'>
+              </div>
+            </div>
+          </div>
+          <div class="contact-page__maps-text">
+            <p class="contact-page__maps-tag">
+              Как добраться
+            </p>
+            <p class="contact-page__maps-desc">
+              Клиника и реабилитационный центр доктора Калюжной расположены в удобной транспортной доступности. Для
+              пациентов на личном автомобиле предусмотрена закрытая охраняемая парковка. Также вы можете заказать услугу
+              анонимного трансфера (наша служба приедет и бережно доставит пациента в стационар)
+            </p>
+          </div>
+        </div>
       </div>
     </section>
-    <section class="get-help section__general">
+    <section class="clinic-ratings section__general">
+      <div class="clinic-ratings__container container">
+        <div class="clinic-ratings__top section__top">
+          <div>
+            <p class="clinic-ratings__title section__title-general">Рейтинги клиники <span>на ведущих медицинских
+                порталах</span>
+            </p>
+            <p class="clinic-ratings__subtitle section__subtitle-general">Оценки и отзывы реальных пациентов и их
+              родственников на независимых площадках подтверждают наш высокий экспертный статус и честный подход к
+              лечению
+            </p>
+          </div>
+          <div class="clinic-ratings__links section__links-general">
+            <a class="clinic-ratings__link primary-link" href="">
+              <i></i>Читать все отзывы<span></span>
+            </a>
+          </div>
+        </div>
+        <div class="clinic-ratings__swiper doctorsSwiper swiper swiper__general">
+          <div class="swiper-wrapper">
+            <div class="clinic-ratings__swiper-slide swiper-slide">
+              <a class="clinic-ratings__card-link" href="#">
+                <div class="clinic-ratings__card-main">
+                  <div class="clinic-ratings__card-icon">
+                    <picture>
+                      <source srcset="assets/img/doc/prodoc.svg" type="image/svg+xml">
+                      <img src="assets/img/doc/prodoc.png" alt="логотип Сберздоровье" title="Сберздоровье">
+                    </picture>
+                  </div>
+                  <div class="clinic-ratings__card-info">
+                    <p class="clinic-ratings__card-title">
+                      Сберздоровье
+                    </p>
+                    <p class="clinic-ratings__card-num">4.7<img src="assets/img/doc/stars.png" alt="">
+                    </p>
+                    <p class="clinic-ratings__card-quantity"> 47 отзывов</span></p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="clinic-ratings__swiper-slide swiper-slide">
+              <a class="clinic-ratings__card-link" href="#">
+                <div class="clinic-ratings__card-main">
+                  <div class="clinic-ratings__card-icon">
+                    <picture>
+                      <source srcset="assets/img/doc/gmap.png" type="image/svg+xml">
+                      <img src="assets/img/doc/gmap.png" alt="логотип Google Maps" title="Google Maps">
+                    </picture>
+                  </div>
+                  <div class="clinic-ratings__card-info">
+                    <p class="clinic-ratings__card-title">
+                      Google Maps
+                    </p>
+                    <p class="clinic-ratings__card-num">4.7<img src="assets/img/doc/stars.png" alt="">
+                    </p>
+                    <p class="clinic-ratings__card-quantity"> 47 отзывов</span></p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="clinic-ratings__swiper-slide swiper-slide">
+              <a class="clinic-ratings__card-link" href="#">
+                <div class="clinic-ratings__card-main">
+                  <div class="clinic-ratings__card-icon">
+                    <picture>
+                      <source srcset="assets/img/doc/yandex.png" type="image/svg+xml">
+                      <img src="assets/img/doc/yandex.png" alt="логотип Яндекс.карты" title="Яндекс.карты">
+                    </picture>
+                  </div>
+                  <div class="clinic-ratings__card-info">
+                    <p class="clinic-ratings__card-title">
+                      Яндекс.карты
+                    </p>
+                    <p class="clinic-ratings__card-num">4.7<img src="assets/img/doc/stars.png" alt="">
+                    </p>
+                    <p class="clinic-ratings__card-quantity"> 47 отзывов</span></p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="clinic-ratings__swiper-slide swiper-slide">
+              <a class="clinic-ratings__card-link" href="#">
+                <div class="clinic-ratings__card-main">
+                  <div class="clinic-ratings__card-icon">
+                    <picture>
+                      <source srcset="assets/img/icons/2gis.svg" type="image/svg+xml">
+                      <img src="assets/img/icons/2gis.png" alt="логотип 2гис" title="2гис">
+                    </picture>
+                  </div>
+                  <div class="clinic-ratings__card-info">
+                    <p class="clinic-ratings__card-title">
+                      2гис
+                    </p>
+                    <p class="clinic-ratings__card-num">4.7<img src="assets/img/doc/stars.png" alt="">
+                    </p>
+                    <p class="clinic-ratings__card-quantity"> 47 отзывов</span></p>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="get-help get-help--contact section__general">
       <div class="get-help__container container">
         <div class="get-help__wrapper">
           <div class="get-help__top section__top">
-            <p class="get-help__title section__title-general">Нужна помощь прямо сейчас?
+            <p class="get-help__title section__title-general">Напишите нам,
+              мы окажем помощь
             </p>
-            <p class="get-help__subtitle section__subtitle-general">Оставьте номер телефона — и наш специалист свяжется
-              с
-              вами в течение 3-х минут. Абсолютно анонимно и бесплатно</p>
-          </div>
-          <div class="get-help__items">
-            <div class="get-help__item">
-              <img src="assets/img/icons/get-items.png" alt="Иконка">
-              <P>Гарантия полной анонимности</P>
-              </p>
-            </div>
-            <div class="get-help__item">
-              <img src="assets/img/icons/get-items.png" alt="Иконка">
-              <P>Врачи высшей категории с опытом от 11 лет</P>
-              </p>
-            </div>
-            <div class="get-help__item">
-              <img src="assets/img/icons/get-items.png" alt="Иконка">
-              <P>Лицензия № Л041-01126-23/01066181</P>
-              </p>
-            </div>
-            <div class="get-help__item">
-              <img src="assets/img/icons/get-items.png" alt="Иконка">
-              <P>Оценка 4.9 на основе 700+ отзывов</P>
-              </p>
-            </div>
+            <p class="get-help__subtitle section__subtitle-general">Есть вопросы по программам восстановления или нужна
+              экстренная консультация? Заполните форму, и дежурный специалист свяжется с вами</p>
           </div>
           <form class="get-help__form">
             <div class="get-help__form-wrap">
@@ -471,7 +459,10 @@
                   placeholder="Введите ваше имя*" required="">
                 <input type="tel" name="params[phone][]" class="get-help__form-input get-help__form-input--phone"
                   placeholder="Введите ваш номер телефона*" required="">
+
               </div>
+              <textarea class="get-help__form-textarea" name="params[message][]" placeholder="Ваш отзыв"
+                data-download-category="0"></textarea>
               <div class="get-help__form-btns">
                 <div class="politic intro__form-politic">
                   <input type="checkbox" id="politic2" checked="">

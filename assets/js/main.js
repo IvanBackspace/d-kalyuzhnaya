@@ -843,6 +843,7 @@ document.addEventListener("DOMContentLoaded", () => {
     checkCards();
 
     let resizeTimer;
+
     window.addEventListener("resize", () => {
         clearTimeout(resizeTimer);
         resizeTimer = setTimeout(checkCards, 150);
@@ -850,12 +851,121 @@ document.addEventListener("DOMContentLoaded", () => {
 
     document.addEventListener("click", (e) => {
         const btn = e.target.closest(".patient-stories__card-btn");
+
         if (!btn || !btn.classList.contains("active")) return;
 
         const card = btn.closest(".patient-stories__card-content");
         const text = card.querySelector("p");
 
+        if (!text) return;
+
         text.classList.toggle("hide");
         btn.classList.toggle("open");
     });
+
+
+    const maps = document.querySelectorAll(".map");
+
+    if (maps.length) {
+        const observer = new IntersectionObserver((entries, obs) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    loadMap();
+                    obs.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.2
+        });
+
+        maps.forEach(map => observer.observe(map));
+    }
+
+
+    function loadMap() {
+        if (window.ymaps) {
+            initMaps();
+            return;
+        }
+
+        const script = document.createElement("script");
+
+        script.src = "https://api-maps.yandex.ru/2.1/?lang=ru_RU";
+        script.async = true;
+        script.onload = initMaps;
+
+        document.head.appendChild(script);
+    }
+
+
+    function initMaps() {
+        ymaps.ready(() => {
+
+            document.querySelectorAll(".map").forEach(mapElement => {
+
+                if (mapElement.dataset.loaded) return;
+
+                mapElement.dataset.loaded = "true";
+
+                let points;
+
+                try {
+                    points = JSON.parse(mapElement.dataset.points);
+                } catch (e) {
+                    return;
+                }
+
+                if (!points.length) return;
+
+
+                const map = new ymaps.Map(mapElement, {
+                    center: points[0].coords,
+                    zoom: 14,
+                    controls: []
+                });
+
+
+                map.options.set("minZoom", 10);
+                map.options.set("maxZoom", 18);
+
+
+                points.forEach(point => {
+
+                    const placemark = new ymaps.Placemark(
+                        point.coords,
+                        {
+                            hintContent: point.hint || "",
+                            balloonContent: point.balloon || ""
+                        },
+                        {
+                            iconLayout: "default#image",
+                            iconImageHref: "assets/img/icons/location-map.svg",
+                            iconImageSize: [26, 26],
+                            iconImageOffset: [-13, -26]
+                        }
+                    );
+
+                    map.geoObjects.add(placemark);
+
+                });
+
+
+                if (points.length > 1) {
+                    map.setBounds(map.geoObjects.getBounds(), {
+                        checkZoomRange: true,
+                        zoomMargin: 80
+                    });
+                } else {
+                    map.setCenter(points[0].coords, 14);
+                }
+
+
+                map.behaviors.disable([
+                    "scrollZoom"
+                ]);
+
+            });
+
+        });
+    }
 });
