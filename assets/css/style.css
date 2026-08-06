@@ -1947,6 +1947,7 @@ input {
     color: var(--belyy-100);
 }
 
+.page-reviews__tabs-main,
 .terms-arranties__bottom,
 .support__items-wrapper,
 .daily-routine__main,
@@ -1963,6 +1964,7 @@ input {
     -ms-overflow-style: none;
 }
 
+.page-reviews__tabs-main::-webkit-scrollbar,
 .terms-arranties__bottom::-webkit-scrollbar,
 .support__items-wrapper::-webkit-scrollbar,
 .daily-routine__main::-webkit-scrollbar,
@@ -9080,5 +9082,294 @@ button.fServices--more.mobile {
         transform: rotate(340deg);
         height: 800px;
     }
+}
 
+.page-reviews__tabs-main {
+    margin-bottom: 8px;
+}
+
+.page-reviews__count {
+    border: 1px solid var(--belyy-15);
+    border-radius: 15px;
+    padding: 20px;
+    background: var(--fonovyy);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.page-reviews__count p:first-child {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 143%;
+    color: var(--tekst-dark-60);
+}
+
+.page-reviews__count p:last-child {
+    font-family: var(--second-family);
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 133%;
+    text-transform: uppercase;
+    color: var(--tekst-dark-100);
+}
+
+.page-reviews__tabs {
+    margin-bottom: 8px;
+}
+
+.page-reviews__item-title {
+    font-family: var(--second-family);
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 120%;
+    text-transform: uppercase;
+    color: var(--tekst-dark-100);
+    margin-bottom: 20px;
+}
+
+.page-reviews__tabs-btn {
+    border-radius: 10px;
+    padding: 10px;
+    font-family: var(--second-family);
+    font-weight: 700;
+    font-size: 9px;
+    line-height: 133%;
+    text-transform: uppercase;
+    color: var(--tekst-dark-100);
+    max-height: 32px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.page-reviews__tabs-btns {
+    display: flex;
+    gap: 4px;
+}
+
+.page-reviews__tabs-btn.active,
+.page-reviews__tabs-btn:hover {
+    background-color: var(--glubina-doveriya);
+    color: var(--belyy-100);
+}
+
+.page-reviews__item {
+    margin-bottom: 70px;
+}
+
+.page-reviews__item-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.page-reviews__tabs {
+    padding-top: 40px;
+}
+
+@media (min-width: 1025px) {
+    .page-reviews__tabs {
+        padding-top: 0px;
+    }
+
+    .page-reviews__tabs {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 70px;
+    }
+
+    .page-reviews__count {
+        border: 1px solid var(--belyy-15);
+        border-radius: 20px;
+        padding: 26px 28px;
+        gap: 30px;
+        margin-bottom: 0;
+    }
+
+    .page-reviews__count p:first-child {
+        font-size: 16px;
+    }
+
+    .page-reviews__count p:last-child {
+        font-size: 16px;
+    }
+
+    .page-reviews__tabs-main {
+        margin-bottom: 0px;
+    }
+
+    .page-reviews__item-title {
+        font-size: 48px;
+        margin-bottom: 52px;
+    }
+
+    .page-reviews__tabs-btn {
+        border-radius: 18px;
+        padding: 20px 24px;
+    }
+
+    .page-reviews__tabs-btns {
+        display: flex;
+        gap: 4px;
+        font-size: 14px;
+    }
+
+    .page-reviews__item {
+        margin-bottom: 120px;
+    }
+
+    .page-reviews__item-cards {
+        gap: 20px;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .page-reviews__item-cards .patient-stories__card {
+        flex: 0 0 calc((100% - 20px)/2);
+    }
+}
+
+@media (min-width: 1200px) {
+    .page-reviews__item-cards .patient-stories__card {
+        flex: 0 0 calc((100% - 40px)/3);
+    }
+}
+
+.video-review {
+    position: relative;
+    overflow: hidden;
+    height: 400px;
+}
+
+.video-review {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: end;
+}
+
+.video-review__tags {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.video-review__tags p {
+    border-radius: 8px;
+    padding: 6px 10px;
+    backdrop-filter: blur(50px);
+    background: var(--belyy-15);
+    font-family: var(--second-family);
+    font-weight: 700;
+    font-size: 9px;
+    line-height: 133%;
+    text-transform: uppercase;
+    color: var(--belyy-100);
+    display: flex;
+    gap: 5px;
+}
+
+.video-review__name {
+    font-family: var(--second-family);
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 133%;
+    text-transform: uppercase;
+    color: var(--belyy-100);
+    margin-bottom: 8px;
+}
+
+.video-review__desc {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 133%;
+    color: var(--tekst-white-80);
+}
+
+.video-review__img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    object-fit: cover;
+    min-height: 400px;
+    height: 100%;
+    width: 100%;
+    border-radius: 26px;
+}
+
+.video-review__main {
+    z-index: 10;
+    padding: 20px;
+}
+
+.video-review__img-play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: background-color .3s;
+    border-radius: 50%;
+}
+
+.video-review:hover .video-review__img-play {
+    background-color: var(--ogon-vozrozhdeniya-800);
+}
+
+@media (min-width: 470px) {
+    .page-reviews__item-cards .video-review {
+        min-height: 688px;
+    }
+}
+
+@media (min-width: 1025px) {
+    .page-reviews__item-cards .video-review {
+        flex: 0 0 calc((100% - 20px) / 2);
+    }
+
+    .video-review {
+        border-radius: 40px;
+    }
+
+    .video-review__tags {
+        margin-bottom: 16px;
+    }
+
+    .video-review__tags p {
+        border-radius: 12px;
+        padding: 8px 14px;
+        gap: 5px;
+        font-size: 12px;
+    }
+
+    .video-review__name {
+        font-size: 20px;
+        margin-bottom: 12px;
+    }
+
+    .video-review__desc {
+        font-size: 16px;
+    }
+
+    .video-review__img {
+        border-radius: 40px;
+    }
+
+    .video-review__main {
+        padding: 32px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .page-reviews__item-cards .video-review {
+        flex: 0 0 calc((100% - 40px) / 3);
+    }
 }
