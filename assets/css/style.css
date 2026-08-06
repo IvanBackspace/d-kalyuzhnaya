@@ -10033,3 +10033,128 @@ button.fServices--more.mobile {
         margin-bottom: 16px;
     }
 }
+
+.hero--404 {
+    background-image: url("../img/icons/404mob.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 742px;
+    background-position: top;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    margin-bottom: 0;
+}
+
+.hero--404 h1 {
+    font-family: var(--second-family);
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 124%;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--belyy-100);
+}
+
+.hero--404 .subtitle__general {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 143%;
+    text-align: center;
+    color: var(--belyy-100);
+    margin-bottom: 20px;
+}
+
+.intro__info p {
+    font-family: var(--second-family);
+    font-weight: 700;
+    font-size: 9px;
+    line-height: 133%;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--tekst-white-60);
+}
+
+.intro__info a {
+    font-family: var(--second-family);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 125%;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--belyy-100);
+    transition: color .3s;
+}
+
+.intro__info a:hover {
+    color: var(--ogon-vozrozhdeniya-800);
+}
+
+.intro__info {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.intro__bottom {
+    margin-bottom: 40px;
+}
+
+@media (min-width: 1025px) {
+    .hero--404 {
+        background-image: url("../img/icons/404desc.jpg");
+        background-position: center;
+    }
+
+    .hero--404 .intro__wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero--404 h1 {
+        font-size: 54px;
+        margin-bottom: 24px;
+    }
+
+    .hero--404 .subtitle__general {
+        font-size: 20px;
+        margin-bottom: 44px;
+    }
+
+    .intro__info p {
+        font-size: 12px;
+        text-align: left;
+    }
+
+    .intro__info a {
+        font-size: 24px;
+    }
+
+    .intro__info {
+        gap: 6px;
+        align-items: start;
+        max-width: 336px;
+    }
+
+    .intro__bottom {
+        margin-bottom: 36px;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        gap: 40px;
+
+    }
+}
+
+@media (min-width: 1300px) {
+
+    .hero--404 .intro__content {
+        width: 100%;
+        max-width: 66%;
+        padding-top: 335px;
+    }
+
+}
