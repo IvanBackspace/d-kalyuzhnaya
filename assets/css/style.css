@@ -9794,7 +9794,7 @@ button.fServices--more.mobile {
     }
 
     .tab-content.active {
-        display: block;
+        display: flex;
     }
 }
 
